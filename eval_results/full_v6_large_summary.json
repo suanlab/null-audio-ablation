@@ -1,0 +1,35 @@
+{
+  "scores": {
+    "real": 77.30061349693251,
+    "shuffled": 25.766871165644172,
+    "shifted": 79.14110429447852,
+    "noise": 34.96932515337423,
+    "silent": 32.515337423312886
+  },
+  "counts": {
+    "real": {
+      "correct": 126,
+      "total": 163
+    },
+    "shuffled": {
+      "correct": 42,
+      "total": 163
+    },
+    "shifted": {
+      "correct": 129,
+      "total": 163
+    },
+    "noise": {
+      "correct": 57,
+      "total": 163
+    },
+    "silent": {
+      "correct": 53,
+      "total": 163
+    }
+  },
+  "delta_real_minus_noise": 42.331288343558285,
+  "delta_real_minus_silent": 44.78527607361963,
+  "delta_real_minus_shuffled": 51.53374233128834,
+  "note": "Resumed tail-only large eval from sample index 385 due repeated hangs in earlier sample range"
+}

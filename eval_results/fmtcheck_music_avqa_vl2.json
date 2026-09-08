@@ -1,0 +1,494 @@
+{
+  "accuracy": 76.66666666666667,
+  "correct": 46,
+  "total": 60,
+  "audio_mode": "real",
+  "answer_format": "vocab",
+  "audio_access": "sampled",
+  "shift_seconds": null,
+  "visual_mode": "clean",
+  "visual_severity": 0.0,
+  "model": "DAMO-NLP-SG/VideoLLaMA2.1-7B-AV",
+  "predictions": [
+    {
+      "index": "0",
+      "video": "00004465.mp4",
+      "gt": "eight",
+      "pred": "four",
+      "correct": "False",
+      "output": "Four"
+    },
+    {
+      "index": "1",
+      "video": "00000279.mp4",
+      "gt": "indoor",
+      "pred": "indoor",
+      "correct": "True",
+      "output": "Indoor"
+    },
+    {
+      "index": "2",
+      "video": "00004183.mp4",
+      "gt": "no",
+      "pred": "no",
+      "correct": "True",
+      "output": "No"
+    },
+    {
+      "index": "3",
+      "video": "00000405.mp4",
+      "gt": "yes",
+      "pred": "yes",
+      "correct": "True",
+      "output": "Yes"
+    },
+    {
+      "index": "4",
+      "video": "00008942.mp4",
+      "gt": "cello",
+      "pred": "cello",
+      "correct": "True",
+      "output": "Cello"
+    },
+    {
+      "index": "5",
+      "video": "00007836.mp4",
+      "gt": "accordion",
+      "pred": "no",
+      "correct": "False",
+      "output": "No"
+    },
+    {
+      "index": "6",
+      "video": "00006554.mp4",
+      "gt": "yes",
+      "pred": "yes",
+      "correct": "True",
+      "output": "Yes"
+    },
+    {
+      "index": "7",
+      "video": "00008655.mp4",
+      "gt": "yes",
+      "pred": "yes",
+      "correct": "True",
+      "output": "Yes"
+    },
+    {
+      "index": "8",
+      "video": "00002027.mp4",
+      "gt": "yes",
+      "pred": "acoustic guitar",
+      "correct": "False",
+      "output": "Acoustic guitar"
+    },
+    {
+      "index": "9",
+      "video": "00002370.mp4",
+      "gt": "no",
+      "pred": "yes",
+      "correct": "False",
+      "output": "Yes"
+    },
+    {
+      "index": "10",
+      "video": "00007990.mp4",
+      "gt": "three",
+      "pred": "erhu",
+      "correct": "False",
+      "output": "Erhu"
+    },
+    {
+      "index": "11",
+      "video": "00002551.mp4",
+      "gt": "no",
+      "pred": "no",
+      "correct": "True",
+      "output": "No"
+    },
+    {
+      "index": "12",
+      "video": "00006536.mp4",
+      "gt": "yes",
+      "pred": "yes",
+      "correct": "True",
+      "output": "Yes"
+    },
+    {
+      "index": "13",
+      "video": "00003725.mp4",
+      "gt": "yes",
+      "pred": "yes",
+      "correct": "True",
+      "output": "Yes"
+    },
+    {
+      "index": "14",
+      "video": "00008334.mp4",
+      "gt": "no",
+      "pred": "yes",
+      "correct": "False",
+      "output": "Yes"
+    },
+    {
+      "index": "15",
+      "video": "00003706.mp4",
+      "gt": "no",
+      "pred": "yes",
+      "correct": "False",
+      "output": "Yes"
+    },
+    {
+      "index": "16",
+      "video": "00001672.mp4",
+      "gt": "yes",
+      "pred": "yes",
+      "correct": "True",
+      "output": "Yes"
+    },
+    {
+      "index": "17",
+      "video": "00004550.mp4",
+      "gt": "acoustic guitar",
+      "pred": "acoustic guitar",
+      "correct": "True",
+      "output": "Acoustic guitar"
+    },
+    {
+      "index": "18",
+      "video": "00001988.mp4",
+      "gt": "trumpet",
+      "pred": "trumpet",
+      "correct": "True",
+      "output": "Trumpet"
+    },
+    {
+      "index": "19",
+      "video": "00002463.mp4",
+      "gt": "middle",
+      "pred": "middle",
+      "correct": "True",
+      "output": "Middle"
+    },
+    {
+      "index": "20",
+      "video": "00008411.mp4",
+      "gt": "yes",
+      "pred": "yes",
+      "correct": "True",
+      "output": "Yes"
+    },
+    {
+      "index": "21",
+      "video": "00003209.mp4",
+      "gt": "violin",
+      "pred": "violin",
+      "correct": "True",
+      "output": "Violin"
+    },
+    {
+      "index": "22",
+      "video": "00003801.mp4",
+      "gt": "yes",
+      "pred": "yes",
+      "correct": "True",
+      "output": "Yes"
+    },
+    {
+      "index": "23",
+      "video": "00007492.mp4",
+      "gt": "yes",
+      "pred": "yes",
+      "correct": "True",
+      "output": "Yes"
+    },
+    {
+      "index": "24",
+      "video": "00006872.mp4",
+      "gt": "yes",
+      "pred": "yes",
+      "correct": "True",
+      "output": "Yes"
+    },
+    {
+      "index": "25",
+      "video": "00002451.mp4",
+      "gt": "three",
+      "pred": "three",
+      "correct": "True",
+      "output": "Three"
+    },
+    {
+      "index": "26",
+      "video": "00004942.mp4",
+      "gt": "drum",
+      "pred": "drum",
+      "correct": "True",
+      "output": "Drum"
+    },
+    {
+      "index": "27",
+      "video": "00004924.mp4",
+      "gt": "zero",
+      "pred": "zero",
+      "correct": "True",
+      "output": "Zero"
+    },
+    {
+      "index": "28",
+      "video": "00001858.mp4",
+      "gt": "yes",
+      "pred": "no",
+      "correct": "False",
+      "output": "No"
+    },
+    {
+      "index": "29",
+      "video": "00007538.mp4",
+      "gt": "no",
+      "pred": "no",
+      "correct": "True",
+      "output": "No"
+    },
+    {
+      "index": "30",
+      "video": "00001426.mp4",
+      "gt": "no",
+      "pred": "yes",
+      "correct": "False",
+      "output": "Yes"
+    },
+    {
+      "index": "31",
+      "video": "00002071.mp4",
+      "gt": "left",
+      "pred": "right",
+      "correct": "False",
+      "output": "Right"
+    },
+    {
+      "index": "32",
+      "video": "00006560.mp4",
+      "gt": "violin",
+      "pred": "cello",
+      "correct": "False",
+      "output": "Cello"
+    },
+    {
+      "index": "33",
+      "video": "00004644.mp4",
+      "gt": "cello",
+      "pred": "cello",
+      "correct": "True",
+      "output": "Cello"
+    },
+    {
+      "index": "34",
+      "video": "00007320.mp4",
+      "gt": "no",
+      "pred": "no",
+      "correct": "True",
+      "output": "No"
+    },
+    {
+      "index": "35",
+      "video": "00008012.mp4",
+      "gt": "yes",
+      "pred": "yes",
+      "correct": "True",
+      "output": "Yes"
+    },
+    {
+      "index": "36",
+      "video": "00005249.mp4",
+      "gt": "two",
+      "pred": "two",
+      "correct": "True",
+      "output": "Two"
+    },
+    {
+      "index": "37",
+      "video": "00004191.mp4",
+      "gt": "one",
+      "pred": "one",
+      "correct": "True",
+      "output": "One"
+    },
+    {
+      "index": "38",
+      "video": "00006689.mp4",
+      "gt": "flute",
+      "pred": "flute",
+      "correct": "True",
+      "output": "Flute"
+    },
+    {
+      "index": "39",
+      "video": "00002499.mp4",
+      "gt": "ukulele",
+      "pred": "ukulele",
+      "correct": "True",
+      "output": "Ukulele"
+    },
+    {
+      "index": "40",
+      "video": "00004193.mp4",
+      "gt": "two",
+      "pred": "two",
+      "correct": "True",
+      "output": "Two"
+    },
+    {
+      "index": "41",
+      "video": "00000783.mp4",
+      "gt": "no",
+      "pred": "no",
+      "correct": "True",
+      "output": "No"
+    },
+    {
+      "index": "42",
+      "video": "00005198.mp4",
+      "gt": "yes",
+      "pred": "yes",
+      "correct": "True",
+      "output": "Yes"
+    },
+    {
+      "index": "43",
+      "video": "00007865.mp4",
+      "gt": "zero",
+      "pred": "zero",
+      "correct": "True",
+      "output": "Zero"
+    },
+    {
+      "index": "44",
+      "video": "00007551.mp4",
+      "gt": "no",
+      "pred": "yes",
+      "correct": "False",
+      "output": "Yes"
+    },
+    {
+      "index": "45",
+      "video": "00004903.mp4",
+      "gt": "no",
+      "pred": "no",
+      "correct": "True",
+      "output": "No"
+    },
+    {
+      "index": "46",
+      "video": "00002190.mp4",
+      "gt": "yes",
+      "pred": "yes",
+      "correct": "True",
+      "output": "Yes"
+    },
+    {
+      "index": "47",
+      "video": "00006516.mp4",
+      "gt": "yes",
+      "pred": "yes",
+      "correct": "True",
+      "output": "Yes"
+    },
+    {
+      "index": "48",
+      "video": "00007278.mp4",
+      "gt": "indoor",
+      "pred": "indoor",
+      "correct": "True",
+      "output": "Indoor"
+    },
+    {
+      "index": "49",
+      "video": "00002285.mp4",
+      "gt": "yes",
+      "pred": "yes",
+      "correct": "True",
+      "output": "Yes"
+    },
+    {
+      "index": "50",
+      "video": "00006076.mp4",
+      "gt": "two",
+      "pred": "two",
+      "correct": "True",
+      "output": "Two"
+    },
+    {
+      "index": "51",
+      "video": "00000791.mp4",
+      "gt": "zero",
+      "pred": "zero",
+      "correct": "True",
+      "output": "Zero"
+    },
+    {
+      "index": "52",
+      "video": "00000696.mp4",
+      "gt": "one",
+      "pred": "one",
+      "correct": "True",
+      "output": "One"
+    },
+    {
+      "index": "53",
+      "video": "00002180.mp4",
+      "gt": "left",
+      "pred": "middle",
+      "correct": "False",
+      "output": "Middle"
+    },
+    {
+      "index": "54",
+      "video": "00000082.mp4",
+      "gt": "saxophone",
+      "pred": "saxophone",
+      "correct": "True",
+      "output": "Saxophone"
+    },
+    {
+      "index": "55",
+      "video": "00000815.mp4",
+      "gt": "violin",
+      "pred": "violin",
+      "correct": "True",
+      "output": "Violin"
+    },
+    {
+      "index": "56",
+      "video": "00002514.mp4",
+      "gt": "two",
+      "pred": "two",
+      "correct": "True",
+      "output": "Two"
+    },
+    {
+      "index": "57",
+      "video": "00008112.mp4",
+      "gt": "flute",
+      "pred": "flute",
+      "correct": "True",
+      "output": "Flute"
+    },
+    {
+      "index": "58",
+      "video": "00007003.mp4",
+      "gt": "right",
+      "pred": "left",
+      "correct": "False",
+      "output": "Left"
+    },
+    {
+      "index": "59",
+      "video": "00003733.mp4",
+      "gt": "clarinet",
+      "pred": "clarinet",
+      "correct": "True",
+      "output": "Clarinet"
+    }
+  ]
+}

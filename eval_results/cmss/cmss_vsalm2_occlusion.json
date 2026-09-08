@@ -1,0 +1,60 @@
+{
+  "model": "cmss_vsalm2",
+  "family": "occlusion",
+  "audio_real": "real",
+  "audio_null": "silent",
+  "n_items": 300,
+  "n_clusters": 300,
+  "unparsed_by_cell": {
+    "sev0_real": 1,
+    "sev0_silent": 1,
+    "sev0.33_real": 1,
+    "sev0.33_silent": 1,
+    "sev0.66_real": 1,
+    "sev0.66_silent": 1,
+    "sev1_real": 1,
+    "sev1_silent": 1
+  },
+  "n_boot": 10000,
+  "seed": 2027,
+  "margin_pp": 10.0,
+  "deltas": [
+    {
+      "severity": 0.0,
+      "delta_pp": -1.3333333333333335,
+      "ci95_lo": -4.0,
+      "ci95_hi": 1.3333333333333335,
+      "n_items": 300,
+      "n_clusters": 300
+    },
+    {
+      "severity": 0.33,
+      "delta_pp": 1.6666666666666667,
+      "ci95_lo": -2.0,
+      "ci95_hi": 5.333333333333334,
+      "n_items": 300,
+      "n_clusters": 300
+    },
+    {
+      "severity": 0.66,
+      "delta_pp": 6.333333333333334,
+      "ci95_lo": 2.666666666666667,
+      "ci95_hi": 10.0,
+      "n_items": 300,
+      "n_clusters": 300
+    },
+    {
+      "severity": 1.0,
+      "delta_pp": 6.0,
+      "ci95_lo": 2.0,
+      "ci95_hi": 10.0,
+      "n_items": 300,
+      "n_clusters": 300
+    }
+  ],
+  "sg_pp": 7.333333333333333,
+  "sg_ci95_lo": 3.6666666666666665,
+  "sg_ci95_hi": 11.0,
+  "sg_severity": 1.0,
+  "tau_switch": null
+}

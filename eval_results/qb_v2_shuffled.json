@@ -1,0 +1,800 @@
+{
+  "accuracy": 33.6734693877551,
+  "correct": 33,
+  "total": 98,
+  "predictions": [
+    {
+      "index": "0",
+      "video": "-WwAxd-BBrs_0.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. nailing."
+    },
+    {
+      "index": "1",
+      "video": "cblvSlTyiqQ_6.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. Singing\n答案是 B. Play music"
+    },
+    {
+      "index": "2",
+      "video": "-Nis-cumBYc_250.mp4",
+      "gt": "D",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. run"
+    },
+    {
+      "index": "3",
+      "video": "-Nis-cumBYc_250.mp4",
+      "gt": "D",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. airport"
+    },
+    {
+      "index": "4",
+      "video": "-JC9g19P-vU_35.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. chicken. Chickens are known for their loud and distinctive calls, which can be heard from far distances. Therefore, the correct answer is A. chicken."
+    },
+    {
+      "index": "5",
+      "video": "-HVg-i88xE0_30.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. Vehicle technology"
+    },
+    {
+      "index": "6",
+      "video": "-IpGWTs7ckQ_10.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. the wind is mild and the sun is bright"
+    },
+    {
+      "index": "7",
+      "video": "-LxtesAXWIU_32.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. cars crush things"
+    },
+    {
+      "index": "8",
+      "video": "-SKnbdKeajU_7.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. The sound of watering."
+    },
+    {
+      "index": "9",
+      "video": "-HIPq7T3eFI_11.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. Car"
+    },
+    {
+      "index": "10",
+      "video": "-3Hi-atFiAw_30.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. Learn to dance"
+    },
+    {
+      "index": "11",
+      "video": "HKgby13GaZM_60.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. helicopter"
+    },
+    {
+      "index": "12",
+      "video": "-TnDYy29pRA_30.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. automobile engine"
+    },
+    {
+      "index": "13",
+      "video": "-5qzWUgsszA_540.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. Electronic gun\n\nThe answer is C. Electronic gun\n\nThe answer is C. Electronic gun\n\nIn this scenario, the electronic gun is used to simulate the sound of an ambulance siren or a police car siren. Th"
+    },
+    {
+      "index": "14",
+      "video": "-NxAELmUcec_53.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. automobile"
+    },
+    {
+      "index": "15",
+      "video": "2DfZ21h3rM4_3.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. dog"
+    },
+    {
+      "index": "16",
+      "video": "-SZIgJCerwI_8.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. motorboat"
+    },
+    {
+      "index": "17",
+      "video": "-N_S8kZxh-M_152.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. sow"
+    },
+    {
+      "index": "18",
+      "video": "-8Nvvo3qM-A_30.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. TOILET"
+    },
+    {
+      "index": "19",
+      "video": "-JtMqnUxmjM_30.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. driving a racing car"
+    },
+    {
+      "index": "20",
+      "video": "-JaUsb1_IbI_30.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. sing"
+    },
+    {
+      "index": "21",
+      "video": "-INNrk4mik4_31.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. police car siren\nAnswer with the letter B. A rooster crows\nAnswer with the letter C. Quack \nAnswer with the letter D. frog\nAnswer with the letter E. A rooster crowing\nAnswer with the letter F. A p"
+    },
+    {
+      "index": "22",
+      "video": "-3Q5K1PO7ag_51.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. shuttlecock"
+    },
+    {
+      "index": "23",
+      "video": "-SPa5NgtBNE_362.mp4",
+      "gt": "C",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. shuttlecock"
+    },
+    {
+      "index": "24",
+      "video": "-KOgOEvhrbw_154.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. Shell\n\nIn the context of a video, the answer would be B. cut grass. This choice represents the action of cutting grass using a lawn mower or a grass cutter. The other options listed do not fit int"
+    },
+    {
+      "index": "25",
+      "video": "-YGyhkTItRo_189.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. metro station"
+    },
+    {
+      "index": "26",
+      "video": "-Va6UCHNXzs_250.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. write"
+    },
+    {
+      "index": "27",
+      "video": "-OI4VoCS28I_5.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. Alpaca"
+    },
+    {
+      "index": "28",
+      "video": "-L_--bn4bys_45.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. tortoise\n答案是A. tortoise\n\n问题的答案是A. tortoise\n\n问题的答案是A. tortoise\n\n问题的答案是A. tortoise\n\n问题的答案是A. tortoise\n\n问题的答案是A. tortoise\n\n问题的答案是A. tortoise\n\n问题的答案是A"
+    },
+    {
+      "index": "29",
+      "video": "-JTbHL7OKf0_52.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. 声音的风\n\n答案是 C. 音乐声的风。"
+    },
+    {
+      "index": "30",
+      "video": "-ERNqGf249g_346.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. Sharpen the knife"
+    },
+    {
+      "index": "31",
+      "video": "-KqXcm-I2zY_87.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. tennis match"
+    },
+    {
+      "index": "32",
+      "video": "-MIIsQQJO2o_30.mp4",
+      "gt": "C",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. 风声\n答案是 B. 鸟叫声\n\n在回答这个问题时，选项 B. 风声是正确的答案。风声通常与水流声、鸟叫声和水下声音等自然声音相关联。因此，正确答案是 B. 风声。其他"
+    },
+    {
+      "index": "33",
+      "video": "-StCx0GPObw_30.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. On track"
+    },
+    {
+      "index": "34",
+      "video": "-W9ZCx9t_8s_30.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. crow"
+    },
+    {
+      "index": "35",
+      "video": "-KpXEoL4rW8_11.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. cat"
+    },
+    {
+      "index": "36",
+      "video": "-IBtBeR6B00_0.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. Car"
+    },
+    {
+      "index": "37",
+      "video": "-RZuJjoglMs_61.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Civil defense alarm."
+    },
+    {
+      "index": "38",
+      "video": "-IilQt9YNzw_613.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. Turtle swimming"
+    },
+    {
+      "index": "39",
+      "video": "-JC9g19P-vU_2.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. chicken\n答案是A. 鸡。鸡。"
+    },
+    {
+      "index": "40",
+      "video": "-V-3H5lOA2k_30.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. Hoe\nAnswer with the letter B. seeder\nAnswer with the letter C. Tipper\nAnswer with the letter D. The sound of mowing\n\nThe answer is D. The sound of mowing."
+    },
+    {
+      "index": "41",
+      "video": "-UxlFmoVuPo_30.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. dog"
+    },
+    {
+      "index": "42",
+      "video": "4IF49XmNCaw_50.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. Pipe blockage"
+    },
+    {
+      "index": "43",
+      "video": "-8ju6V8B5Oc_40.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. TOILET"
+    },
+    {
+      "index": "44",
+      "video": "-8a_sOalbYc_308.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. off-white"
+    },
+    {
+      "index": "45",
+      "video": "-Tok_g_jgE0_268.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. take a walk"
+    },
+    {
+      "index": "46",
+      "video": "-O4W3NA5-uA_150.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. shuttlecock\nB. toilet flush\nC. play volleyball\nD. play tennis"
+    },
+    {
+      "index": "47",
+      "video": "we8NP0EKyZQ_20.mp4",
+      "gt": "D",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. Pressing the button on a remote control."
+    },
+    {
+      "index": "48",
+      "video": "-KrDQXnlXRw_10.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. Water flow sound\nAnswer with the letter B. The sound of bathing\nAnswer with the letter C. Boil water\nAnswer with the letter D. Toilet flushing\nAnswer with the letter E. Boil water\nAnswer with the "
+    },
+    {
+      "index": "49",
+      "video": "-Wigi5NZWPY_47.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. Sit on the bench"
+    },
+    {
+      "index": "50",
+      "video": "-TZtWSNT9Po_30.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. motorboat"
+    },
+    {
+      "index": "51",
+      "video": "-Ejdbj6I2W4_0.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Fireworks"
+    },
+    {
+      "index": "52",
+      "video": "-XRiLbb3Syo_2.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. train\nAnswer with the letter B. fire\nAnswer with the letter C. Siren\nAnswer with the letter D. radio broadcast\n\nThe answer is D. radio broadcast\n\nThe answer is D. radio broadcast\n\nIn this scenario"
+    },
+    {
+      "index": "53",
+      "video": "-SWs9oP1MKQ_10.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. planing\n答案是A. planing\n\n在视频中，可以听到以下几种声音：\n\n1. 飞机飞行\n2. 蚊子嗡嗡\n3. 蜜蜂嗡嗡\n4. 飞行的龙\n\n在这几种声音中，最符合"
+    },
+    {
+      "index": "54",
+      "video": "-2LovF10IwM_179.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. He Mian"
+    },
+    {
+      "index": "55",
+      "video": "-R2kN-_12pc_30.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. walking\n答案是 B. take a walk。"
+    },
+    {
+      "index": "56",
+      "video": "-IL4hjBMsLE_56.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. The magpie calls"
+    },
+    {
+      "index": "57",
+      "video": "-OGq-n_9EYA_39.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. The sound of a whistle blowing through a whistle."
+    },
+    {
+      "index": "58",
+      "video": "-NPu34as_OY_7.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. cat"
+    },
+    {
+      "index": "59",
+      "video": "-HxVr19g6HQ_214.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. Installation of sliding door"
+    },
+    {
+      "index": "60",
+      "video": "-HUcjhcskP4_40.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. using a sewing machine"
+    },
+    {
+      "index": "61",
+      "video": "-NucoIuPWYc_6.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Cheetah"
+    },
+    {
+      "index": "62",
+      "video": "-JBRB2gGWDA_4.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. Parachute jump"
+    },
+    {
+      "index": "63",
+      "video": "-3inDTr5RV0_631.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. motor sound\nAnswer with the letter B. Lathe sound\nAnswer with the letter C. gear sound\nAnswer with the letter D. Machine friction sound\n\nThe answer is D. Machine friction sound\n\nThe answer is D. M"
+    },
+    {
+      "index": "64",
+      "video": "-GbVgsMZ9U0_292.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Lathe rotation"
+    },
+    {
+      "index": "65",
+      "video": "-IL4hjBMsLE_76.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. The words of others like a parrot repeating."
+    },
+    {
+      "index": "66",
+      "video": "-SyWyev2PfI_77.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. howls of a shrew"
+    },
+    {
+      "index": "67",
+      "video": "-PN3OIo-oT4_56.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. aircraft."
+    },
+    {
+      "index": "68",
+      "video": "-HxQ9AoyRmY_30.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. duck\n\nThe answer is D. duck\n\nThe question asks about which animal is shown in the video. The options provided are:\n\nA. A flock of chickens\nB. Frog\nC. Gibbon\nD. Duck\n\nThe correct answer is D. Duck\n"
+    },
+    {
+      "index": "69",
+      "video": "-Ha8-q4iApM_166.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. paper-cutting"
+    },
+    {
+      "index": "70",
+      "video": "-LGTb-xyjzA_11.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. sound of wind"
+    },
+    {
+      "index": "71",
+      "video": "-SS94jclogk_170.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. highway"
+    },
+    {
+      "index": "72",
+      "video": "-KdBaGgzf4w_70.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. sea wave"
+    },
+    {
+      "index": "73",
+      "video": "--zLzL0sq3M_30.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. In the car"
+    },
+    {
+      "index": "74",
+      "video": "-MXl8VJ6dUw_30.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. Grove"
+    },
+    {
+      "index": "75",
+      "video": "-SIf6epg9cU_2.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. dog"
+    },
+    {
+      "index": "76",
+      "video": "-KJbMzEiYFA_80.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. Piglet\nE. Cow mooing\nF. Chicken clucking\nG. Cat purring\nH. Horse whinnying\nI. Bird singing\nJ. Dog barking\nK. Elephant trumpeting\nL. Cow mooing\nM. Chicken clucking\nN. Cat pur"
+    },
+    {
+      "index": "77",
+      "video": "-M9But-Hb_A_1.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. crow"
+    },
+    {
+      "index": "78",
+      "video": "-II-7qJxKPc_21.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. aquatic"
+    },
+    {
+      "index": "79",
+      "video": "-OGq-n_9EYA_0.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. Automotive piping"
+    },
+    {
+      "index": "80",
+      "video": "-P53lJ1ViWk_30.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. Motor car"
+    },
+    {
+      "index": "81",
+      "video": "-IKnJa9U66I_150.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. Making curtains"
+    },
+    {
+      "index": "82",
+      "video": "-NT3v_AC1UY_212.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. Tweezers"
+    },
+    {
+      "index": "83",
+      "video": "oxs8A0Cdwwc_30.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. walk"
+    },
+    {
+      "index": "84",
+      "video": "-S_x0BC3jyM_439.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. Catching deer\nAnswer with the letter C. Pulling sheep."
+    },
+    {
+      "index": "85",
+      "video": "-MaDN8paAsc_6.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. The alarm clock wakes up."
+    },
+    {
+      "index": "86",
+      "video": "-INmCm9heS4_13.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. Clean the door\n\nThe answer is C. Clean the door. This option suggests that cleaning the door is the action being taken, which could involve opening and cleaning the door for various purposes, such"
+    },
+    {
+      "index": "87",
+      "video": "-XSb0qDoql0_30.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. racing"
+    },
+    {
+      "index": "88",
+      "video": "-XSb0qDoql0_123.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. train"
+    },
+    {
+      "index": "89",
+      "video": "-LmSy9cDMXY_30.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. dove"
+    },
+    {
+      "index": "90",
+      "video": "Kia_gYhJ7k0_30.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. automobile"
+    },
+    {
+      "index": "91",
+      "video": "-LpRm08gSwA_2.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Play somatosensory games"
+    },
+    {
+      "index": "92",
+      "video": "-Uuo0G76AoI_49.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. sheep"
+    },
+    {
+      "index": "93",
+      "video": "-E35OMfL4A4_1.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. The squirrel barked\nE. The sound of a cat meowing\nF. The sound of a dog barking\nG. The sound of a bird chirping\nH. The sound of a chicken clucking\nI. The sound of a cow mooing\nJ. The sound of a ro"
+    },
+    {
+      "index": "94",
+      "video": "-ROt2go3ALY_10.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. cut grass"
+    },
+    {
+      "index": "95",
+      "video": "-Pg4vVPs4bE_30.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. Toy car"
+    },
+    {
+      "index": "96",
+      "video": "-Kh9u-I-lXA_2.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Car horn"
+    },
+    {
+      "index": "97",
+      "video": "-U5uDdxXmpc_219.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. 听音乐\n答案是 D. 听音乐\n\n在视频中，人们在使用电动缝纫机进行缝纫。这场景可以被描述为听音乐。因此，正确答案是 D. 听音乐。"
+    }
+  ],
+  "elapsed_seconds": 247.3,
+  "checkpoint": "checkpoints/audio_quick_bridge_v2/stage3_instruction",
+  "config": {
+    "use_audio": true,
+    "use_temporal_bridge": true,
+    "mm_projector_type": "stc",
+    "audio_mode": "shuffled",
+    "shift_seconds": null
+  }
+}

@@ -1,0 +1,800 @@
+{
+  "accuracy": 34.69387755102041,
+  "correct": 34,
+  "total": 98,
+  "predictions": [
+    {
+      "index": "0",
+      "video": "-WwAxd-BBrs_0.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. nailing"
+    },
+    {
+      "index": "1",
+      "video": "cblvSlTyiqQ_6.mp4",
+      "gt": "D",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. Play music"
+    },
+    {
+      "index": "2",
+      "video": "-Nis-cumBYc_250.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. racing"
+    },
+    {
+      "index": "3",
+      "video": "-Nis-cumBYc_250.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Racetrack"
+    },
+    {
+      "index": "4",
+      "video": "-JC9g19P-vU_35.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " \"C. crow\""
+    },
+    {
+      "index": "5",
+      "video": "-HVg-i88xE0_30.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. The road is flat"
+    },
+    {
+      "index": "6",
+      "video": "-IpGWTs7ckQ_10.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. The typhoon is coming."
+    },
+    {
+      "index": "7",
+      "video": "-LxtesAXWIU_32.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " \"C\" represents cars crushing things. This could be due to various reasons, such as car accidents or car crashes. The sound of wind is represented by the letter \"A.\" Hail refers to raindrops that are "
+    },
+    {
+      "index": "8",
+      "video": "-SKnbdKeajU_7.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. The sound of mowing"
+    },
+    {
+      "index": "9",
+      "video": "-HIPq7T3eFI_11.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. motorcycle"
+    },
+    {
+      "index": "10",
+      "video": "-3Hi-atFiAw_30.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. Jumping Gymnastics"
+    },
+    {
+      "index": "11",
+      "video": "HKgby13GaZM_60.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. helicopter"
+    },
+    {
+      "index": "12",
+      "video": "-TnDYy29pRA_30.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. Blower"
+    },
+    {
+      "index": "13",
+      "video": "-5qzWUgsszA_540.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Fireworks and firecrackers"
+    },
+    {
+      "index": "14",
+      "video": "-NxAELmUcec_53.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. kettle"
+    },
+    {
+      "index": "15",
+      "video": "2DfZ21h3rM4_3.mp4",
+      "gt": "C",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. bird"
+    },
+    {
+      "index": "16",
+      "video": "-SZIgJCerwI_8.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. motorcycle"
+    },
+    {
+      "index": "17",
+      "video": "-N_S8kZxh-M_152.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. watering"
+    },
+    {
+      "index": "18",
+      "video": "-8Nvvo3qM-A_30.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. a living room"
+    },
+    {
+      "index": "19",
+      "video": "-JtMqnUxmjM_30.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. driving a racing car"
+    },
+    {
+      "index": "20",
+      "video": "-JaUsb1_IbI_30.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " \"D\" represents singing. Singing is a common activity that people engage in, whether it's for personal enjoyment or as part of group activities like karaoke singing. Singing can be a source of noise p"
+    },
+    {
+      "index": "21",
+      "video": "-INNrk4mik4_31.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " \"D\" for frog. The answer is \"D\". A rooster crowing is a common sound in the morning, often associated with waking up or being woken up by a rooster's crowing. This sound can be heard through various "
+    },
+    {
+      "index": "22",
+      "video": "-3Q5K1PO7ag_51.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. Play billiards"
+    },
+    {
+      "index": "23",
+      "video": "-SPa5NgtBNE_362.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. Playing ice hockey"
+    },
+    {
+      "index": "24",
+      "video": "-KOgOEvhrbw_154.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " \"Fire drill\" is the most common answer for this question. It involves using a fire extinguisher to put out a fire, typically in a controlled environment such as a laboratory or a kitchen. Fire drills"
+    },
+    {
+      "index": "25",
+      "video": "-YGyhkTItRo_189.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " \"D. highway\""
+    },
+    {
+      "index": "26",
+      "video": "-Va6UCHNXzs_250.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " \"C. write\""
+    },
+    {
+      "index": "27",
+      "video": "-OI4VoCS28I_5.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. dog"
+    },
+    {
+      "index": "28",
+      "video": "-L_--bn4bys_45.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " \"A. tortoise\""
+    },
+    {
+      "index": "29",
+      "video": "-JTbHL7OKf0_52.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. rowboat. The answer is D. rowboat."
+    },
+    {
+      "index": "30",
+      "video": "-ERNqGf249g_346.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. Paper cutting"
+    },
+    {
+      "index": "31",
+      "video": "-KqXcm-I2zY_87.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. tennis match"
+    },
+    {
+      "index": "32",
+      "video": "-MIIsQQJO2o_30.mp4",
+      "gt": "C",
+      "pred": "B",
+      "correct": "False",
+      "output": " \"B\" is the correct answer. The sound of wind blowing through a window or door. This could be due to various factors, such as a strong wind gust, a window or door being opened or closed, or even a fan"
+    },
+    {
+      "index": "33",
+      "video": "-StCx0GPObw_30.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. Racetrack"
+    },
+    {
+      "index": "34",
+      "video": "-W9ZCx9t_8s_30.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. crow"
+    },
+    {
+      "index": "35",
+      "video": "-KpXEoL4rW8_11.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. cat"
+    },
+    {
+      "index": "36",
+      "video": "-IBtBeR6B00_0.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. Car"
+    },
+    {
+      "index": "37",
+      "video": "-RZuJjoglMs_61.mp4",
+      "gt": "D",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. Whistling"
+    },
+    {
+      "index": "38",
+      "video": "-IilQt9YNzw_613.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. Submarine rescue"
+    },
+    {
+      "index": "39",
+      "video": "-JC9g19P-vU_2.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " \"C. Magpie\""
+    },
+    {
+      "index": "40",
+      "video": "-V-3H5lOA2k_30.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. The sound of mowing."
+    },
+    {
+      "index": "41",
+      "video": "-UxlFmoVuPo_30.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. cat"
+    },
+    {
+      "index": "42",
+      "video": "4IF49XmNCaw_50.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. Pipe blockage"
+    },
+    {
+      "index": "43",
+      "video": "-8ju6V8B5Oc_40.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Shop\n\nThe answer is B. bedroom. The scenario described involves a person using a video camera to capture footage of a kitchen appliance, specifically a microwave oven. The microwave oven is often "
+    },
+    {
+      "index": "44",
+      "video": "-8a_sOalbYc_308.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. Beige"
+    },
+    {
+      "index": "45",
+      "video": "-Tok_g_jgE0_268.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Rope skipping"
+    },
+    {
+      "index": "46",
+      "video": "-O4W3NA5-uA_150.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. play tennis"
+    },
+    {
+      "index": "47",
+      "video": "we8NP0EKyZQ_20.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. Firing technology"
+    },
+    {
+      "index": "48",
+      "video": "-KrDQXnlXRw_10.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Toilet flushing"
+    },
+    {
+      "index": "49",
+      "video": "-Wigi5NZWPY_47.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. Drive a nail"
+    },
+    {
+      "index": "50",
+      "video": "-TZtWSNT9Po_30.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. motorboat"
+    },
+    {
+      "index": "51",
+      "video": "-Ejdbj6I2W4_0.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Fireworks"
+    },
+    {
+      "index": "52",
+      "video": "-XRiLbb3Syo_2.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. train"
+    },
+    {
+      "index": "53",
+      "video": "-SWs9oP1MKQ_10.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. dragonfly\n\nThe answer is C. honeybee. Honeybees are known for their buzzing sound when flying, which can be heard as a loud buzzing noise. This buzzing sound is produced by the wings of the honeyb"
+    },
+    {
+      "index": "54",
+      "video": "-2LovF10IwM_179.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. Making lollipops"
+    },
+    {
+      "index": "55",
+      "video": "-R2kN-_12pc_30.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. horse racing"
+    },
+    {
+      "index": "56",
+      "video": "-IL4hjBMsLE_56.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " \"C\" for the pigeon calls."
+    },
+    {
+      "index": "57",
+      "video": "-OGq-n_9EYA_39.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Car engine noise"
+    },
+    {
+      "index": "58",
+      "video": "-NPu34as_OY_7.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. cat"
+    },
+    {
+      "index": "59",
+      "video": "-HxVr19g6HQ_214.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. Installation of sliding door."
+    },
+    {
+      "index": "60",
+      "video": "-HUcjhcskP4_40.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. using a sewing machine"
+    },
+    {
+      "index": "61",
+      "video": "-NucoIuPWYc_6.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Cheetah."
+    },
+    {
+      "index": "62",
+      "video": "-JBRB2gGWDA_4.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. Parachute jump"
+    },
+    {
+      "index": "63",
+      "video": "-3inDTr5RV0_631.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. motor"
+    },
+    {
+      "index": "64",
+      "video": "-GbVgsMZ9U0_292.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Lathe rotation"
+    },
+    {
+      "index": "65",
+      "video": "-IL4hjBMsLE_76.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. Peacock's cry"
+    },
+    {
+      "index": "66",
+      "video": "-SyWyev2PfI_77.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " \"C. howls of a shrew\""
+    },
+    {
+      "index": "67",
+      "video": "-PN3OIo-oT4_56.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. train"
+    },
+    {
+      "index": "68",
+      "video": "-HxQ9AoyRmY_30.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. duck"
+    },
+    {
+      "index": "69",
+      "video": "-Ha8-q4iApM_166.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. paper-cutting"
+    },
+    {
+      "index": "70",
+      "video": "-LGTb-xyjzA_11.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " \"D\" represents a dog barking. The answer with the letter \"C\" represents wind blowing. The answer with the letter \"B\" could be an ambulance siren. The answer with the letter \"A\" could be a dog barking"
+    },
+    {
+      "index": "71",
+      "video": "-SS94jclogk_170.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. rowing"
+    },
+    {
+      "index": "72",
+      "video": "-KdBaGgzf4w_70.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. train"
+    },
+    {
+      "index": "73",
+      "video": "--zLzL0sq3M_30.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. At home"
+    },
+    {
+      "index": "74",
+      "video": "-MXl8VJ6dUw_30.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. Building\n\nThe answer is D. Building."
+    },
+    {
+      "index": "75",
+      "video": "-SIf6epg9cU_2.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. lion"
+    },
+    {
+      "index": "76",
+      "video": "-KJbMzEiYFA_80.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. Birdsong"
+    },
+    {
+      "index": "77",
+      "video": "-M9But-Hb_A_1.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " \"D\" represents myna bird. This bird species is known for its distinctive call, calling it the \"myna bird.\" The myna bird is a common bird in many parts of the world, known for its ability to mimic ot"
+    },
+    {
+      "index": "78",
+      "video": "-II-7qJxKPc_21.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. By the car\n\nThe answer is D. By the car\n\nThe answer is D. By the car\n\nThe answer is D. By the car\n\nThe answer is D. By the car\n\nThe answer is D. By the car\n\nThe answer is D. By the car\n\nThe answer"
+    },
+    {
+      "index": "79",
+      "video": "-OGq-n_9EYA_0.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. Automotive exhaust pipe"
+    },
+    {
+      "index": "80",
+      "video": "-P53lJ1ViWk_30.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. Motor car"
+    },
+    {
+      "index": "81",
+      "video": "-IKnJa9U66I_150.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. Stitching\n\nThe answer is C. Stitching. This could be used in sewing technology, where the machine is sewing a fabric or clothing item. The process of stitching involves using a needle and thread t"
+    },
+    {
+      "index": "82",
+      "video": "-NT3v_AC1UY_212.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. Scissors"
+    },
+    {
+      "index": "83",
+      "video": "oxs8A0Cdwwc_30.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. walk"
+    },
+    {
+      "index": "84",
+      "video": "-S_x0BC3jyM_439.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. Catching bears"
+    },
+    {
+      "index": "85",
+      "video": "-MaDN8paAsc_6.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. The alarm clock wakes up."
+    },
+    {
+      "index": "86",
+      "video": "-INmCm9heS4_13.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Vacuum cleaner to clean the floor."
+    },
+    {
+      "index": "87",
+      "video": "-XSb0qDoql0_30.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. train"
+    },
+    {
+      "index": "88",
+      "video": "-XSb0qDoql0_123.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " \"D. Tractor\""
+    },
+    {
+      "index": "89",
+      "video": "-LmSy9cDMXY_30.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " \"D. dove\""
+    },
+    {
+      "index": "90",
+      "video": "Kia_gYhJ7k0_30.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. bus"
+    },
+    {
+      "index": "91",
+      "video": "-LpRm08gSwA_2.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Play somatosensory games"
+    },
+    {
+      "index": "92",
+      "video": "-Uuo0G76AoI_49.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " \"D. squirrel\""
+    },
+    {
+      "index": "93",
+      "video": "-E35OMfL4A4_1.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. The sound of a cat."
+    },
+    {
+      "index": "94",
+      "video": "-ROt2go3ALY_10.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. Scarification\n\nScarification is a process where people are trying to understand or analyze something by breaking it down into smaller parts or components. In this case, the person is trying to und"
+    },
+    {
+      "index": "95",
+      "video": "-Pg4vVPs4bE_30.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. train"
+    },
+    {
+      "index": "96",
+      "video": "-Kh9u-I-lXA_2.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Car horn"
+    },
+    {
+      "index": "97",
+      "video": "-U5uDdxXmpc_219.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " \"C\" represents playing games. The options provided include listening to music, which is a common activity for people. Therefore, the answer is \"C\". Playing games can involve various activities such a"
+    }
+  ],
+  "elapsed_seconds": 580.7,
+  "checkpoint": "checkpoints/full_v6/stage3_instruction",
+  "config": {
+    "use_audio": true,
+    "use_temporal_bridge": true,
+    "mm_projector_type": "stc",
+    "audio_mode": "noise",
+    "shift_seconds": null
+  }
+}

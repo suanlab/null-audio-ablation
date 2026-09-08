@@ -1,0 +1,392 @@
+{
+  "accuracy": 63.829787234042556,
+  "correct": 30,
+  "total": 47,
+  "predictions": [
+    {
+      "index": "4",
+      "video": "-JC9g19P-vU_35.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. crow"
+    },
+    {
+      "index": "7",
+      "video": "-LxtesAXWIU_32.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. wind B. hail C. cars crush things D. sea wave"
+    },
+    {
+      "index": "8",
+      "video": "-SKnbdKeajU_7.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. The sound of mowing"
+    },
+    {
+      "index": "9",
+      "video": "-HIPq7T3eFI_11.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. motorcycle"
+    },
+    {
+      "index": "11",
+      "video": "HKgby13GaZM_60.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. helicopter"
+    },
+    {
+      "index": "12",
+      "video": "-TnDYy29pRA_30.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. Blower"
+    },
+    {
+      "index": "13",
+      "video": "-5qzWUgsszA_540.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Fireworks and firecrackers"
+    },
+    {
+      "index": "14",
+      "video": "-NxAELmUcec_53.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. automobile"
+    },
+    {
+      "index": "16",
+      "video": "-SZIgJCerwI_8.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. motorcycle\n\nExplanation:\nThe answer is D. motorcycle. The sound described in the question is typically associated with a motorcycle, which is a common source of noise pollution. Motorcycles are kn"
+    },
+    {
+      "index": "20",
+      "video": "-JaUsb1_IbI_30.mp4",
+      "gt": "D",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. disco dancing"
+    },
+    {
+      "index": "21",
+      "video": "-INNrk4mik4_31.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. frog croaking"
+    },
+    {
+      "index": "25",
+      "video": "-YGyhkTItRo_189.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. train B. aircraft C. metro D. highway"
+    },
+    {
+      "index": "27",
+      "video": "-OI4VoCS28I_5.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. dog"
+    },
+    {
+      "index": "29",
+      "video": "-JTbHL7OKf0_52.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. rowboat. The answer is C. sound of wind."
+    },
+    {
+      "index": "32",
+      "video": "-MIIsQQJO2o_30.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. Birdsong\n答案是 C. Birdsong\n\n题目描述的是鸟叫声。选项中，C. Birdsong 是正确答案。鸟叫声通常是由鸟类发出的。因此，正确答案是 C. Birdsong。"
+    },
+    {
+      "index": "34",
+      "video": "-W9ZCx9t_8s_30.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. Geese crow"
+    },
+    {
+      "index": "35",
+      "video": "-KpXEoL4rW8_11.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. cat"
+    },
+    {
+      "index": "36",
+      "video": "-IBtBeR6B00_0.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. Car"
+    },
+    {
+      "index": "37",
+      "video": "-RZuJjoglMs_61.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Civil defense alarm"
+    },
+    {
+      "index": "39",
+      "video": "-JC9g19P-vU_2.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. Magpie"
+    },
+    {
+      "index": "40",
+      "video": "-V-3H5lOA2k_30.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. Tipper"
+    },
+    {
+      "index": "41",
+      "video": "-UxlFmoVuPo_30.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. dog"
+    },
+    {
+      "index": "48",
+      "video": "-KrDQXnlXRw_10.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Toilet flushing sound"
+    },
+    {
+      "index": "50",
+      "video": "-TZtWSNT9Po_30.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. motorboat"
+    },
+    {
+      "index": "51",
+      "video": "-Ejdbj6I2W4_0.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Fireworks"
+    },
+    {
+      "index": "52",
+      "video": "-XRiLbb3Syo_2.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. Siren"
+    },
+    {
+      "index": "53",
+      "video": "-SWs9oP1MKQ_10.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. honeybee. The answer is C. honeybee."
+    },
+    {
+      "index": "56",
+      "video": "-IL4hjBMsLE_56.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. The magpie calls"
+    },
+    {
+      "index": "57",
+      "video": "-OGq-n_9EYA_39.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Car engine noise"
+    },
+    {
+      "index": "58",
+      "video": "-NPu34as_OY_7.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. cat"
+    },
+    {
+      "index": "60",
+      "video": "-HUcjhcskP4_40.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. tram sound. D. using a sewing machine. A. wind blowing sound B. water flow sound C. tram sound D. using a sewing machine. Answer: D. using a sewing machine."
+    },
+    {
+      "index": "63",
+      "video": "-3inDTr5RV0_631.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. motor sound\nB. Lathe noise\nC. gear noise\nD. Machine friction sound\n\nThe answer is D. Machine friction sound\n\nThe answer is D. Machine friction sound. This could be the sound of a machine experienc"
+    },
+    {
+      "index": "64",
+      "video": "-GbVgsMZ9U0_292.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Lathe rotation"
+    },
+    {
+      "index": "65",
+      "video": "-IL4hjBMsLE_76.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. Peacock's cry"
+    },
+    {
+      "index": "67",
+      "video": "-PN3OIo-oT4_56.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. ambulance"
+    },
+    {
+      "index": "70",
+      "video": "-LGTb-xyjzA_11.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. Ambulance siren"
+    },
+    {
+      "index": "71",
+      "video": "-SS94jclogk_170.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. canoeing"
+    },
+    {
+      "index": "72",
+      "video": "-KdBaGgzf4w_70.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. aircraft"
+    },
+    {
+      "index": "75",
+      "video": "-SIf6epg9cU_2.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. dog"
+    },
+    {
+      "index": "76",
+      "video": "-KJbMzEiYFA_80.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. Cows mooing\nAnswer with the letter B. pheasant\nAnswer with the letter D. Birdsong\nAnswer with the letter A. Cows mooing\n\nThe answer is A. Cows mooing. This sound is typically associated with cows "
+    },
+    {
+      "index": "77",
+      "video": "-M9But-Hb_A_1.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. myna bird. The answer is D. myna bird."
+    },
+    {
+      "index": "80",
+      "video": "-P53lJ1ViWk_30.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. Motor car"
+    },
+    {
+      "index": "87",
+      "video": "-XSb0qDoql0_30.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. train"
+    },
+    {
+      "index": "88",
+      "video": "-XSb0qDoql0_123.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. Tractor."
+    },
+    {
+      "index": "93",
+      "video": "-E35OMfL4A4_1.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. The squirrel barked"
+    },
+    {
+      "index": "95",
+      "video": "-Pg4vVPs4bE_30.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. police car"
+    },
+    {
+      "index": "96",
+      "video": "-Kh9u-I-lXA_2.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Car horn"
+    }
+  ],
+  "elapsed_seconds": 123.5,
+  "checkpoint": "checkpoints/full_v6/stage3_instruction",
+  "config": {
+    "use_audio": true,
+    "use_temporal_bridge": true,
+    "mm_projector_type": "stc",
+    "audio_mode": "real",
+    "shift_seconds": null
+  }
+}

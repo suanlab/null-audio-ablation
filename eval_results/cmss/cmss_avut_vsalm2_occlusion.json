@@ -1,0 +1,51 @@
+{
+  "model": "cmss_avut_vsalm2",
+  "family": "occlusion",
+  "audio_real": "real",
+  "audio_null": "silent",
+  "n_items": 300,
+  "n_clusters": 117,
+  "unparsed_by_cell": {},
+  "n_boot": 10000,
+  "seed": 2027,
+  "margin_pp": 10.0,
+  "deltas": [
+    {
+      "severity": 0.0,
+      "delta_pp": 13.333333333333334,
+      "ci95_lo": 8.135593220338983,
+      "ci95_hi": 18.627450980392158,
+      "n_items": 300,
+      "n_clusters": 117
+    },
+    {
+      "severity": 0.33,
+      "delta_pp": 10.333333333333334,
+      "ci95_lo": 5.0,
+      "ci95_hi": 15.699795440623085,
+      "n_items": 300,
+      "n_clusters": 117
+    },
+    {
+      "severity": 0.66,
+      "delta_pp": 8.666666666666668,
+      "ci95_lo": 2.631363244176014,
+      "ci95_hi": 14.839029064196737,
+      "n_items": 300,
+      "n_clusters": 117
+    },
+    {
+      "severity": 1.0,
+      "delta_pp": 10.0,
+      "ci95_lo": 4.406779661016949,
+      "ci95_hi": 15.646258503401361,
+      "n_items": 300,
+      "n_clusters": 117
+    }
+  ],
+  "sg_pp": -3.3333333333333335,
+  "sg_ci95_lo": -8.361204013377927,
+  "sg_ci95_hi": 1.6182543184970348,
+  "sg_severity": 1.0,
+  "tau_switch": null
+}

@@ -1,0 +1,18 @@
+{
+  "items": 1319,
+  "classes": 20,
+  "majority_baseline": 13.267626990144048,
+  "task": "instrument identity (20-way)",
+  "encoders": {
+    "BEATs": {
+      "mean": 54.81305449936629,
+      "std": 2.3135807524964527,
+      "dim": 768
+    },
+    "Whisper": {
+      "mean": 35.70947113722779,
+      "std": 2.2741198987345546,
+      "dim": 1280
+    }
+  }
+}

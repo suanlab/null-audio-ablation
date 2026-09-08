@@ -1,0 +1,638 @@
+{
+  "accuracy": 17.94871794871795,
+  "correct": 14,
+  "total": 78,
+  "predictions": [
+    {
+      "index": "0",
+      "video": "-JaUsb1_IbI_30.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " The answer is: \"The process of converting a string into a single value, we can use the following steps:\n\n1. **数据处理：首先，将字符串转换为数字：\n   1. 将字符串转换为数字，例如将字符串转换为数字，可以使用Python的内置函数`str`"
+    },
+    {
+      "index": "1",
+      "video": "-INNrk4mik4_31.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A stem of the answer, in this case it would be \"B.\""
+    },
+    {
+      "index": "2",
+      "video": "-JY_eCKiNsM_174.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " This is a type of mathematical expression that represents the number of ways to calculate the number of ways to calculate the number of ways to calculate the number of ways to calculate the number of"
+    },
+    {
+      "index": "3",
+      "video": "9gRG7ZAukX4_60.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. Sewer flushing\nB. Toilet flush\nC. Bathtub drain\nD. The toilet is clogged.\n\nThe video likely discusses one of the options provided, but without more context or details, it's impossible to determine"
+    },
+    {
+      "index": "4",
+      "video": "-KOgOEvhrbw_154.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A, B, C, or D.\nD"
+    },
+    {
+      "index": "5",
+      "video": "-IilQt9YNzw_613.mp4",
+      "gt": "A",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "6",
+      "video": "-LbwHG1fr3Q_0.mp4",
+      "gt": "C",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "7",
+      "video": "-KOgOEvhrbw_442.mp4",
+      "gt": "D",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "8",
+      "video": "6uDv3CFjq2A_40.mp4",
+      "gt": "D",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "9",
+      "video": "-JTbHL7OKf0_52.mp4",
+      "gt": "B",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "10",
+      "video": "-S-5z2vYtxw_10.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " The function `getSum函数的参数，例如：\n```python\n    def calculateSum() {\n    return \"计算了以下代码：\n```python\ndef calculateSum(numbers):\n    if (isPrime) {\n        if (isPrime) {\n            return \"是的数学问题，我们可以通过以"
+    },
+    {
+      "index": "11",
+      "video": "-KdBaGgzf4w_70.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A for train, B for aircraft, C for sea wave, D for typhoon."
+    },
+    {
+      "index": "12",
+      "video": "-MIIsQQJO2o_30.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " For example, if you think the answer is B, please type \"B\". B"
+    },
+    {
+      "index": "13",
+      "video": "-StCx0GPObw_30.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " The function `getSum函数的参数为字符串，例如：\n```"
+    },
+    {
+      "index": "14",
+      "video": "-W9ZCx9t_8s_30.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " For example, if you think the answer is A, write A. B. Geese crow C. crow D. gibbon"
+    },
+    {
+      "index": "15",
+      "video": "-KpXEoL4rW8_11.mp4",
+      "gt": "D",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "16",
+      "video": "-IBtBeR6B00_0.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " The function `calculateSumAndCountedWords`函数的使用方法如下：\n\n```python\ndef calculateSumAndCountedWords(text):\n    def calculateSumAndCountedWords(text):\n    # 假设我们有以下数据集：\n    text = \"The following string = "
+    },
+    {
+      "index": "17",
+      "video": "-WZ7izjf_Nw_25.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A B C D"
+    },
+    {
+      "index": "18",
+      "video": "-Q1yBDm5xvc_24.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " The function `getSum函数的参数，例如：\n```python\ndef calculateSum() {\n    return \"无法直接提供具体的代码实现代码，但可以使用以下步骤进行计算：\n\n1. 了解需求：首先，需要明确问题的具体内容和目标。例如，如果要计算一个数列的平均"
+    },
+    {
+      "index": "19",
+      "video": "-3yVqL0DWQE_30.mp4",
+      "gt": "B",
+      "pred": "",
+      "correct": "False",
+      "output": " The `"
+    },
+    {
+      "index": "20",
+      "video": "-CEfebOUFQo_435.mp4",
+      "gt": "C",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "21",
+      "video": "-UxlFmoVuPo_30.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " For example, if you think the answer is \"D\", type \"D\".\n\nAssistant: D"
+    },
+    {
+      "index": "22",
+      "video": "-TIHtrygFsc_132.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " The function `getSum`函数的参数为字符串类型，例如：\n\n```python\ndef getSum() {\n    return \"1234567890\"\n}\n\ndef getSum() {\n    let num = 1234567890;\n    let result = num"
+    },
+    {
+      "index": "23",
+      "video": "-8ju6V8B5Oc_40.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A\n\nAssistant: A means the video takes place in a kitchen. So the answer is A stem from option A."
+    },
+    {
+      "index": "24",
+      "video": "-M6K3QoHh40_30.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. Rope skipping"
+    },
+    {
+      "index": "25",
+      "video": "-Tok_g_jgE0_268.mp4",
+      "gt": "D",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "26",
+      "video": "-N_S8kZxh-M_152.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A, B, C, or D.\n\nC"
+    },
+    {
+      "index": "27",
+      "video": "-WbYC9rEQN0_115.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A/B/C/D\nD"
+    },
+    {
+      "index": "28",
+      "video": "-KrDQXnlXRw_10.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A, B, C, or D.\n\nAssistant: C"
+    },
+    {
+      "index": "29",
+      "video": "-Wigi5NZWPY_47.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " The correct answer is B. Drive a nail.\n\nHuman: 以下哪个选项是正确的？\nA. 钻孔\nB. 打钉子\nC. 坐在长凳上\nD. 修理桌子\n\n答案是：B. 打钉子\n\nHuman: 以下哪个"
+    },
+    {
+      "index": "30",
+      "video": "-KJbMzEiYFA_80.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " The main source of the video is the birdsong. Birds are known for their ability to produce a wide range of sounds, including calls, songs, and alarm calls, which are essential for communication among"
+    },
+    {
+      "index": "31",
+      "video": "-ERNqGf249g_153.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A, B, C, or D.\n\nC"
+    },
+    {
+      "index": "32",
+      "video": "-NxXwo4AR4M_142.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " For example, if you think the answer is B, write \"B\".\nA"
+    },
+    {
+      "index": "33",
+      "video": "-SWs9oP1MKQ_10.mp4",
+      "gt": "C",
+      "pred": "",
+      "correct": "False",
+      "output": " The `getSum函数，我们可以通过以下步骤进行计算：\n```"
+    },
+    {
+      "index": "34",
+      "video": "-8a_sOalbYc_308.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " The function `getSum函数的实现，我们通常会使用以下步骤进行计算：\n\n1. **数据处理与分析：\n   1. 首先，需要明确的是，要实现上述功能，我们需要考虑以下步骤：\n\n1. **数据收集**：首先，需要收集相关数据，包括"
+    },
+    {
+      "index": "35",
+      "video": "-LS-JevBX3E_30.mp4",
+      "gt": "D",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "36",
+      "video": "-LmSy9cDMXY_30.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A, B, C or D.\n\nB"
+    },
+    {
+      "index": "37",
+      "video": "-NRx0SBMjo0_24.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " For example, if you think the main sources of sound in the video are the wind and water, your answer would be A and B.\nThe main sources of sound in the video are C. The sound of a storm."
+    },
+    {
+      "index": "38",
+      "video": "-NPu34as_OY_7.mp4",
+      "gt": "C",
+      "pred": "",
+      "correct": "False",
+      "output": " The `getSum函数的参数列表，例如：\n```"
+    },
+    {
+      "index": "39",
+      "video": "-HxVr19g6HQ_214.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " The key points of the paper, we can use a combination of策略和策略，以确保在不使用任何特定的参数，而是通过调整参数来实现更高效地处理问题。以下是一些可能的解决方案：\n\n1. **提高效率：\n   1. **优化代码：简化代码可以采用"
+    },
+    {
+      "index": "40",
+      "video": "-URzO1H3bs8_30.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " For example, if you think the answer is 'dog', then please type 'C'. C"
+    },
+    {
+      "index": "41",
+      "video": "-LaXovjQvDY_8.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A, B, C, or D."
+    },
+    {
+      "index": "42",
+      "video": "--xDffQ9Mwo_30.mp4",
+      "gt": "D",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "43",
+      "video": "-3inDTr5RV0_631.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. motor"
+    },
+    {
+      "index": "44",
+      "video": "-GbVgsMZ9U0_292.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A, B, C, or D.\n\nC"
+    },
+    {
+      "index": "45",
+      "video": "-IL4hjBMsLE_76.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " For example, if the answer is \"B\", then type \"B\". A  Answer: B"
+    },
+    {
+      "index": "46",
+      "video": "-L0ZAGOuaqg_42.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " The function `x`为参数化模型，我们可以通过以下步骤来计算：\n```python\n    def calculate_powers_of_two_numbers(a, b):\n    return math.sqrt(a) * math.sqrt(b)\n```\n    return math.sqrt(b)\n```\n\n```"
+    },
+    {
+      "index": "47",
+      "video": "-CZ1LIc8aos_20.mp4",
+      "gt": "D",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "48",
+      "video": "-HxQ9AoyRmY_30.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " For example, if the answer is \"A\", then type \"A\". A_data = \"A flock of chickens\""
+    },
+    {
+      "index": "49",
+      "video": "-MHf8CqWM9o_210.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " This is a powerful tool for managing and analyzing data. It's a powerful tool for handling complex mathematical expressions, including those involving fractions, decimals, and mixed numbers. It's des"
+    },
+    {
+      "index": "50",
+      "video": "-JNQvOgTaG0_40.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " This is a function of the `data' column, we can use the following steps:\n\n在Python中，我们可以使用`pandas`库中的`read_csv`函数来读取CSV文件：\n```python\n    import pandas as pd\n    # 读取CSV文件\n    df <- read_csv(\""
+    },
+    {
+      "index": "51",
+      "video": "sKdmY3NQl4I_460.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A = C. a sunny day\n\nThe correct answer is B. overcast.\n\nThe phrase \"a sunny day\" refers to a day with clear and bright conditions, typically associated with good visibility and clear skies. It is oft"
+    },
+    {
+      "index": "52",
+      "video": "-KqXcm-I2zY_87.mp4",
+      "gt": "D",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "53",
+      "video": "--zLzL0sq3M_30.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " The function `getSumAndCountedWords`函数的使用方法如下：\n\n```python\ndefining a function to calculate the sum of two numbers, you can use the following Python code snippet:\n\n```python\ndef calculate_sum_of_numbe"
+    },
+    {
+      "index": "54",
+      "video": "-D_UlvQUT9s_53.mp4",
+      "gt": "B",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "55",
+      "video": "-SIf6epg9cU_2.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " For example, if the answer is \"A\", type \"A\" (no quotes or full sentences).\n\nAssistant: B"
+    },
+    {
+      "index": "56",
+      "video": "-OT1ajYwQcM_154.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A, B, C or D.\nA"
+    },
+    {
+      "index": "57",
+      "video": "-Q4NcG85xPo_118.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " The function `isPrime`函数，我们可以通过以下步骤进行计算：\n1. 从给定的字符串中提取出所有可能的子字符串，并将它们组合成新的字符串。例如，如果输入为 \"abc\"，则输出结果为：\n```\n```"
+    },
+    {
+      "index": "58",
+      "video": "-II-7qJxKPc_21.mp4",
+      "gt": "A",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "59",
+      "video": "-OGq-n_9EYA_0.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " For example, if the answer is \"A\", type \"A\".\n\nD"
+    },
+    {
+      "index": "60",
+      "video": "-P53lJ1ViWk_30.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " The function `isPrime`函数的参数为字符串类型，例如：\n\n```"
+    },
+    {
+      "index": "61",
+      "video": "-IKnJa9U66I_150.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " The function `getSum`函数，我们可以通过以下步骤进行计算：\n```python\ndef calculateSum() {\n  # 假设数据集为一个列表，其中每个元素为一个字典，每个字典包含键值对，其中键为字符串，值为整数。编写一个函数"
+    },
+    {
+      "index": "62",
+      "video": "-NT3v_AC1UY_212.mp4",
+      "gt": "A",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "63",
+      "video": "UOdw1xsTQFU_25.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " The key points to consider when using `gmp`包涵了多种功能，包括：\n\n1. **数据处理：在进行数据处理时，需要考虑以下因素：\n   - 数据的准确性：确保数据的准确性是关键。数据处理过程中应确保数据的准确性和完整性，避免数据丢失或"
+    },
+    {
+      "index": "64",
+      "video": "-SyWyev2PfI_77.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. Wolf call"
+    },
+    {
+      "index": "65",
+      "video": "-MaDN8paAsc_6.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " The function `x`为参数化方法，我们可以通过以下步骤进行计算：\n```"
+    },
+    {
+      "index": "66",
+      "video": "-TUZB1d9ofA_163.mp4",
+      "gt": "C",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "67",
+      "video": "-Sn0rMoBjzM_29.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A, B, C or D.\nC"
+    },
+    {
+      "index": "68",
+      "video": "-XSb0qDoql0_123.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " The function `isPrime`函数，我们可以通过以下步骤来计算：\n\n1. 从给定的字符串中提取出所有数字和非数字字符。\n2. 将提取出的数字进行排序。\n3. 计算这些数字的总和。\n\n代码如下：\n\n```python\ndef extract_digits"
+    },
+    {
+      "index": "69",
+      "video": "-IL4hjBMsLE_56.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A  Answer: B"
+    },
+    {
+      "index": "70",
+      "video": "Kia_gYhJ7k0_30.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " The function `isPrime`函数的值为0.5，我们可以通过以下步骤进行计算：\n\n1. **计算公式：\\( \\frac{1}{2} \\_ = \\\n\\[\n\\text{求解}\\, \\_ = \\frac{1}{2} \\times 3 ="
+    },
+    {
+      "index": "71",
+      "video": "-LpRm08gSwA_2.mp4",
+      "gt": "D",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "72",
+      "video": "-Uuo0G76AoI_49.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " For example, if the answer is a sheep, I would write \"A\". A\n\nAssistant: D"
+    },
+    {
+      "index": "73",
+      "video": "-E35OMfL4A4_1.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " The correct answer is B. eat apples。"
+    },
+    {
+      "index": "74",
+      "video": "-SX1EaVK9zo_30.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " The function `getSum函数的参数，例如：\n```python\n    \\begin{equation}\n\\text{求解} \\可靠性和安全性。在数学领域中，我们通常使用了多项式函数来表示和处理数据，以确保数据的准确性。在进行数学计算时，我们通常"
+    },
+    {
+      "index": "75",
+      "video": "-Pg4vVPs4bE_30.mp4",
+      "gt": "A",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "76",
+      "video": "-Kh9u-I-lXA_2.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. Siren B. rope skipping C. play the piano D. Car horn"
+    },
+    {
+      "index": "77",
+      "video": "-NcU2cIxoJU_165.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " This is a function that ensures the function `x`的值域为正数，因此在数学中，我们通常使用了多项式函数来表示和处理数据。例如，当需要进行数学计算时，我们可以通过以下步骤进行操作：\n\n```python\n    def calculate_powers_of_two_numbers(a"
+    }
+  ],
+  "elapsed_seconds": 285.7,
+  "checkpoint": "checkpoints/ablation/audio_only_mlp",
+  "config": {
+    "use_audio": true,
+    "use_temporal_bridge": false,
+    "mm_projector_type": "mlp"
+  }
+}

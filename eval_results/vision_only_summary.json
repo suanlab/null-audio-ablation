@@ -1,0 +1,17 @@
+{
+  "scores": {
+    "real": 50.0,
+    "shuffled": 50.0,
+    "shifted": 50.0,
+    "noise": 50.0,
+    "silent": 50.0
+  },
+  "delta_real_minus_silent": 0.0,
+  "all_modes_equal_expected": true,
+  "mvbench_accuracy": 33.324999999999996,
+  "training_phase": "vision_only_baseline",
+  "dataset": "avqa_train_v3.jsonl (25K)",
+  "audio_enabled": false,
+  "bridge_enabled": false,
+  "base_checkpoint": "qb_v2_stage2"
+}

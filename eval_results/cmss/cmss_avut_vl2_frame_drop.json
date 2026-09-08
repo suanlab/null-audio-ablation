@@ -1,0 +1,51 @@
+{
+  "model": "cmss_avut_vl2",
+  "family": "frame_drop",
+  "audio_real": "real",
+  "audio_null": "silent",
+  "n_items": 300,
+  "n_clusters": 117,
+  "unparsed_by_cell": {},
+  "n_boot": 10000,
+  "seed": 2027,
+  "margin_pp": 10.0,
+  "deltas": [
+    {
+      "severity": 0.0,
+      "delta_pp": -1.0,
+      "ci95_lo": -3.896103896103896,
+      "ci95_hi": 1.9738470557582048,
+      "n_items": 300,
+      "n_clusters": 117
+    },
+    {
+      "severity": 0.33,
+      "delta_pp": 1.3333333333333335,
+      "ci95_lo": -1.6181229773462782,
+      "ci95_hi": 4.234527687296417,
+      "n_items": 300,
+      "n_clusters": 117
+    },
+    {
+      "severity": 0.66,
+      "delta_pp": 0.33333333333333337,
+      "ci95_lo": -2.3333333333333335,
+      "ci95_hi": 3.050847457627119,
+      "n_items": 300,
+      "n_clusters": 117
+    },
+    {
+      "severity": 1.0,
+      "delta_pp": 1.3333333333333335,
+      "ci95_lo": -2.112676056338028,
+      "ci95_hi": 4.88599348534202,
+      "n_items": 300,
+      "n_clusters": 117
+    }
+  ],
+  "sg_pp": 2.3333333333333335,
+  "sg_ci95_lo": -1.5977009132654632,
+  "sg_ci95_hi": 6.291390728476822,
+  "sg_severity": 1.0,
+  "tau_switch": null
+}

@@ -1,0 +1,15 @@
+{
+  "scores": {
+    "real": 65.3061224489796,
+    "shuffled": 32.6530612244898,
+    "shifted": 56.12244897959183,
+    "noise": 33.6734693877551,
+    "silent": 30.612244897959183
+  },
+  "mvbench_overall_accuracy": 32.525,
+  "delta_real_minus_noise": 31.632653061224495,
+  "delta_real_minus_silent": 34.69387755102041,
+  "delta_real_minus_shuffled": 32.6530612244898,
+  "audio_contribution_positive": true,
+  "mvbench_above_random_baseline_30_9": true
+}

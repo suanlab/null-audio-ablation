@@ -1,0 +1,15 @@
+{
+  "scores": {
+    "real": 57.14285714285714,
+    "shuffled": 43.87755102040816,
+    "shifted": 61.224489795918366,
+    "noise": 45.91836734693878,
+    "silent": 41.83673469387755
+  },
+  "delta_real_minus_noise": 11.224489795918359,
+  "delta_real_minus_silent": 15.306122448979586,
+  "delta_real_minus_shuffled": 13.265306122448976,
+  "audio_contribution_positive": true,
+  "audio_dropout_prob": 0.3,
+  "base_checkpoint": "qb_v2_stage2"
+}

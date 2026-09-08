@@ -1,0 +1,75 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "videollm"
+version = "0.1.0"
+description = "Audio-Visual Video Understanding with Large Language Models"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+dependencies = [
+    "torch>=2.2.0",
+    "torchvision>=0.17.0",
+    "torchaudio>=2.2.0",
+    "transformers>=4.40.0",
+    "tokenizers>=0.19.0",
+    "accelerate>=0.29.0",
+    "peft>=0.4.0",
+    "einops>=0.6.1",
+    "decord>=0.6.0",
+    "timm>=1.0.0",
+    "sentencepiece>=0.1.99",
+    "Pillow>=10.0.0",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+train = [
+    "deepspeed>=0.13.0",
+    "flash-attn>=2.5.0",
+    "bitsandbytes>=0.43.0",
+    "wandb>=0.16.0",
+]
+audio = [
+    "laion-clap>=1.1.6",
+    "librosa>=0.10.0",
+    "soundfile>=0.12.0",
+]
+eval = [
+    "lmms-eval>=0.2.0",
+]
+dev = [
+    "ruff>=0.4.0",
+    "pyright>=1.1.360",
+    "pytest>=8.0.0",
+    "pytest-cov>=5.0.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "SIM", "TCH"]
+ignore = ["E501"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["videollm"]
+
+[tool.pyright]
+include = ["src"]
+pythonVersion = "3.10"
+typeCheckingMode = "strict"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-x -q -m 'not slow'"
+markers = [
+    "slow: marks tests that download models or require GPU (deselect with '-m \"not slow\"')",
+    "gpu: marks tests that require CUDA GPU",
+]

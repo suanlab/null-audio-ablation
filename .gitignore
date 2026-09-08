@@ -1,0 +1,12 @@
+# never publish media or weights
+*.mp4
+*.wav
+*.pt
+*.pth
+*.bin
+*.safetensors
+__pycache__/
+*.pyc
+.venv/
+# manuscript is not published here while under review
+paper/

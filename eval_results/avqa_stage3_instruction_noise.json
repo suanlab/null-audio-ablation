@@ -1,0 +1,800 @@
+{
+  "accuracy": 52.04081632653062,
+  "correct": 51,
+  "total": 98,
+  "predictions": [
+    {
+      "index": "0",
+      "video": "-WwAxd-BBrs_0.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. Driving a motorcycle"
+    },
+    {
+      "index": "1",
+      "video": "cblvSlTyiqQ_6.mp4",
+      "gt": "D",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "2",
+      "video": "-Nis-cumBYc_250.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. train"
+    },
+    {
+      "index": "3",
+      "video": "-Nis-cumBYc_250.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Racetrack"
+    },
+    {
+      "index": "4",
+      "video": "-JC9g19P-vU_35.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. chicken"
+    },
+    {
+      "index": "5",
+      "video": "-HVg-i88xE0_30.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. Vehicle technology"
+    },
+    {
+      "index": "6",
+      "video": "-IpGWTs7ckQ_10.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. The typhoon is coming"
+    },
+    {
+      "index": "7",
+      "video": "-LxtesAXWIU_32.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. wind"
+    },
+    {
+      "index": "8",
+      "video": "-SKnbdKeajU_7.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. gun fire"
+    },
+    {
+      "index": "9",
+      "video": "-HIPq7T3eFI_11.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. Car"
+    },
+    {
+      "index": "10",
+      "video": "-3Hi-atFiAw_30.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. Jump Gymnastics"
+    },
+    {
+      "index": "11",
+      "video": "HKgby13GaZM_60.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. lawn mower"
+    },
+    {
+      "index": "12",
+      "video": "-TnDYy29pRA_30.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. Blower"
+    },
+    {
+      "index": "13",
+      "video": "-5qzWUgsszA_540.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Fireworks and firecrackers"
+    },
+    {
+      "index": "14",
+      "video": "-NxAELmUcec_53.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. train"
+    },
+    {
+      "index": "15",
+      "video": "2DfZ21h3rM4_3.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. dog"
+    },
+    {
+      "index": "16",
+      "video": "-SZIgJCerwI_8.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. remote controlled aircraft"
+    },
+    {
+      "index": "17",
+      "video": "-N_S8kZxh-M_152.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. watering"
+    },
+    {
+      "index": "18",
+      "video": "-8Nvvo3qM-A_30.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. TOILET"
+    },
+    {
+      "index": "19",
+      "video": "-JtMqnUxmjM_30.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. riding"
+    },
+    {
+      "index": "20",
+      "video": "-JaUsb1_IbI_30.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. skiing"
+    },
+    {
+      "index": "21",
+      "video": "-INNrk4mik4_31.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. police car siren"
+    },
+    {
+      "index": "22",
+      "video": "-3Q5K1PO7ag_51.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. Bowling"
+    },
+    {
+      "index": "23",
+      "video": "-SPa5NgtBNE_362.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. play volleyball"
+    },
+    {
+      "index": "24",
+      "video": "-KOgOEvhrbw_154.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. Machine gun fire"
+    },
+    {
+      "index": "25",
+      "video": "-YGyhkTItRo_189.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. train"
+    },
+    {
+      "index": "26",
+      "video": "-Va6UCHNXzs_250.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. Ring the bell"
+    },
+    {
+      "index": "27",
+      "video": "-OI4VoCS28I_5.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. dog"
+    },
+    {
+      "index": "28",
+      "video": "-L_--bn4bys_45.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. tortoise"
+    },
+    {
+      "index": "29",
+      "video": "-JTbHL7OKf0_52.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. train"
+    },
+    {
+      "index": "30",
+      "video": "-ERNqGf249g_346.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. cut up vegetables"
+    },
+    {
+      "index": "31",
+      "video": "-KqXcm-I2zY_87.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. tennis match"
+    },
+    {
+      "index": "32",
+      "video": "-MIIsQQJO2o_30.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. flow"
+    },
+    {
+      "index": "33",
+      "video": "-StCx0GPObw_30.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. Racetrack"
+    },
+    {
+      "index": "34",
+      "video": "-W9ZCx9t_8s_30.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. Geese crow"
+    },
+    {
+      "index": "35",
+      "video": "-KpXEoL4rW8_11.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. wolf"
+    },
+    {
+      "index": "36",
+      "video": "-IBtBeR6B00_0.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. Car"
+    },
+    {
+      "index": "37",
+      "video": "-RZuJjoglMs_61.mp4",
+      "gt": "D",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. Whistling"
+    },
+    {
+      "index": "38",
+      "video": "-IilQt9YNzw_613.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. Submarine rescue"
+    },
+    {
+      "index": "39",
+      "video": "-JC9g19P-vU_2.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. chicken"
+    },
+    {
+      "index": "40",
+      "video": "-V-3H5lOA2k_30.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " The answer is A. Hoe"
+    },
+    {
+      "index": "41",
+      "video": "-UxlFmoVuPo_30.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. dog"
+    },
+    {
+      "index": "42",
+      "video": "4IF49XmNCaw_50.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " The answer is B. Flush the toilet"
+    },
+    {
+      "index": "43",
+      "video": "-8ju6V8B5Oc_40.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. TOILET"
+    },
+    {
+      "index": "44",
+      "video": "-8a_sOalbYc_308.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. off-white"
+    },
+    {
+      "index": "45",
+      "video": "-Tok_g_jgE0_268.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Rope skipping"
+    },
+    {
+      "index": "46",
+      "video": "-O4W3NA5-uA_150.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. play tennis"
+    },
+    {
+      "index": "47",
+      "video": "we8NP0EKyZQ_20.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " The answer is A. Drive a nail"
+    },
+    {
+      "index": "48",
+      "video": "-KrDQXnlXRw_10.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Toilet flushing"
+    },
+    {
+      "index": "49",
+      "video": "-Wigi5NZWPY_47.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " The answer is D. Fix the table"
+    },
+    {
+      "index": "50",
+      "video": "-TZtWSNT9Po_30.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. remote controlled aircraft"
+    },
+    {
+      "index": "51",
+      "video": "-Ejdbj6I2W4_0.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Fireworks"
+    },
+    {
+      "index": "52",
+      "video": "-XRiLbb3Syo_2.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. Siren"
+    },
+    {
+      "index": "53",
+      "video": "-SWs9oP1MKQ_10.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. planing"
+    },
+    {
+      "index": "54",
+      "video": "-2LovF10IwM_179.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. Foam extrusion"
+    },
+    {
+      "index": "55",
+      "video": "-R2kN-_12pc_30.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. riding"
+    },
+    {
+      "index": "56",
+      "video": "-IL4hjBMsLE_56.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. police car siren"
+    },
+    {
+      "index": "57",
+      "video": "-OGq-n_9EYA_39.mp4",
+      "gt": "D",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. Car whistle"
+    },
+    {
+      "index": "58",
+      "video": "-NPu34as_OY_7.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. dog"
+    },
+    {
+      "index": "59",
+      "video": "-HxVr19g6HQ_214.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. Installation of glass door"
+    },
+    {
+      "index": "60",
+      "video": "-HUcjhcskP4_40.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. sound of wind"
+    },
+    {
+      "index": "61",
+      "video": "-NucoIuPWYc_6.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. lion"
+    },
+    {
+      "index": "62",
+      "video": "-JBRB2gGWDA_4.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. Parachute jump"
+    },
+    {
+      "index": "63",
+      "video": "-3inDTr5RV0_631.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. Lathe"
+    },
+    {
+      "index": "64",
+      "video": "-GbVgsMZ9U0_292.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Lathe rotation"
+    },
+    {
+      "index": "65",
+      "video": "-IL4hjBMsLE_76.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. The magpie calls"
+    },
+    {
+      "index": "66",
+      "video": "-SyWyev2PfI_77.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. The dog howled"
+    },
+    {
+      "index": "67",
+      "video": "-PN3OIo-oT4_56.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. ambulance"
+    },
+    {
+      "index": "68",
+      "video": "-HxQ9AoyRmY_30.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. A flock of chickens"
+    },
+    {
+      "index": "69",
+      "video": "-Ha8-q4iApM_166.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. Sharpening scissors"
+    },
+    {
+      "index": "70",
+      "video": "-LGTb-xyjzA_11.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. Ambulance siren"
+    },
+    {
+      "index": "71",
+      "video": "-SS94jclogk_170.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. canoe"
+    },
+    {
+      "index": "72",
+      "video": "-KdBaGgzf4w_70.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. train"
+    },
+    {
+      "index": "73",
+      "video": "--zLzL0sq3M_30.mp4",
+      "gt": "C",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "74",
+      "video": "-MXl8VJ6dUw_30.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. Passing cars"
+    },
+    {
+      "index": "75",
+      "video": "-SIf6epg9cU_2.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. wolf"
+    },
+    {
+      "index": "76",
+      "video": "-KJbMzEiYFA_80.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. Birdsong"
+    },
+    {
+      "index": "77",
+      "video": "-M9But-Hb_A_1.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. myna"
+    },
+    {
+      "index": "78",
+      "video": "-II-7qJxKPc_21.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. On the road"
+    },
+    {
+      "index": "79",
+      "video": "-OGq-n_9EYA_0.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. automobile engine"
+    },
+    {
+      "index": "80",
+      "video": "-P53lJ1ViWk_30.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. Motor car"
+    },
+    {
+      "index": "81",
+      "video": "-IKnJa9U66I_150.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. Sewing technology"
+    },
+    {
+      "index": "82",
+      "video": "-NT3v_AC1UY_212.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. knife"
+    },
+    {
+      "index": "83",
+      "video": "oxs8A0Cdwwc_30.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " The answer is C. Tugboat to shore"
+    },
+    {
+      "index": "84",
+      "video": "-S_x0BC3jyM_439.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. Pull the dog"
+    },
+    {
+      "index": "85",
+      "video": "-MaDN8paAsc_6.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. The alarm clock wakes up"
+    },
+    {
+      "index": "86",
+      "video": "-INmCm9heS4_13.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Vacuum cleaner to clean the floor"
+    },
+    {
+      "index": "87",
+      "video": "-XSb0qDoql0_30.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. train"
+    },
+    {
+      "index": "88",
+      "video": "-XSb0qDoql0_123.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. automobile"
+    },
+    {
+      "index": "89",
+      "video": "-LmSy9cDMXY_30.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. chicken"
+    },
+    {
+      "index": "90",
+      "video": "Kia_gYhJ7k0_30.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. automobile"
+    },
+    {
+      "index": "91",
+      "video": "-LpRm08gSwA_2.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. Playing games"
+    },
+    {
+      "index": "92",
+      "video": "-Uuo0G76AoI_49.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. sheep"
+    },
+    {
+      "index": "93",
+      "video": "-E35OMfL4A4_1.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. The squirrel barked"
+    },
+    {
+      "index": "94",
+      "video": "-ROt2go3ALY_10.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. cut grass"
+    },
+    {
+      "index": "95",
+      "video": "-Pg4vVPs4bE_30.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. police car"
+    },
+    {
+      "index": "96",
+      "video": "-Kh9u-I-lXA_2.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Car horn"
+    },
+    {
+      "index": "97",
+      "video": "-U5uDdxXmpc_219.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " The answer is C. Playing games"
+    }
+  ],
+  "elapsed_seconds": 182.2,
+  "checkpoint": "checkpoints/audio_v2/stage3_instruction",
+  "config": {
+    "use_audio": true,
+    "use_temporal_bridge": true,
+    "mm_projector_type": "stc",
+    "audio_mode": "noise",
+    "shift_seconds": null
+  }
+}

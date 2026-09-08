@@ -1,0 +1,2418 @@
+{
+  "accuracy": 33.666666666666664,
+  "correct": 101,
+  "total": 300,
+  "predictions": [
+    {
+      "index": "0",
+      "video": "3J81_L2Py8c_70.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. playing accordion"
+    },
+    {
+      "index": "1",
+      "video": "2_gcAeeqzwQ_1.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. helicopter\n\nThe answer is C. helicopter. Helicopters are commonly used in various applications, such as transportation, photography, and sound effects in movies and video games. They are known for"
+    },
+    {
+      "index": "2",
+      "video": "1ddDkmwH-T4_387.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. fireworks banging"
+    },
+    {
+      "index": "3",
+      "video": "0izT2gPbsok_30.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. skidding"
+    },
+    {
+      "index": "4",
+      "video": "Uz-bzWfELCk_0.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. skidding\nB. people belly laughing\nC. police radio chatter\nD. people gargling\n\nThe answer is C. police radio chatter. This event typically involves the police radio communication, where officers ar"
+    },
+    {
+      "index": "5",
+      "video": "34VEOYSaYG8_99.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. running electric fan"
+    },
+    {
+      "index": "6",
+      "video": "2wGM6oTIxio_27.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. female singing"
+    },
+    {
+      "index": "7",
+      "video": "0DjbjUvK_TU_20.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. wind chime. The answer is D. wind chime."
+    },
+    {
+      "index": "8",
+      "video": "47iu0vXNcP4_156.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. playing timbales"
+    },
+    {
+      "index": "9",
+      "video": "2nDgSSFBt3I_364.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. pumping water"
+    },
+    {
+      "index": "10",
+      "video": "-Tch5am2RTY_30.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. people burping"
+    },
+    {
+      "index": "11",
+      "video": "1xZESfMpi9Q_156.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. playing badminton"
+    },
+    {
+      "index": "12",
+      "video": "40V9PXs5TQI_216.mp4",
+      "gt": "C",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. people crowd\n\nExplanation:\nThe answer is B. people crowd. This scenario typically occurs when there is a large gathering of people, such as at a concert or festival, where the audience is cheering"
+    },
+    {
+      "index": "13",
+      "video": "-ZMb-QiqDJY_101.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. people running"
+    },
+    {
+      "index": "14",
+      "video": "1aQSKz2JvFw_71.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. child singing"
+    },
+    {
+      "index": "15",
+      "video": "12dYN4J6yjA_20.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. people sniggering"
+    },
+    {
+      "index": "16",
+      "video": "10XzvMsy20I_86.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. opening or closing drawers."
+    },
+    {
+      "index": "17",
+      "video": "3sz7nQTcwcE_9.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. dog growling"
+    },
+    {
+      "index": "18",
+      "video": "0ymH_mTFNH0_1.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. car passing by"
+    },
+    {
+      "index": "19",
+      "video": "-ct58kOlLfs_30.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. playing clarinet"
+    },
+    {
+      "index": "20",
+      "video": "1-k-OAPil5U_12.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. playing clarinet"
+    },
+    {
+      "index": "21",
+      "video": "0OZ985n1Q1s_5.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. mouse squeaking"
+    },
+    {
+      "index": "22",
+      "video": "-IgzS3fIrBE_30.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. playing electric guitar"
+    },
+    {
+      "index": "23",
+      "video": "46Ui0WCPoNk_30.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. people clapping"
+    },
+    {
+      "index": "24",
+      "video": "2rRTUPQOOaM_180.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. playing clarinet"
+    },
+    {
+      "index": "25",
+      "video": "09fBZO51IOc_81.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. female singing"
+    },
+    {
+      "index": "26",
+      "video": "1wr4uv7UUUQ_10.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. playing flute"
+    },
+    {
+      "index": "27",
+      "video": "22b6SLUvGHk_20.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. skateboarding"
+    },
+    {
+      "index": "28",
+      "video": "-VcqC_zuYGg_70.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. people giggling"
+    },
+    {
+      "index": "29",
+      "video": "-cnIMz7PNog_77.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. playing steel guitar, slide guitar\nB. train horning\nC. playing squash\nD. tornado roaring\n\nThe answer is B. train horning. This sound is commonly associated with the train blowing its horn when pas"
+    },
+    {
+      "index": "30",
+      "video": "2sY5Q-XVolY_290.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. playing vibraphone"
+    },
+    {
+      "index": "31",
+      "video": "3JU1t_ndjbA_403.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. duck quacking"
+    },
+    {
+      "index": "32",
+      "video": "3-QdcdG1erA_46.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. playing harp"
+    },
+    {
+      "index": "33",
+      "video": "1D9cqLzTDWU_200.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. car passing by"
+    },
+    {
+      "index": "34",
+      "video": "2Yi4Z9-cuiE_9.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. ambulance siren."
+    },
+    {
+      "index": "35",
+      "video": "-51CA8BX7gU_30.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. female singing"
+    },
+    {
+      "index": "36",
+      "video": "2aPDsvJSXMI_102.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. people slapping"
+    },
+    {
+      "index": "37",
+      "video": "0pYpyy1VXdM_80.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. bird squawking"
+    },
+    {
+      "index": "38",
+      "video": "214DjCf4MG8_162.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. subway, metro, underground\nB. playing oboe\nC. chopping food\nD. turkey gobbling\n\nThe answer is A. subway, metro, underground. This is a common sound in urban areas, particularly in cities with exte"
+    },
+    {
+      "index": "39",
+      "video": "2489JjNIqyA_252.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. female speech, woman speaking"
+    },
+    {
+      "index": "40",
+      "video": "3VyV63CfR0M_17.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. playing vibraphone"
+    },
+    {
+      "index": "41",
+      "video": "1EiNSiO0UvU_0.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. raining"
+    },
+    {
+      "index": "42",
+      "video": "10d160Gt4Ms_2.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. tractor digging"
+    },
+    {
+      "index": "43",
+      "video": "44FbZUhd9bU_35.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. people whistling"
+    },
+    {
+      "index": "44",
+      "video": "0BRXPCVI6Y4_236.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. rope skipping"
+    },
+    {
+      "index": "45",
+      "video": "1MEMkQHIXvw_174.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. bouncing on trampoline"
+    },
+    {
+      "index": "46",
+      "video": "-_ftZ-yvxCI_89.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. people sniggering"
+    },
+    {
+      "index": "47",
+      "video": "39lhrblviZ4_60.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. playing electric guitar"
+    },
+    {
+      "index": "48",
+      "video": "1fT3ac-PuZU_18.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. baby laughter"
+    },
+    {
+      "index": "49",
+      "video": "36m1o-tM05g_36.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. cricket chirping"
+    },
+    {
+      "index": "50",
+      "video": "0aZZyAhkQR8_195.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. playing castanets. This is a common sound effect used in movies and video games to create the impression of someone playing castanets. Castanets are musical instruments that produce a distinctive "
+    },
+    {
+      "index": "51",
+      "video": "1ny_q8e9-Qo_127.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. playing oboe"
+    },
+    {
+      "index": "52",
+      "video": "-2MeFbcUUmk_30.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. male singing"
+    },
+    {
+      "index": "53",
+      "video": "2WfJBpN4elI_20.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. dog bow-wow"
+    },
+    {
+      "index": "54",
+      "video": "1W0SV_bdFnY_30.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. opening or closing car doors"
+    },
+    {
+      "index": "55",
+      "video": "1fDpeM4ms_s_60.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. skidding"
+    },
+    {
+      "index": "56",
+      "video": "-AYbRvMHKi8_95.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. playing tabla"
+    },
+    {
+      "index": "57",
+      "video": "1PAL-a2MnQk_16.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. wind rustling leaves"
+    },
+    {
+      "index": "58",
+      "video": "0jWAWkL8Pfw_11.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. playing acoustic guitar"
+    },
+    {
+      "index": "59",
+      "video": "-cT03CPlOqc_177.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. people coughing"
+    },
+    {
+      "index": "60",
+      "video": "3hyvrtG_jZE_89.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. airplane\n\nThe answer is D. airplane. The question asks about the source of sound, and the options provided include a lathe spinning, a dog bow-wow, a ferret dooking, and an airplane. Among these o"
+    },
+    {
+      "index": "61",
+      "video": "1gcKZuQga8k_30.mp4",
+      "gt": "D",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. female singing"
+    },
+    {
+      "index": "62",
+      "video": "2CidaVnd60g_0.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. playing cymbal"
+    },
+    {
+      "index": "63",
+      "video": "0tw6feOOTXI_18.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. crow cawing"
+    },
+    {
+      "index": "64",
+      "video": "-Akoz2Fqb4I_60.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. playing erhu"
+    },
+    {
+      "index": "65",
+      "video": "-w-3hvO_Zvo_227.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. playing harmonica"
+    },
+    {
+      "index": "66",
+      "video": "-RRWAri_7ks_35.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. playing sitar"
+    },
+    {
+      "index": "67",
+      "video": "-r6ReNc9NCs_69.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. male speech, man speaking\nB. police radio chatter\nC. subway, metro, underground\nD. playing snare drum\n\nThe answer is B. police radio chatter. This sound can be heard in various situations, such as"
+    },
+    {
+      "index": "68",
+      "video": "2ShrzNAxUYE_76.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. sharpening knife"
+    },
+    {
+      "index": "69",
+      "video": "46Lg2xglZu4_236.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. playing oboe"
+    },
+    {
+      "index": "70",
+      "video": "0a2lWfEIffU_0.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. people crowd"
+    },
+    {
+      "index": "71",
+      "video": "0v15xCmKqYo_78.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. people booing"
+    },
+    {
+      "index": "72",
+      "video": "3XyW729VjR8_139.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. car passing by"
+    },
+    {
+      "index": "73",
+      "video": "22HMtr4aeVo_50.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. playing acoustic guitar"
+    },
+    {
+      "index": "74",
+      "video": "0RSMUQosl38_30.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. male singing"
+    },
+    {
+      "index": "75",
+      "video": "36LRQi1ocvM_84.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. lighting firecrackers"
+    },
+    {
+      "index": "76",
+      "video": "0itrou_j0tI_84.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. dog barking"
+    },
+    {
+      "index": "77",
+      "video": "1G3hacBOyKI_30.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. male singing"
+    },
+    {
+      "index": "78",
+      "video": "47o5KUqNshI_140.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. people clapping"
+    },
+    {
+      "index": "79",
+      "video": "31KY84zW3XI_160.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. car engine starting"
+    },
+    {
+      "index": "80",
+      "video": "2niIOtYfozY_5.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. skateboarding"
+    },
+    {
+      "index": "81",
+      "video": "331QXFJdFuA_30.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. car passing by"
+    },
+    {
+      "index": "82",
+      "video": "1gvhZOwf_eY_30.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. female singing\nB. francolin calling\nC. forging swords\nD. rowboat, canoe, kayak rowing\n\nThe answer is D. rowboat, canoe, kayak rowing. This activity typically involves moving a boat or a canoe or k"
+    },
+    {
+      "index": "83",
+      "video": "3RT39tfrYiA_14.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. firing muskets"
+    },
+    {
+      "index": "84",
+      "video": "-fj_43YABAQ_30.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. female singing"
+    },
+    {
+      "index": "85",
+      "video": "42KhgjwEnKk_161.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. race car, auto racing"
+    },
+    {
+      "index": "86",
+      "video": "1_CC87jIhXk_382.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. swimming\nB. playing ukulele\nC. car engine idling\nD. ambulance siren\n\nThe answer is C. car engine idling. When someone is driving and the car engine is idling, it can be heard from a distance. The "
+    },
+    {
+      "index": "87",
+      "video": "0CvAFdtyVlo_39.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. striking pool. The answer is D. striking pool."
+    },
+    {
+      "index": "88",
+      "video": "3xbSAVzJ9kY_30.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. playing cymbal\nB. lip smacking\nC. motorboat, speedboat acceleration\nD. eating with cutlery\n\nThe answer is C. motorboat, speedboat acceleration. This scenario typically involves a boat speeding up "
+    },
+    {
+      "index": "89",
+      "video": "0lSPlC95iSM_30.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. people running"
+    },
+    {
+      "index": "90",
+      "video": "0ag2FEP5ioY_199.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. people farting"
+    },
+    {
+      "index": "91",
+      "video": "-JVYFW4VyKc_117.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. lions roaring"
+    },
+    {
+      "index": "92",
+      "video": "3T3hm1hHCto_228.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. male singing"
+    },
+    {
+      "index": "93",
+      "video": "18fUW_j2oZ4_8.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. male speech, man speaking"
+    },
+    {
+      "index": "94",
+      "video": "48iqWuaAkSU_140.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. people slurping"
+    },
+    {
+      "index": "95",
+      "video": "1mqeARbktQ8_240.mp4",
+      "gt": "C",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. playing steel guitar, slide guitar. This is a common musical instrument used in various genres of music, including blues and rock music. It's often associated with slide guitar techniques, which c"
+    },
+    {
+      "index": "96",
+      "video": "4-jVhH3a7tQ_37.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. child speech, kid speaking"
+    },
+    {
+      "index": "97",
+      "video": "0Yj_4nYe_Oo_0.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. popping popcorn."
+    },
+    {
+      "index": "98",
+      "video": "3qfJKebhBTU_18.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. people slapping"
+    },
+    {
+      "index": "99",
+      "video": "0sjF_jG4-B4_30.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. mouse clicking"
+    },
+    {
+      "index": "100",
+      "video": "2W4EL1ZoJrU_16.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. skateboarding"
+    },
+    {
+      "index": "101",
+      "video": "3lyhEzMvr4k_30.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. people running"
+    },
+    {
+      "index": "102",
+      "video": "3Gyi7AvDLzc_30.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. magpie calling"
+    },
+    {
+      "index": "103",
+      "video": "2upMYciVz-c_3.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. playing didgeridoo"
+    },
+    {
+      "index": "104",
+      "video": "4-DcTjFR4qw_100.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. car passing by"
+    },
+    {
+      "index": "105",
+      "video": "3sRO6iwfUxo_30.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. playing table tennis"
+    },
+    {
+      "index": "106",
+      "video": "30Y4_sSw2wc_81.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. engine accelerating, revving, vroom\n\nThe answer is D. engine accelerating, revving, vroom. This scenario could be a car or motorcycle engine revving and accelerating. The noise associated with thi"
+    },
+    {
+      "index": "107",
+      "video": "3GSq_fa_lkA_3.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. hammering nails"
+    },
+    {
+      "index": "108",
+      "video": "1DGgC1sclpY_0.mp4",
+      "gt": "C",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. sharpening knife"
+    },
+    {
+      "index": "109",
+      "video": "1k_KQt2gFA0_0.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. playing tennis"
+    },
+    {
+      "index": "110",
+      "video": "-n0RTmmrs-0_200.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. yodelling\n\nThe answer is D. yodelling. Yodelling is a type of singing that involves using the upper vocal range, often accompanied by hand clapping or foot stomping to add rhythm to the performanc"
+    },
+    {
+      "index": "111",
+      "video": "3kS4S8otgOc_172.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. police car (siren)"
+    },
+    {
+      "index": "112",
+      "video": "30fJ2tRViCE_30.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. playing castanets. Castanets are a musical instrument that is often used in music to create a specific sound effect, such as in this scenario. Playing castanets can produce a distinctive and recog"
+    },
+    {
+      "index": "113",
+      "video": "0OVv5NSUbAs_16.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. people running"
+    },
+    {
+      "index": "114",
+      "video": "3JU2xtinJws_239.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. chipmunk chirping"
+    },
+    {
+      "index": "115",
+      "video": "1ma4b_TsEVA_320.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. yodeling\n\nExplanation:\nYodeling is a type of singing that involves using both the upper and lower vocal registers, often with a distinctive pitch and rhythm. It typically involves a combination of"
+    },
+    {
+      "index": "116",
+      "video": "-j5tX4O3hh0_14.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. playing erhu"
+    },
+    {
+      "index": "117",
+      "video": "0xSlEe9i2A4_284.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. owl hooting"
+    },
+    {
+      "index": "118",
+      "video": "-tspttPvWD0_21.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. playing harp. The answer is C. playing harp."
+    },
+    {
+      "index": "119",
+      "video": "3nAc3hMiSvE_210.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. gibbon howling."
+    },
+    {
+      "index": "120",
+      "video": "-wrV1SnmQFQ_2.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. playing steel guitar, slide guitar\nB. car engine knocking\nC. driving snowmobile\nD. popping popcorn\n\nThe answer is B. car engine knocking. This event typically occurs when someone is listening to a"
+    },
+    {
+      "index": "121",
+      "video": "1z8Gt969VXE_56.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. waterfall burbling"
+    },
+    {
+      "index": "122",
+      "video": "-d1lAtyWGrM_7.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. people shuffling\n\nThe answer is C. people shuffling. This activity involves moving your feet in a rhythmic pattern, typically associated with dancing or walking in a lively manner. Shuffling can b"
+    },
+    {
+      "index": "123",
+      "video": "3PeDxa3ggAk_50.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. child speech, kid speaking"
+    },
+    {
+      "index": "124",
+      "video": "39gJk3V0ekk_30.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. people farting"
+    },
+    {
+      "index": "125",
+      "video": "3_v-2YlKoAU_78.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. bird squawking"
+    },
+    {
+      "index": "126",
+      "video": "-1rZFviqTTQ_28.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. people battle cry"
+    },
+    {
+      "index": "127",
+      "video": "-JXUUIutBS8_55.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. singing bowl\nB. magpie calling\nC. playing sitar\nD. lions growling\n\nThe answer is C. playing sitar. The sitar is a stringed musical instrument that is often used in Indian classical music, particul"
+    },
+    {
+      "index": "128",
+      "video": "0i_lGB3GshY_220.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. frog croaking"
+    },
+    {
+      "index": "129",
+      "video": "2aKUo0ZBbbw_270.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. people running"
+    },
+    {
+      "index": "130",
+      "video": "3my8O8vQxhw_0.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. child singing"
+    },
+    {
+      "index": "131",
+      "video": "3rxwXCAkvpU_83.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. car passing by"
+    },
+    {
+      "index": "132",
+      "video": "2gecnZTaDV0_1.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. cap gun shooting"
+    },
+    {
+      "index": "133",
+      "video": "1SpHjTw56jg_260.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. eating with cutlery"
+    },
+    {
+      "index": "134",
+      "video": "-LFyfhQOCjQ_218.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. slot machine\nB. cattle mooing\nC. tapping guitar\nD. ferret dooking"
+    },
+    {
+      "index": "135",
+      "video": "0RCx1Zsak4E_56.mp4",
+      "gt": "D",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. parrot talking"
+    },
+    {
+      "index": "136",
+      "video": "2j53rzjvfw8_12.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. people whistling"
+    },
+    {
+      "index": "137",
+      "video": "0iEg7FhIf0k_30.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. female singing"
+    },
+    {
+      "index": "138",
+      "video": "3yl2yTzV0AY_110.mp4",
+      "gt": "C",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. machine gun shooting"
+    },
+    {
+      "index": "139",
+      "video": "0wSIUkC0agk_39.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. playing steelpan. This is a musical instrument that is often used in orchestral music, particularly in the context of playing steelpan or steelpan. Steelpan is a type of musical instrument that is"
+    },
+    {
+      "index": "140",
+      "video": "-1X2N5XJckw_0.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. people marching"
+    },
+    {
+      "index": "141",
+      "video": "2KKidnTUl_k_85.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. people hiccupping"
+    },
+    {
+      "index": "142",
+      "video": "0kEFHKA484Q_49.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. running electric fan"
+    },
+    {
+      "index": "143",
+      "video": "2APv1eUSy5g_9.mp4",
+      "gt": "D",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. playing drum kit"
+    },
+    {
+      "index": "144",
+      "video": "0jQPB-ubZwI_233.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. playing bass drum."
+    },
+    {
+      "index": "145",
+      "video": "18G2NHmMGf8_30.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. motorboat, speedboat acceleration"
+    },
+    {
+      "index": "146",
+      "video": "32-q0b1HKSI_666.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. arc welding"
+    },
+    {
+      "index": "147",
+      "video": "108qZg_tnpM_44.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. playing harmonica"
+    },
+    {
+      "index": "148",
+      "video": "0DtJdRFPmS4_30.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. female singing\nB. cat meowing\nC. playing lacrosse\nD. car engine idling\n\nThe answer is B. cat meowing."
+    },
+    {
+      "index": "149",
+      "video": "-gMwxP9-xwk_2.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. people slurping"
+    },
+    {
+      "index": "150",
+      "video": "0Wzh7Hou30s_101.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. tapping guitar. This could be a guitar being played with the tapping technique, which is often used in guitar playing to create unique sounds or effects. The tapping guitar technique involves usin"
+    },
+    {
+      "index": "151",
+      "video": "3n_8G8fP8y4_231.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. playing marimba, xylophone"
+    },
+    {
+      "index": "152",
+      "video": "2KQAtN4XF8o_45.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. eating with cutlery. The answer is C. eating with cutlery."
+    },
+    {
+      "index": "153",
+      "video": "0QmOB92fQGU_32.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. ice cream truck, ice cream van\n\nThe answer is D. ice cream truck, ice cream van. Ice cream trucks or ice cream vans are known for their distinctive sound, which often includes a combination of dif"
+    },
+    {
+      "index": "154",
+      "video": "1Lh1OJKfAJg_16.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. mouse clicking"
+    },
+    {
+      "index": "155",
+      "video": "0YLUmiMFWx4_19.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. driving buses\nB. chicken crowing\nC. hair dryer drying\nD. snake hissing\n\nThe answer is B. chicken crowing. This event typically occurs when a person is listening to the sound of a chicken crowing, "
+    },
+    {
+      "index": "156",
+      "video": "2PtCxzVQVvI_59.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. playing harp. The answer is D. playing harp."
+    },
+    {
+      "index": "157",
+      "video": "-2zHCY2q4DA_139.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. cricket chirping"
+    },
+    {
+      "index": "158",
+      "video": "-Q3MX7Tgx_E_111.mp4",
+      "gt": "C",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. playing snare drum. This sound is often associated with drumming or playing the snare drum in musical performances. It's a common sound effect used in movies, video games, and music production to "
+    },
+    {
+      "index": "159",
+      "video": "3anaTGoCb7M_11.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. playing bagpipes"
+    },
+    {
+      "index": "160",
+      "video": "1CT3KxoGOkc_33.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. running electric fan"
+    },
+    {
+      "index": "161",
+      "video": "--UQXuZfbFY_59.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. playing piano"
+    },
+    {
+      "index": "162",
+      "video": "3XhpZyBrIVk_18.mp4",
+      "gt": "D",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. car passing by"
+    },
+    {
+      "index": "163",
+      "video": "2k3bPjaLgrA_19.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. parrot talking"
+    },
+    {
+      "index": "164",
+      "video": "1KFV0RbRDPc_28.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. tapping guitar. This could be a guitar player tapping the guitar strings, creating a unique sound effect. Guitar tapping is a popular technique used by guitarists to create percussive sounds or to"
+    },
+    {
+      "index": "165",
+      "video": "-HDZjRaKt1w_4.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. hail. The answer is D. hail."
+    },
+    {
+      "index": "166",
+      "video": "0SUtleWQbYA_40.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. motorboat, speedboat acceleration"
+    },
+    {
+      "index": "167",
+      "video": "15Ko_gCo_Mw_460.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. playing clarinet"
+    },
+    {
+      "index": "168",
+      "video": "1UB94O0p1Ls_130.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. playing cymbal\nB. baby babbling\nC. chipmunk chirping\nD. dog howling\n\nThe answer is B. baby babbling. This sound event typically occurs when a baby is babbling or cooing, which is a common occurren"
+    },
+    {
+      "index": "169",
+      "video": "-LGKIp1i3jE_0.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. playing didgeridoo"
+    },
+    {
+      "index": "170",
+      "video": "-5KBSlu3DQc_30.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. rowboat, canoe, kayak rowing. This is a common sound associated with water activities on the water, such as rowing boats or kayaking. The answer provided describes the scenario of someone rowing a"
+    },
+    {
+      "index": "171",
+      "video": "3xOMYddub4o_18.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. playing glockenspiel"
+    },
+    {
+      "index": "172",
+      "video": "00nQKgFqiKQ_6.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. engine accelerating, revving, vroom\n\nThe answer is D. engine accelerating, revving, vroom. This sound is often associated with vehicles or machinery operating at high speed, such as a car or motor"
+    },
+    {
+      "index": "173",
+      "video": "2NYbr0NgWbI_90.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. female speech, woman speaking"
+    },
+    {
+      "index": "174",
+      "video": "3UzJI70pAEs_117.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. cricket chirping"
+    },
+    {
+      "index": "175",
+      "video": "tVNREdFsylY_30.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. people cheering"
+    },
+    {
+      "index": "176",
+      "video": "3rGVkZS8KL4_293.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. people shuffling. The answer is B. people shuffling."
+    },
+    {
+      "index": "177",
+      "video": "3s0QRMuXTnE_60.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. church bell ringing."
+    },
+    {
+      "index": "178",
+      "video": "1S4SJnWsq1s_442.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. mosquito buzzing"
+    },
+    {
+      "index": "179",
+      "video": "40RCCwGGZno_187.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. female speech, woman speaking"
+    },
+    {
+      "index": "180",
+      "video": "3VU0ygtGw58_29.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. engine accelerating, revving, vroom\nB. cell phone buzzing\nC. dog bow-wow\nD. people eating apple\n\nThe answer is B. cell phone buzzing. This sound is often associated with a buzzing or ringing of a "
+    },
+    {
+      "index": "181",
+      "video": "1V4dOLDD02Q_5.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. airplane flyby"
+    },
+    {
+      "index": "182",
+      "video": "333RFK0IlFU_58.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. slot machine"
+    },
+    {
+      "index": "183",
+      "video": "01qB_Lg2wcQ_20.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. strike lighter igniting\n\nExplanation:\nA. playing trombone\nB. strike lighter igniting\nC. playing gong\nD. blowtorch igniting\n\nIn this scenario, the answer is B. strike lighter igniting. This action "
+    },
+    {
+      "index": "184",
+      "video": "1YWeSXAXwQE_30.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. people burping"
+    },
+    {
+      "index": "185",
+      "video": "0aA8V88_djQ_20.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. frog croaking"
+    },
+    {
+      "index": "186",
+      "video": "0Veq3Kqvd54_150.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. people slurping"
+    },
+    {
+      "index": "187",
+      "video": "3r6y7bG4RjQ_166.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. electric shaver, electric razor shaving"
+    },
+    {
+      "index": "188",
+      "video": "29Vt10n1jYw_20.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. playing table tennis"
+    },
+    {
+      "index": "189",
+      "video": "0JtEMni9aws_15.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. bouncing on trampoline"
+    },
+    {
+      "index": "190",
+      "video": "-DVM0BK_h5A_30.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. ferret dooking"
+    },
+    {
+      "index": "191",
+      "video": "3OI3WujIzZU_20.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. male singing"
+    },
+    {
+      "index": "192",
+      "video": "3QyjOPf4rbI_0.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. playing darts"
+    },
+    {
+      "index": "193",
+      "video": "2sKmLLGGuVw_0.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. pheasant crowing"
+    },
+    {
+      "index": "194",
+      "video": "2JpvRGz5Dq0_1.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. swimming\nB. wind chime\nC. using sewing machines\nD. snake rattling\n\nThe answer is C. using sewing machines. Sewing machines are often used in various applications, including home sewing, industrial"
+    },
+    {
+      "index": "195",
+      "video": "3en9IzSPnNU_141.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. beat boxing\nB. playing accordion\nC. police car (siren)\nD. driving snowmobile\n\nThe answer is C. police car (siren)"
+    },
+    {
+      "index": "196",
+      "video": "36bDoMC3E0M_14.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. rowboat, canoe, kayak rowing. This is a common sound associated with watercraft moving on the water. Rowboats, canoes, and kayaks are often used for leisure activities or transportation on calm wa"
+    },
+    {
+      "index": "197",
+      "video": "35AwgRIAwmo_30.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. female singing"
+    },
+    {
+      "index": "198",
+      "video": "0d--qR2htPQ_120.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. squishing water. This could be a person splashing water, a water balloon popping, or a water bottle being squeezed. The answer is C. squishing water."
+    },
+    {
+      "index": "199",
+      "video": "1-AP0JB3kZA_9.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. rope skipping"
+    },
+    {
+      "index": "200",
+      "video": "05teB0FNOnE_52.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. swimming"
+    },
+    {
+      "index": "201",
+      "video": "05ri4y9hZJ4_30.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. child singing"
+    },
+    {
+      "index": "202",
+      "video": "-KRjZ2gjEwc_3.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. people finger snapping"
+    },
+    {
+      "index": "203",
+      "video": "-FFeLquyrFQ_0.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. playing snare drum"
+    },
+    {
+      "index": "204",
+      "video": "43UkI0CDi7w_2.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. elephant trumpeting"
+    },
+    {
+      "index": "205",
+      "video": "-GW1J75oAKU_304.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. cat meowing"
+    },
+    {
+      "index": "206",
+      "video": "0h4ZlkBp8o0_15.mp4",
+      "gt": "C",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. car engine knocking"
+    },
+    {
+      "index": "207",
+      "video": "1rUPNoAT5d0_85.mp4",
+      "gt": "D",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "208",
+      "video": "1YcZq0OUO8Y_30.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. female singing"
+    },
+    {
+      "index": "209",
+      "video": "45XeZOfuc9c_254.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. lighting firecrackers"
+    },
+    {
+      "index": "210",
+      "video": "-x8HgXnpf0s_0.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. playing mandolin"
+    },
+    {
+      "index": "211",
+      "video": "2EU-le_5i4A_60.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. cat purring"
+    },
+    {
+      "index": "212",
+      "video": "-lIxnqaPGzA_882.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. people farting"
+    },
+    {
+      "index": "213",
+      "video": "334u5Ja0iho_69.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. car passing by"
+    },
+    {
+      "index": "214",
+      "video": "1u9dGylRkyM_35.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. woodpecker pecking tree"
+    },
+    {
+      "index": "215",
+      "video": "3n768MgJd2Q_87.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. playing acoustic guitar"
+    },
+    {
+      "index": "216",
+      "video": "2gz3GvKN1sA_265.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. basketball bounce"
+    },
+    {
+      "index": "217",
+      "video": "0a9wVat2PWk_230.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. playing tabla"
+    },
+    {
+      "index": "218",
+      "video": "06DbIa7z4Zw_110.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. skateboarding\nB. playing bassoon\nC. orchestra\nD. lip smacking\n\nThe answer is A. skateboarding. Skateboarding involves the sound of the skateboard wheels rolling on the ground, which can be heard a"
+    },
+    {
+      "index": "219",
+      "video": "45UNrYN8qG4_104.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. mosquito buzzing"
+    },
+    {
+      "index": "220",
+      "video": "2bEQQ35Wkdc_31.mp4",
+      "gt": "D",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. people coughing"
+    },
+    {
+      "index": "221",
+      "video": "459h5FxgnrU_30.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. playing acoustic guitar"
+    },
+    {
+      "index": "222",
+      "video": "2ncA_PGb8So_30.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. people shuffling\n\nThe answer is D. people shuffling. This activity involves moving one's feet in a rhythmic pattern, typically associated with dancing or walking in a musical context. Shuffling fe"
+    },
+    {
+      "index": "223",
+      "video": "021XnTtxzo8_230.mp4",
+      "gt": "D",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. people crowd. The answer is B. people crowd."
+    },
+    {
+      "index": "224",
+      "video": "33aXr5IOMYg_48.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. canary calling"
+    },
+    {
+      "index": "225",
+      "video": "0nbon-ub-cc_229.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. car engine starting\nB. playing steelpan\nC. duck quacking\nD. driving snowmobile\n\nThe answer is B. playing steelpan. Steelpan is a musical instrument that produces a distinctive sound, often used in"
+    },
+    {
+      "index": "226",
+      "video": "-u-OViTO-UA_1.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. rope skipping"
+    },
+    {
+      "index": "227",
+      "video": "1i3_NIKp3Zk_18.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. playing cornet"
+    },
+    {
+      "index": "228",
+      "video": "05tcLjLeBdQ_861.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. baby babbling"
+    },
+    {
+      "index": "229",
+      "video": "1Hd2AciuKcM_140.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. horse clip-clop"
+    },
+    {
+      "index": "230",
+      "video": "3c5IlwhnbAM_60.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. cat purring"
+    },
+    {
+      "index": "231",
+      "video": "1yqzK5vYE28_223.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. tapping guitar. This could be a guitar player tapping the guitar strings, creating a percussive sound effect. The answer is C. tapping guitar."
+    },
+    {
+      "index": "232",
+      "video": "26OX7nUmR-w_90.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. driving motorcycle"
+    },
+    {
+      "index": "233",
+      "video": "-Cv3gOXEoxA_40.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. people eating crisps"
+    },
+    {
+      "index": "234",
+      "video": "3PGtQo2b6O0_15.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. crow cawing"
+    },
+    {
+      "index": "235",
+      "video": "3REDa7Da7Dk_30.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. playing hockey"
+    },
+    {
+      "index": "236",
+      "video": "3jfDmY9hqqE_30.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. dog howling"
+    },
+    {
+      "index": "237",
+      "video": "1QSd_2Trxig_45.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. slot machine"
+    },
+    {
+      "index": "238",
+      "video": "26q4l9sxUKY_67.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. people running"
+    },
+    {
+      "index": "239",
+      "video": "1hl0zQaTJNI_112.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. singing bowl"
+    },
+    {
+      "index": "240",
+      "video": "-oy0BkpMGAk_30.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. skidding"
+    },
+    {
+      "index": "241",
+      "video": "15o1ap9vyG8_57.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. fox barking."
+    },
+    {
+      "index": "242",
+      "video": "1TPceiqJozU_7.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. scuba diving"
+    },
+    {
+      "index": "243",
+      "video": "0qmhy60KNa8_150.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. female speech, woman speaking"
+    },
+    {
+      "index": "244",
+      "video": "3d4Q9iU5Je8_6.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. cat meowing"
+    },
+    {
+      "index": "245",
+      "video": "1eLjEl8eDqk_30.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. people burping"
+    },
+    {
+      "index": "246",
+      "video": "2fXTNs_R4yo_224.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. cat caterwauling"
+    },
+    {
+      "index": "247",
+      "video": "0WkfP8GAR4M_55.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. playing acoustic guitar"
+    },
+    {
+      "index": "248",
+      "video": "2g6MRr5jsKY_79.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. skiing"
+    },
+    {
+      "index": "249",
+      "video": "487jIOnY-yE_8.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. singing choir"
+    },
+    {
+      "index": "250",
+      "video": "23ky1UGWeKg_190.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. playing bass guitar"
+    },
+    {
+      "index": "251",
+      "video": "0aNRJmGOUFo_30.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. dog howling"
+    },
+    {
+      "index": "252",
+      "video": "3GA8zFujOFU_30.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. female speech, woman speaking\nB. playing bass drum\nC. splashing water\nD. air horn\n\nThe answer is B. playing bass drum. This sound event typically occurs when someone is playing a bass drum instrum"
+    },
+    {
+      "index": "253",
+      "video": "3vYoIU0jv60_30.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. playing violin, fiddle"
+    },
+    {
+      "index": "254",
+      "video": "-ggLqUKLPfU_0.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. people sneezing"
+    },
+    {
+      "index": "255",
+      "video": "-q0m29pHK98_1.mp4",
+      "gt": "D",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. people booing"
+    },
+    {
+      "index": "256",
+      "video": "3Kqlc3mM_Sk_44.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. turkey gobbling. This sound event is often associated with the turkey gobbling during hunting or when the turkey is making a call. The turkey gobbling can be heard in various situations, such as d"
+    },
+    {
+      "index": "257",
+      "video": "1o8EUEYCqIY_25.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. helicopter\n\nThe answer is D. helicopter. Helicopters are commonly used in various applications, such as transportation, photography, and sound effects in movies and video games. They are known for"
+    },
+    {
+      "index": "258",
+      "video": "3ajAP-bZ9Vs_10.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. engine accelerating, revving, vrooming"
+    },
+    {
+      "index": "259",
+      "video": "-Jj_VT1dTDI_136.mp4",
+      "gt": "D",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "260",
+      "video": "-516tRoxniU_20.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. playing cello"
+    },
+    {
+      "index": "261",
+      "video": "-omoW7wuRfQ_30.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. rowing a boat, canoe, kayak\nB. cat purring\nC. using sewing machines\nD. playing bugle\n\nThe answer is A. rowing a boat, canoe, kayak. This activity involves moving through water, typically associate"
+    },
+    {
+      "index": "262",
+      "video": "-sCrXS2kJlA_30.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. skateboarding"
+    },
+    {
+      "index": "263",
+      "video": "3l4VPdx6iAw_156.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. playing bassoon"
+    },
+    {
+      "index": "264",
+      "video": "0VJJ_em16PI_49.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. playing bass guitar"
+    },
+    {
+      "index": "265",
+      "video": "1MhGKuAaj-A_30.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. child singing"
+    },
+    {
+      "index": "266",
+      "video": "2aOm79Zj4f8_1.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. tap dancing"
+    },
+    {
+      "index": "267",
+      "video": "0MBfdfqhflk_496.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. female singing\nB. people sobbing\nC. elephant trumpeting\nD. people eating noodle\n\nThe answer is A. female singing. This choice indicates that the primary audio event being described involves a fema"
+    },
+    {
+      "index": "268",
+      "video": "38a6_19txtU_69.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. skateboarding"
+    },
+    {
+      "index": "269",
+      "video": "2WnPwsQ1Ku4_131.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. sharpening knife"
+    },
+    {
+      "index": "270",
+      "video": "1BgAcGWShOk_124.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. playing bass drum. The answer is C. playing bass drum."
+    },
+    {
+      "index": "271",
+      "video": "2ZTkL3F761A_30.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. dog bow-wow"
+    },
+    {
+      "index": "272",
+      "video": "2w6jRF1Ekhs_193.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. playing sitar"
+    },
+    {
+      "index": "273",
+      "video": "2QZSUAQMHqk_39.mp4",
+      "gt": "C",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. cheetah chirruping"
+    },
+    {
+      "index": "274",
+      "video": "0M-hPUiNVks_20.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. female speech, woman speaking"
+    },
+    {
+      "index": "275",
+      "video": "23ydDQbdqGQ_13.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. playing synthesizer."
+    },
+    {
+      "index": "276",
+      "video": "-rwT6vwL3ZU_290.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. playing cello"
+    },
+    {
+      "index": "277",
+      "video": "1wnBMYlSkLA_30.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. playing bass guitar"
+    },
+    {
+      "index": "278",
+      "video": "2XK3vXa-wgw_30.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. horse clip-clop"
+    },
+    {
+      "index": "279",
+      "video": "-IbJX_oadgs_330.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. playing electric guitar"
+    },
+    {
+      "index": "280",
+      "video": "1GCzEAELChA_77.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. duck quacking"
+    },
+    {
+      "index": "281",
+      "video": "2cmGfVqK8Ng_94.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. people hiccup"
+    },
+    {
+      "index": "282",
+      "video": "2N6a-OVNSwU_590.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. skateboarding"
+    },
+    {
+      "index": "283",
+      "video": "-ucIqx2-sPA_50.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. playing harpsichord. This is a musical instrument that is often used in classical music, particularly in the Baroque period, to imitate the sound of a harpsichord. Harpsichord is known for its dis"
+    },
+    {
+      "index": "284",
+      "video": "-4pmCrSdMhg_30.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. horse clip-clop"
+    },
+    {
+      "index": "285",
+      "video": "3A0LxYhBvj0_190.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. people clapping"
+    },
+    {
+      "index": "286",
+      "video": "03Y-DbTforg_357.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. people slurping"
+    },
+    {
+      "index": "287",
+      "video": "2bA9-WkLX-A_10.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. cricket chirping"
+    },
+    {
+      "index": "288",
+      "video": "2N_2SwRY924_85.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. wind noise"
+    },
+    {
+      "index": "289",
+      "video": "1Z2LhZ-2rU0_4.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. turkey gobbling"
+    },
+    {
+      "index": "290",
+      "video": "0VP-tjMKNko_186.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. lathe spinning"
+    },
+    {
+      "index": "291",
+      "video": "1ljQxmjObH8_234.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. playing erhu\nB. airplane\nC. chainsawing trees\nD. pig oinking"
+    },
+    {
+      "index": "292",
+      "video": "2Wj_8uQ16AM_101.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. playing erhu"
+    },
+    {
+      "index": "293",
+      "video": "-WMmf4NNcJ8_82.mp4",
+      "gt": "C",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. playing electric guitar"
+    },
+    {
+      "index": "294",
+      "video": "-zoQRlTGmt4_111.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. ice cracking"
+    },
+    {
+      "index": "295",
+      "video": "1PoQXeRabzk_43.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. cricket chirping"
+    },
+    {
+      "index": "296",
+      "video": "1JbXJl0Uu8I_124.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. chimpanzee pant-hooting"
+    },
+    {
+      "index": "297",
+      "video": "2HdaWygLPPo_30.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. playing piano"
+    },
+    {
+      "index": "298",
+      "video": "-lk__L7TBSo_132.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. playing hammond organ"
+    },
+    {
+      "index": "299",
+      "video": "1IK0W2qOYz0_27.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. playing erhu"
+    }
+  ],
+  "elapsed_seconds": 724.7,
+  "checkpoint": "checkpoints/full_v6/stage3_instruction",
+  "config": {
+    "use_audio": true,
+    "use_temporal_bridge": true,
+    "mm_projector_type": "stc",
+    "audio_mode": "silent",
+    "shift_seconds": null,
+    "visual_mode": "motion_blur",
+    "visual_severity": 0.66
+  }
+}

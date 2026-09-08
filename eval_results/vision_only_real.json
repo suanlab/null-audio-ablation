@@ -1,0 +1,800 @@
+{
+  "accuracy": 50.0,
+  "correct": 49,
+  "total": 98,
+  "predictions": [
+    {
+      "index": "0",
+      "video": "-WwAxd-BBrs_0.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. Driving a motorcycle\n\nThe answer is B. skiing\n\nThe answer is C. Car repair\n\nThe answer is D. nailing\n\nThe answer is A. Driving a motorcycle\n\nThe answer is B. skiing\n\nThe answer is C. Car repair\n\nT"
+    },
+    {
+      "index": "1",
+      "video": "cblvSlTyiqQ_6.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. speak\nB. Play music\nC. Play singing\nD. Play the siren\n答案：A. speak\nB. Play music\nC. Play singing\nD. Play the siren\n答案：D. Play the siren"
+    },
+    {
+      "index": "2",
+      "video": "-Nis-cumBYc_250.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. Car repair\n答案：C. Car repair"
+    },
+    {
+      "index": "3",
+      "video": "-Nis-cumBYc_250.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Racetrack\n答案：D. Racetrack"
+    },
+    {
+      "index": "4",
+      "video": "-JC9g19P-vU_35.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. crow"
+    },
+    {
+      "index": "5",
+      "video": "-HVg-i88xE0_30.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. Vehicle technology\nB. scenery\nC. Car performance\nD. The road is flat\n答案: B. scenery\n\n答案: C. Car performance\n\n答案: D. The road is flat"
+    },
+    {
+      "index": "6",
+      "video": "-IpGWTs7ckQ_10.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. a furious storm B. the wind is mild and the sun is bright C. Dark clouds D. The typhoon is coming\n\nThe answer is B. the wind is mild and the sun is bright\n\nThe answer is B. the wind is mild and th"
+    },
+    {
+      "index": "7",
+      "video": "-LxtesAXWIU_32.mp4",
+      "gt": "D",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. hail\n\nThe answer is A. wind\n\nThe answer is B. hail\n\nThe answer is D. sea wave"
+    },
+    {
+      "index": "8",
+      "video": "-SKnbdKeajU_7.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. The sound of watering\n答案：D. The sound of mowing\n答案：C. The sound of watering"
+    },
+    {
+      "index": "9",
+      "video": "-HIPq7T3eFI_11.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. Car\nB. motorcycle\nC. siren\nD. gun fire\n\nAssistant: C. siren\nD. gun fire"
+    },
+    {
+      "index": "10",
+      "video": "-3Hi-atFiAw_30.mp4",
+      "gt": "C",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. Learn rope skipping\nAnswer with the letter. C. Learn to dance\nAnswer with the letter. D. Jump Gymnastics\nAnswer with the letter. A. mobile phone"
+    },
+    {
+      "index": "11",
+      "video": "HKgby13GaZM_60.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. helicopter\n\nThe answer is A. lawn mower\n\nThe answer is C. helicopter\n\nThe answer is B. gun\n\nThe answer is C. helicopter\n\nThe answer is C. helicopter\n\nThe answer is C. helicopter\n\nThe answer is C. "
+    },
+    {
+      "index": "12",
+      "video": "-TnDYy29pRA_30.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. automobile engine\nB. Bulldozer\nC. The sound of motorcycles\nD. Blower\n\nAssistant: C. The sound of motorcycles"
+    },
+    {
+      "index": "13",
+      "video": "-5qzWUgsszA_540.mp4",
+      "gt": "D",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. Gunfire"
+    },
+    {
+      "index": "14",
+      "video": "-NxAELmUcec_53.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. train\n答案：B. train\n\n"
+    },
+    {
+      "index": "15",
+      "video": "2DfZ21h3rM4_3.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. dog\n答案是 D. turkey"
+    },
+    {
+      "index": "16",
+      "video": "-SZIgJCerwI_8.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. motorboat\n答案：C. motorboat\n答案：D. motorcycle\n答案：B. aircraft\n答案：C. motorboat\n答案：D. motorcycle\n答案：A. remote controlled aircraft"
+    },
+    {
+      "index": "17",
+      "video": "-N_S8kZxh-M_152.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. watering\n\nAssistant: A. sow\nB. cut grass\nC. Spraying pesticides\nD. watering\nE. cutting grass\nF. cutting grass\nG. cutting grass\nH. cutting grass\nI. watering\nJ. cutting grass\nK. watering\nL. cutting "
+    },
+    {
+      "index": "18",
+      "video": "-8Nvvo3qM-A_30.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. TOILET\n\nAssistant: A. TOILET\nB. Swimming Pool\nC. kitchen\nD. a living room\n答案: A. TOILET"
+    },
+    {
+      "index": "19",
+      "video": "-JtMqnUxmjM_30.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. diving\n答案: B. rowboat\n答案: A. riding\n答案: D. driving a racing car\n答案: C. diving\n答案: B. rowboat\n答案: A. riding\n答案: D. driving a racing car\n答案: C. diving\n答案: B."
+    },
+    {
+      "index": "20",
+      "video": "-JaUsb1_IbI_30.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. skiing\nB. disco dancing\nC. The sound of running water\nD. sing\n答案: A. skiing\nB. disco dancing\nC. The sound of running water\nD. sing\n答案: A. skiing\nB. disco dancing\nC. The sound of running water\nD"
+    },
+    {
+      "index": "21",
+      "video": "-INNrk4mik4_31.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " c. quack\nB. A rooster crows\nC. Quack \nD. frog\n答案：B. A rooster crows\n答案：C. Quack \n答案：D. frog\n答案：A. police car siren\n答案：B. A rooster crows\n"
+    },
+    {
+      "index": "22",
+      "video": "-3Q5K1PO7ag_51.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. Bowling\nB. shuttlecock\nC. play volleyball\nD. Play billiards\n答案: D. Play billiards\n\n"
+    },
+    {
+      "index": "23",
+      "video": "-SPa5NgtBNE_362.mp4",
+      "gt": "C",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. shuttlecock"
+    },
+    {
+      "index": "24",
+      "video": "-KOgOEvhrbw_154.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. Machine gun fire\nB. cut grass\nC. shell\nD. Fire drill\n答案: D. Fire drill\n\n"
+    },
+    {
+      "index": "25",
+      "video": "-YGyhkTItRo_189.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. train\n答案：A. train\n\n"
+    },
+    {
+      "index": "26",
+      "video": "-Va6UCHNXzs_250.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. Ring the bell"
+    },
+    {
+      "index": "27",
+      "video": "-OI4VoCS28I_5.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. dog\n答案：D. dog\n答案：B. cat\n答案：D. dog\n答案：C. lion\n答案：B. cat\n答案：A. Alpaca"
+    },
+    {
+      "index": "28",
+      "video": "-L_--bn4bys_45.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. tortoise\n\nThe answer is B. fish\nThe answer is C. whale\nThe answer is D. octopus\nThe answer is A. tortoise"
+    },
+    {
+      "index": "29",
+      "video": "-JTbHL7OKf0_52.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. rowboat\n\nAssistant: B. Hyenas\nC. sound of wind\nD. rowboat\n答案：B. Hyenas\n答案：A. train\n答案：D. rowboat\n答案：C. sound of wind\n答案：D. rowboat\n答案：B. Hyenas"
+    },
+    {
+      "index": "30",
+      "video": "-ERNqGf249g_346.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. cut up vegetables"
+    },
+    {
+      "index": "31",
+      "video": "-KqXcm-I2zY_87.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. football match\nB. Badminton competition\nC. Ping pong competition\nD. tennis match\n答案: C. Ping pong competition\n\n"
+    },
+    {
+      "index": "32",
+      "video": "-MIIsQQJO2o_30.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. Birdsong\nD. underwater sound\n答案：C. Birdsong\n答案：A. flow\n答案：B. sound of wind\n答案：D. underwater sound"
+    },
+    {
+      "index": "33",
+      "video": "-StCx0GPObw_30.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. Racetrack\nExplanation: The context suggests that the video takes place on a racetrack, as it is often used in sports events like horse racing or car racing. The other options do not fit the contex"
+    },
+    {
+      "index": "34",
+      "video": "-W9ZCx9t_8s_30.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " c\n\nAssistant: B. Geese crow\nC. crow\nD. gibbon\n答案: C. crow"
+    },
+    {
+      "index": "35",
+      "video": "-KpXEoL4rW8_11.mp4",
+      "gt": "D",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. dog\n答案：B. dog\n\n答案：B. dog\n\n答案：A. pheasant\n\n答案：C. cat\n\n答案：D. wolf\n\n答案：B. dog\n\n答案：B. dog\n\n答案：B. dog\n\n答案：B. dog\n\n答案：B."
+    },
+    {
+      "index": "36",
+      "video": "-IBtBeR6B00_0.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. Car\nE. Tank\nF. Missile\nG. Aircraft\nH. Helicopter\nI. Rocket\nJ. Submarine\nK. Airplane\nL. Jet\nM. Helicopter\nN. Rocket\nO. Submarine\nP. Airplane\nQ. Helicopter\nR"
+    },
+    {
+      "index": "37",
+      "video": "-RZuJjoglMs_61.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. it's hailing\nB. Whistling\nC. Advertising vehicle\nD. Civil defense alarm\n答案: D. Civil defense alarm\n\n以下是中国关于历史考试的单项选择题，请选出其中的正确答案。\n下列哪项不是《中华人民共和国国防教育法》规定的国防教育的内容？"
+    },
+    {
+      "index": "38",
+      "video": "-IilQt9YNzw_613.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. Submarine diving\n答案：A. Submarine diving\n答案：C. Turtle swimming\n答案：D. Submarine rescue\n答案：B. repeat the words of others like a parrot\n答案：C. Turtle swimming\n答案：A. Submarine diving\n答案：D. Submarine"
+    },
+    {
+      "index": "39",
+      "video": "-JC9g19P-vU_2.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. crow\n\nThe answer is C. Magpie\n\nThe answer is A. chicken\n\nThe answer is B. crow\n\nThe answer is D. lion"
+    },
+    {
+      "index": "40",
+      "video": "-V-3H5lOA2k_30.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. Hoe\nB. seeder\nC. Tipper\nD. The sound of mowing\n答案是 D. The sound of mowing"
+    },
+    {
+      "index": "41",
+      "video": "-UxlFmoVuPo_30.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. pheasant\n答案是 D. dog\n答案是 C. cat\n答案是 B. chicken\n答案是 A. pheasant"
+    },
+    {
+      "index": "42",
+      "video": "4IF49XmNCaw_50.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. Flush the toilet"
+    },
+    {
+      "index": "43",
+      "video": "-8ju6V8B5Oc_40.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. TOILET"
+    },
+    {
+      "index": "44",
+      "video": "-8a_sOalbYc_308.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. off-white"
+    },
+    {
+      "index": "45",
+      "video": "-Tok_g_jgE0_268.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Rope skipping\nExplanation: The video shows people engaging in rope skipping, which is a form of exercise or recreational activity involving jumping over a rope held by another person. Therefore, t"
+    },
+    {
+      "index": "46",
+      "video": "-O4W3NA5-uA_150.mp4",
+      "gt": "D",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. toilet flush\nB. toilet flush\nC. play volleyball\nD. play tennis\n\n答案：B. toilet flush\n\n"
+    },
+    {
+      "index": "47",
+      "video": "we8NP0EKyZQ_20.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. Drive a nail"
+    },
+    {
+      "index": "48",
+      "video": "-KrDQXnlXRw_10.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Toilet flushing\n答案：D. Toilet flushing"
+    },
+    {
+      "index": "49",
+      "video": "-Wigi5NZWPY_47.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. Drive a nail"
+    },
+    {
+      "index": "50",
+      "video": "-TZtWSNT9Po_30.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. motorboat\n\nAssistant: B. motorboat\nC. waterfall\nD. highway\nE. river\nF. lake\nG. stream\nH. mountain\nI. bridge\nJ. tunnel\nK. road\nL. road\nM. tunnel\nN. bridge\nO. tunnel\n"
+    },
+    {
+      "index": "51",
+      "video": "-Ejdbj6I2W4_0.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Fireworks"
+    },
+    {
+      "index": "52",
+      "video": "-XRiLbb3Syo_2.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. Siren\n答案：C. Siren"
+    },
+    {
+      "index": "53",
+      "video": "-SWs9oP1MKQ_10.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. honeybee\n\nThe answer is A. planing\n\n"
+    },
+    {
+      "index": "54",
+      "video": "-2LovF10IwM_179.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. Foam extrusion\nB. Knead the dough\nC. He Mian\nD. Making lollipops\n答案: B. Knead the dough"
+    },
+    {
+      "index": "55",
+      "video": "-R2kN-_12pc_30.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. riding\n答案：A. riding\n\n"
+    },
+    {
+      "index": "56",
+      "video": "-IL4hjBMsLE_56.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " c. The magpie calls\nD. The pigeon calls\n\nAssistant: B. A rooster crows\nC. The magpie calls\nD. The pigeon calls\n答案：B. A rooster crows\n答案：C. The magpie calls\n答案：D. The pigeon calls\n答案"
+    },
+    {
+      "index": "57",
+      "video": "-OGq-n_9EYA_39.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. Train starts"
+    },
+    {
+      "index": "58",
+      "video": "-NPu34as_OY_7.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. dog\n答案：D. dog"
+    },
+    {
+      "index": "59",
+      "video": "-HxVr19g6HQ_214.mp4",
+      "gt": "C",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. assemble an elevator"
+    },
+    {
+      "index": "60",
+      "video": "-HUcjhcskP4_40.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. tram\n\nExplanation: The sound described in the video is a tram, which is a type of streetcar or urban rail vehicle used for public transportation. Trams are typically powered by electricity and run"
+    },
+    {
+      "index": "61",
+      "video": "-NucoIuPWYc_6.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. lion\n答案：D. Cheetah\n\n答案：A. lion\n\n答案：B. black bear\n\n答案：C. otter\n\n答案：D. Cheetah\n\n答案：A. lion\n\n答案：B. black bear\n\n答案：C. otter\n\n答案：D."
+    },
+    {
+      "index": "62",
+      "video": "-JBRB2gGWDA_4.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. Parachute jump\n答案：D. Parachute jump"
+    },
+    {
+      "index": "63",
+      "video": "-3inDTr5RV0_631.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. motor\nB. Lathe\nC. gear\nD. Machine friction sound\n答案: B. Lathe\n\n"
+    },
+    {
+      "index": "64",
+      "video": "-GbVgsMZ9U0_292.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. Lathe rotation\n答案：D. Lathe rotation\n"
+    },
+    {
+      "index": "65",
+      "video": "-IL4hjBMsLE_76.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " c. A rooster crows\nD. Peacock's cry\n答案：C. A rooster crows\n答案：A. The magpie calls\n答案：B. repeat the words of others like a parrot\n答案：D. Peacock's cry\n答案：C. A rooster"
+    },
+    {
+      "index": "66",
+      "video": "-SyWyev2PfI_77.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. The dog howled"
+    },
+    {
+      "index": "67",
+      "video": "-PN3OIo-oT4_56.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. ambulance\nB. train\nC. aircraft\nD. highway\n答案: B. train\n\n以下是中国关于历史考试的单项选择题，请选出其中的正确答案。\n下列哪一项是1956年毛泽东在中央政治局扩大会议上作《论十大关系》讲话的直接背景"
+    },
+    {
+      "index": "68",
+      "video": "-HxQ9AoyRmY_30.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. A flock of chickens\nB. frog\nC. gibbon\nD. duck\n\nAssistant: B. frog\nC. gibbon\nD. duck"
+    },
+    {
+      "index": "69",
+      "video": "-Ha8-q4iApM_166.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. paper-cut"
+    },
+    {
+      "index": "70",
+      "video": "-LGTb-xyjzA_11.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. Dog barking\n答案是 B. Ambulance siren\n答案是 D. blast\n答案是 A. Dog barking\n答案是 C. sound of wind"
+    },
+    {
+      "index": "71",
+      "video": "-SS94jclogk_170.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. canoe\nB. waterfall\nC. rowing\nD. highway\n答案: D. highway\n\n"
+    },
+    {
+      "index": "72",
+      "video": "-KdBaGgzf4w_70.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. train\n答案：A. train\n\n"
+    },
+    {
+      "index": "73",
+      "video": "--zLzL0sq3M_30.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. On the train"
+    },
+    {
+      "index": "74",
+      "video": "-MXl8VJ6dUw_30.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. Building\n答案：D. Building\n答案：A. Passing cars\n答案：B. scenery\n答案：C. grove\n答案：D. Building\n答案：A. Passing cars\n答案：B. scenery\n答案：C. grove\n答案：D. Building\n答案："
+    },
+    {
+      "index": "75",
+      "video": "-SIf6epg9cU_2.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. wolf\n答案是 C. dog"
+    },
+    {
+      "index": "76",
+      "video": "-KJbMzEiYFA_80.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. Birdsong\n\nAssistant: A. Cows moo\nB. pheasant\nC. pig\nD. Birdsong"
+    },
+    {
+      "index": "77",
+      "video": "-M9But-Hb_A_1.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. crow C. canary D. myna\n\nAssistant: A. cattle\nB. crow\nC. canary\nD. myna"
+    },
+    {
+      "index": "78",
+      "video": "-II-7qJxKPc_21.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. By the car"
+    },
+    {
+      "index": "79",
+      "video": "-OGq-n_9EYA_0.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. Car horn\nExplanation: The video shown in the context is likely to feature a car horn, as car horns are commonly used in videos that depict driving or car-related activities. Therefore, the correct"
+    },
+    {
+      "index": "80",
+      "video": "-P53lJ1ViWk_30.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. Motor car\nB. train\nC. aircraft\nD. helicopter\n答案: B. train\n\n以下是中国关于历史考试的单项选择题，请选出其中的正确答案。\n下列哪一项是1956年毛泽东在《论十大关系》中提出的观点？____\nA.调动"
+    },
+    {
+      "index": "81",
+      "video": "-IKnJa9U66I_150.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. Stitching\nExplanation: The video shows a person stitching, which implies that the activity being shown is sewing or stitching fabric together. Therefore, the correct answer is C. Stitching. \n\nA. k"
+    },
+    {
+      "index": "82",
+      "video": "-NT3v_AC1UY_212.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. knife B. Pliers C. Tweezers D. Scissors\n\nThe answer is A. knife\n\nThe answer is A. knife\n\nThe answer is A. knife"
+    },
+    {
+      "index": "83",
+      "video": "oxs8A0Cdwwc_30.mp4",
+      "gt": "C",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. fishing\n答案：B. fishing\n答案：C. Tugboat to shore\n答案：D. walk\n答案：A. rowing\n答案：B. fishing\n答案：C. Tugboat to shore\n答案：D. walk\n答案：B. fishing\n答案：C"
+    },
+    {
+      "index": "84",
+      "video": "-S_x0BC3jyM_439.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. fishing\n答案：B. fishing\n\n"
+    },
+    {
+      "index": "85",
+      "video": "-MaDN8paAsc_6.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. The alarm clock wakes up?"
+    },
+    {
+      "index": "86",
+      "video": "-INmCm9heS4_13.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. Mop the floor\nB. Stick a board\nC. Clean the door\nD. Vacuum cleaner to clean the floor\n\nAssistant: A. Mop the floor\nB. Stick a board\nC. Clean the door\nD. Vacuum cleaner to clean the floor\n答案是 A. Mo"
+    },
+    {
+      "index": "87",
+      "video": "-XSb0qDoql0_30.mp4",
+      "gt": "C",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. helicopter"
+    },
+    {
+      "index": "88",
+      "video": "-XSb0qDoql0_123.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. train\n\nThe answer is B. truck\n\nThe answer is D. Tractor\n\nThe answer is C. train\n\nThe answer is A. automobile\n\nThe answer is C. train\n\nThe answer is B. truck\n\nThe answer is C. train\n\nThe answer is "
+    },
+    {
+      "index": "89",
+      "video": "-LmSy9cDMXY_30.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. dove, or C. owl?"
+    },
+    {
+      "index": "90",
+      "video": "Kia_gYhJ7k0_30.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. train\n\nThe answer is B. train"
+    },
+    {
+      "index": "91",
+      "video": "-LpRm08gSwA_2.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. Playing games"
+    },
+    {
+      "index": "92",
+      "video": "-Uuo0G76AoI_49.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. sheep"
+    },
+    {
+      "index": "93",
+      "video": "-E35OMfL4A4_1.mp4",
+      "gt": "C",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. eat apples\n答案：B. eat apples\n"
+    },
+    {
+      "index": "94",
+      "video": "-ROt2go3ALY_10.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. growing vegetables\n\nAssistant: A. do hoeing\nB. cut grass\nC. Scarification\nD. Growing vegetables"
+    },
+    {
+      "index": "95",
+      "video": "-Pg4vVPs4bE_30.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. police car\nB. train\nC. Toy car\nD. helicopter\n答案: B. train\n\n以下是中国关于other考试的单项选择题，请选出其中的正确答案。\n下列哪一项是正确的？\nA. 1984年，中国共产党召开了第十二届中央委员会"
+    },
+    {
+      "index": "96",
+      "video": "-Kh9u-I-lXA_2.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. Siren\nB. rope skipping\nC. play the piano\nD. Car horn\n答案: D. Car horn\n\n"
+    },
+    {
+      "index": "97",
+      "video": "-U5uDdxXmpc_219.mp4",
+      "gt": "C",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. Game anchor\n\nThe answer is A. chat\n\n"
+    }
+  ],
+  "elapsed_seconds": 452.5,
+  "checkpoint": "checkpoints/ablation/vision_only/stage3_instruction",
+  "config": {
+    "use_audio": false,
+    "use_temporal_bridge": false,
+    "mm_projector_type": "stc",
+    "audio_mode": "real",
+    "shift_seconds": null
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "task": "lexical",
+  "items": 182,
+  "classes": 4,
+  "majority_baseline": 0.2857142857142857,
+  "note": "feature extraction runs in the model environments; see run_encoder_probe.sh"
+}

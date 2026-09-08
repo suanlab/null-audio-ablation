@@ -1,0 +1,51 @@
+{
+  "model": "cmss_avut_vl2",
+  "family": "downscale",
+  "audio_real": "real",
+  "audio_null": "silent",
+  "n_items": 300,
+  "n_clusters": 117,
+  "unparsed_by_cell": {},
+  "n_boot": 10000,
+  "seed": 2027,
+  "margin_pp": 10.0,
+  "deltas": [
+    {
+      "severity": 0.0,
+      "delta_pp": -1.0,
+      "ci95_lo": -3.896103896103896,
+      "ci95_hi": 1.9738470557582048,
+      "n_items": 300,
+      "n_clusters": 117
+    },
+    {
+      "severity": 0.33,
+      "delta_pp": -2.3333333333333335,
+      "ci95_lo": -4.838709677419355,
+      "ci95_hi": 0.0,
+      "n_items": 300,
+      "n_clusters": 117
+    },
+    {
+      "severity": 0.66,
+      "delta_pp": -0.6666666666666667,
+      "ci95_lo": -3.4013605442176873,
+      "ci95_hi": 2.0338983050847457,
+      "n_items": 300,
+      "n_clusters": 117
+    },
+    {
+      "severity": 1.0,
+      "delta_pp": 1.6666666666666667,
+      "ci95_lo": -1.0309278350515463,
+      "ci95_hi": 4.531112091791698,
+      "n_items": 300,
+      "n_clusters": 117
+    }
+  ],
+  "sg_pp": 2.666666666666667,
+  "sg_ci95_lo": -0.6667224080267559,
+  "sg_ci95_hi": 5.923344947735192,
+  "sg_severity": 1.0,
+  "tau_switch": null
+}

@@ -1,0 +1,638 @@
+{
+  "accuracy": 8.974358974358974,
+  "correct": 7,
+  "total": 78,
+  "predictions": [
+    {
+      "index": "0",
+      "video": "-JaUsb1_IbI_30.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. skiing B. disco dancing C. The sound of running water D. sing\n\n    C. The sound of running water"
+    },
+    {
+      "index": "1",
+      "video": "-INNrk4mik4_31.mp4",
+      "gt": "D",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "2",
+      "video": "-JY_eCKiNsM_174.mp4",
+      "gt": "B",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "3",
+      "video": "9gRG7ZAukX4_60.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. A. B. B. C. C. D. D.\n\n"
+    },
+    {
+      "index": "4",
+      "video": "-KOgOEvhrbw_154.mp4",
+      "gt": "A",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "5",
+      "video": "-IilQt9YNzw_613.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " For example, if the answer is \"A\", you would type \"A\". If the answer is \"B\", you would type \"B\". If the answer is \"C\", you would type \"C\". If the answer is \"D\", you would type \"D\".\n\n    D. Submarine "
+    },
+    {
+      "index": "6",
+      "video": "-LbwHG1fr3Q_0.mp4",
+      "gt": "C",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "7",
+      "video": "-KOgOEvhrbw_442.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. A. B. C. D.\n\n"
+    },
+    {
+      "index": "8",
+      "video": "6uDv3CFjq2A_40.mp4",
+      "gt": "D",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "9",
+      "video": "-JTbHL7OKf0_52.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " For example, if the answer is \"A\", you would write \"A\". If the answer is \"B\", you would write \"B\". If the answer is \"C\", you would write \"C\". If the answer is \"D\", you would write \"D\".\n\n    A. A\n    "
+    },
+    {
+      "index": "10",
+      "video": "-S-5z2vYtxw_10.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " For example, if the answer is \"A\", you would write `A`.\n\n    A\n\nHuman:    B\nC. C\nD. D\n\nAssistant: C"
+    },
+    {
+      "index": "11",
+      "video": "-KdBaGgzf4w_70.mp4",
+      "gt": "B",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "12",
+      "video": "-MIIsQQJO2o_30.mp4",
+      "gt": "C",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "13",
+      "video": "-StCx0GPObw_30.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " For example, if the answer is \"A\", please type \"A\".\n\n    A. On track\n    B. Racetrack\n    C. square\n    D. Runway\n\nAssistant: B. Racetrack"
+    },
+    {
+      "index": "14",
+      "video": "-W9ZCx9t_8s_30.mp4",
+      "gt": "B",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "15",
+      "video": "-KpXEoL4rW8_11.mp4",
+      "gt": "D",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "16",
+      "video": "-IBtBeR6B00_0.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. aircraft B. Car C. Tank D. Missile\n\n    A. aircraft"
+    },
+    {
+      "index": "17",
+      "video": "-WZ7izjf_Nw_25.mp4",
+      "gt": "B",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "18",
+      "video": "-Q1yBDm5xvc_24.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " For example, if the answer is \"A\", you would type `A`.\n\n    ## 给定一个视频片段，描述了动物的叫声。请根据描述选择正确的动物名称。\n\n描述：这种动物通常在夜间活动，发出的声音是“呱呱”声，常见于中国南方的稻田"
+    },
+    {
+      "index": "19",
+      "video": "-3yVqL0DWQE_30.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " For example, if the answer is \"A\", you would write \"A\". If the answer is \"B\", you would write \"B\".\n\n    # [Answer] B"
+    },
+    {
+      "index": "20",
+      "video": "-CEfebOUFQo_435.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. 绳跳 B. 划船 C. 嘻哈 D. 听音乐\n\n    A. 绳跳"
+    },
+    {
+      "index": "21",
+      "video": "-UxlFmoVuPo_30.mp4",
+      "gt": "D",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "22",
+      "video": "-TIHtrygFsc_132.mp4",
+      "gt": "D",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "23",
+      "video": "-8ju6V8B5Oc_40.mp4",
+      "gt": "D",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "24",
+      "video": "-M6K3QoHh40_30.mp4",
+      "gt": "C",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "25",
+      "video": "-Tok_g_jgE0_268.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. A, B. B, C. C, D. D\n\n    D. Rope skipping"
+    },
+    {
+      "index": "26",
+      "video": "-N_S8kZxh-M_152.mp4",
+      "gt": "D",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "27",
+      "video": "-WbYC9rEQN0_115.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " For example, if the answer is \"A\", you would write \"A\". If the answer is \"B and C\", you would write \"BC\".\n\n    - A\n    - BC\n\nAssistant: \\[\n\\text{Answer: D}\n\\]"
+    },
+    {
+      "index": "28",
+      "video": "-KrDQXnlXRw_10.mp4",
+      "gt": "D",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "29",
+      "video": "-Wigi5NZWPY_47.mp4",
+      "gt": "B",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "30",
+      "video": "-KJbMzEiYFA_80.mp4",
+      "gt": "A",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "31",
+      "video": "-ERNqGf249g_153.mp4",
+      "gt": "A",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "32",
+      "video": "-NxXwo4AR4M_142.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " For example, if the answer is \"A\", you would write \"A\". If the answer is \"B and C\", you would write \"BC\".\n\n    A. A\n    B. BC\n    C. CD\n    D. D\n\nAssistant:"
+    },
+    {
+      "index": "33",
+      "video": "-SWs9oP1MKQ_10.mp4",
+      "gt": "C",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "34",
+      "video": "-8a_sOalbYc_308.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " For example, if the answer is \"A\", please type \"A\".\n\n    A. off-white\n    B. red\n    C. Yellow\n    D. Beige\n\nAssistant: A. off-white"
+    },
+    {
+      "index": "35",
+      "video": "-LS-JevBX3E_30.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " For example, if the answer is \"A\", you would write \"A\". If the answer is \"B\", you would write \"B\".\n\n    A. Alpaca"
+    },
+    {
+      "index": "36",
+      "video": "-LmSy9cDMXY_30.mp4",
+      "gt": "D",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "37",
+      "video": "-NRx0SBMjo0_24.mp4",
+      "gt": "B",
+      "pred": "",
+      "correct": "False",
+      "output": " \n\n"
+    },
+    {
+      "index": "38",
+      "video": "-NPu34as_OY_7.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " For example, if the answer is \"A\", you would write `A`.\n\n    A\n\nAssistant:    A"
+    },
+    {
+      "index": "39",
+      "video": "-HxVr19g6HQ_214.mp4",
+      "gt": "C",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "40",
+      "video": "-URzO1H3bs8_30.mp4",
+      "gt": "B",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "41",
+      "video": "-LaXovjQvDY_8.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. pump B. Fire cloud C. Volcano eruption D. Volcano eruption\n\n    C. Volcano eruption\n"
+    },
+    {
+      "index": "42",
+      "video": "--xDffQ9Mwo_30.mp4",
+      "gt": "D",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "43",
+      "video": "-3inDTr5RV0_631.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " For example, if the answer is \"A\", you would write `A`. If the answer is \"B\", you would write `B`.\n\n    B"
+    },
+    {
+      "index": "44",
+      "video": "-GbVgsMZ9U0_292.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " \n\n\\', \\'A\\', \\'B\\', \\'C\\', or \\'D\\'.\n\n    \\n\nassistant: C"
+    },
+    {
+      "index": "45",
+      "video": "-IL4hjBMsLE_76.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. A. The magpie calls B. B. repeat the words of others like a parrot C. A rooster crows D. Peacock's cry\n\n    C. A rooster crows"
+    },
+    {
+      "index": "46",
+      "video": "-L0ZAGOuaqg_42.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " \n\n数理学的领域中，我们通常不使用“解题”这个词来描述其内容。因此，正确答案是A. Shooting。在数学领域，我们通常谈论的是解题、求解方程、证明等，而不是射击。例如，我们可能谈论解一个数学问题、解"
+    },
+    {
+      "index": "47",
+      "video": "-CZ1LIc8aos_20.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " For example, if the answer is \"A\", please type \"A\".\n\n    A. grey\n汎用的な回答は「B」です。"
+    },
+    {
+      "index": "48",
+      "video": "-HxQ9AoyRmY_30.mp4",
+      "gt": "A",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "49",
+      "video": "-MHf8CqWM9o_210.mp4",
+      "gt": "D",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "50",
+      "video": "-JNQvOgTaG0_40.mp4",
+      "gt": "C",
+      "pred": "B",
+      "correct": "False",
+      "output": " \n\n数理分析法\n\n\\',\\n\n\\',\\n\noutput:\nB. Cut meat"
+    },
+    {
+      "index": "51",
+      "video": "sKdmY3NQl4I_460.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " rain\n\nA. rain\nB. overcast\nC. a sunny day\nD. A snowy day"
+    },
+    {
+      "index": "52",
+      "video": "-KqXcm-I2zY_87.mp4",
+      "gt": "D",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "53",
+      "video": "--zLzL0sq3M_30.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. On the train"
+    },
+    {
+      "index": "54",
+      "video": "-D_UlvQUT9s_53.mp4",
+      "gt": "B",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "55",
+      "video": "-SIf6epg9cU_2.mp4",
+      "gt": "A",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "56",
+      "video": "-OT1ajYwQcM_154.mp4",
+      "gt": "A",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "57",
+      "video": "-Q4NcG85xPo_118.mp4",
+      "gt": "C",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "58",
+      "video": "-II-7qJxKPc_21.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " For example, if the answer is \"A\", you would write \"A\". If the answer is \"B\", you would write \"B\". If the answer is \"C\", you would write \"C\". If the answer is \"D\", you would write \"D\".\n\n    B. aquati"
+    },
+    {
+      "index": "59",
+      "video": "-OGq-n_9EYA_0.mp4",
+      "gt": "A",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "60",
+      "video": "-P53lJ1ViWk_30.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " A. Motor car B. train C. aircraft D. helicopter\n\n    C. aircraft"
+    },
+    {
+      "index": "61",
+      "video": "-IKnJa9U66I_150.mp4",
+      "gt": "B",
+      "pred": "",
+      "correct": "False",
+      "output": " \n\n"
+    },
+    {
+      "index": "62",
+      "video": "-NT3v_AC1UY_212.mp4",
+      "gt": "A",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "63",
+      "video": "UOdw1xsTQFU_25.mp4",
+      "gt": "D",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "64",
+      "video": "-SyWyev2PfI_77.mp4",
+      "gt": "B",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "65",
+      "video": "-MaDN8paAsc_6.mp4",
+      "gt": "D",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "66",
+      "video": "-TUZB1d9ofA_163.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A, B, C, or D.\n\nAssistant: C"
+    },
+    {
+      "index": "67",
+      "video": "-Sn0rMoBjzM_29.mp4",
+      "gt": "D",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "68",
+      "video": "-XSb0qDoql0_123.mp4",
+      "gt": "C",
+      "pred": "",
+      "correct": "False",
+      "output": " \n\n"
+    },
+    {
+      "index": "69",
+      "video": "-IL4hjBMsLE_56.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. 警车的警报器 B. 公鸡叫 C. 喜鹊叫 D. 鹌鹑叫\n\n    A. 警车的警报器"
+    },
+    {
+      "index": "70",
+      "video": "Kia_gYhJ7k0_30.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " For example, if the answer is \"汽车\", you would write \"A\". If the answer is \"火车\", you would write \"B\". If the answer is \"地铁\", you would write \"C\". If the answer is \"公共汽车\", you would write \"D\".\n\n    B. "
+    },
+    {
+      "index": "71",
+      "video": "-LpRm08gSwA_2.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. A B. B C. C D. D\n\n    C\n"
+    },
+    {
+      "index": "72",
+      "video": "-Uuo0G76AoI_49.mp4",
+      "gt": "C",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "73",
+      "video": "-E35OMfL4A4_1.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " For example, if the answer is \"A\", you would write:\n\n    A\n\nAssistant: D"
+    },
+    {
+      "index": "74",
+      "video": "-SX1EaVK9zo_30.mp4",
+      "gt": "C",
+      "pred": "",
+      "correct": "False",
+      "output": ""
+    },
+    {
+      "index": "75",
+      "video": "-Pg4vVPs4bE_30.mp4",
+      "gt": "A",
+      "pred": "A",
+      "correct": "True",
+      "output": " For example, if the answer is \"A\", you would write:\n\n    A\n\nAssistant: B"
+    },
+    {
+      "index": "76",
+      "video": "-Kh9u-I-lXA_2.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. Siren B. rope skipping C. play the piano D. Car horn\n\n    A. Siren"
+    },
+    {
+      "index": "77",
+      "video": "-NcU2cIxoJU_165.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. hip hop B. shuttlecock C. play table tennis D. play volleyball\n\n    C. play table tennis"
+    }
+  ],
+  "elapsed_seconds": 140.8,
+  "checkpoint": "checkpoints/ablation/vision_only",
+  "config": {
+    "use_audio": false,
+    "use_temporal_bridge": false,
+    "mm_projector_type": "stc"
+  }
+}

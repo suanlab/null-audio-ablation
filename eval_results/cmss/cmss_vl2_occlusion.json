@@ -1,0 +1,60 @@
+{
+  "model": "cmss_vl2",
+  "family": "occlusion",
+  "audio_real": "real",
+  "audio_null": "silent",
+  "n_items": 300,
+  "n_clusters": 300,
+  "unparsed_by_cell": {
+    "sev0_real": 1,
+    "sev0_silent": 1,
+    "sev0.33_real": 1,
+    "sev0.33_silent": 1,
+    "sev0.66_real": 1,
+    "sev0.66_silent": 1,
+    "sev1_real": 1,
+    "sev1_silent": 1
+  },
+  "n_boot": 10000,
+  "seed": 2027,
+  "margin_pp": 10.0,
+  "deltas": [
+    {
+      "severity": 0.0,
+      "delta_pp": 3.0,
+      "ci95_lo": 0.6666666666666667,
+      "ci95_hi": 5.333333333333334,
+      "n_items": 300,
+      "n_clusters": 300
+    },
+    {
+      "severity": 0.33,
+      "delta_pp": 5.666666666666666,
+      "ci95_lo": 3.0,
+      "ci95_hi": 8.666666666666668,
+      "n_items": 300,
+      "n_clusters": 300
+    },
+    {
+      "severity": 0.66,
+      "delta_pp": 9.666666666666666,
+      "ci95_lo": 6.333333333333334,
+      "ci95_hi": 13.333333333333334,
+      "n_items": 300,
+      "n_clusters": 300
+    },
+    {
+      "severity": 1.0,
+      "delta_pp": 19.666666666666664,
+      "ci95_lo": 15.0,
+      "ci95_hi": 24.333333333333336,
+      "n_items": 300,
+      "n_clusters": 300
+    }
+  ],
+  "sg_pp": 16.666666666666664,
+  "sg_ci95_lo": 12.333333333333334,
+  "sg_ci95_hi": 21.0,
+  "sg_severity": 1.0,
+  "tau_switch": 1.0
+}

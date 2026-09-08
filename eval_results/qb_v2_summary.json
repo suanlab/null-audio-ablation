@@ -1,0 +1,13 @@
+{
+  "scores": {
+    "real": 65.3061224489796,
+    "shuffled": 33.6734693877551,
+    "shifted": 66.3265306122449,
+    "noise": 23.46938775510204,
+    "silent": 24.489795918367346
+  },
+  "delta_real_minus_noise": 41.83673469387755,
+  "delta_real_minus_silent": 40.816326530612244,
+  "delta_real_minus_shuffled": 31.632653061224495,
+  "audio_contribution_positive": true
+}

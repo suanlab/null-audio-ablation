@@ -1,0 +1,17 @@
+{
+  "scores": {
+    "real": 58.16326530612245,
+    "shuffled": 35.714285714285715,
+    "shifted": 57.14285714285714,
+    "noise": 35.714285714285715,
+    "silent": 34.69387755102041
+  },
+  "delta_real_minus_noise": 22.448979591836732,
+  "delta_real_minus_silent": 23.46938775510204,
+  "delta_real_minus_shuffled": 22.448979591836732,
+  "audio_contribution_positive": true,
+  "audio_dropout_prob": 0.3,
+  "weighted_sft": true,
+  "base_checkpoint": "qb_v2_stage2",
+  "weights_file": "data/instruct/avqa_train_quick5k_weights.json"
+}

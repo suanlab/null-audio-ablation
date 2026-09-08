@@ -1,0 +1,1320 @@
+{
+  "accuracy": 25.766871165644172,
+  "correct": 42,
+  "total": 163,
+  "predictions": [
+    {
+      "index": "385",
+      "video": "36m1o-tM05g_36.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. cricket chirping"
+    },
+    {
+      "index": "386",
+      "video": "-gil-ib9Etc_72.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. train wheels squealing"
+    },
+    {
+      "index": "387",
+      "video": "0izT2gPbsok_30.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. skidding"
+    },
+    {
+      "index": "388",
+      "video": "1Z2LhZ-2rU0_4.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. air horn"
+    },
+    {
+      "index": "389",
+      "video": "1UB94O0p1Ls_130.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. playing cymbal"
+    },
+    {
+      "index": "390",
+      "video": "0DtJdRFPmS4_30.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. playing lacrosse"
+    },
+    {
+      "index": "391",
+      "video": "052s5vlSKn0_30.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. playing acoustic guitar"
+    },
+    {
+      "index": "392",
+      "video": "-51CA8BX7gU_30.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. female singing"
+    },
+    {
+      "index": "393",
+      "video": "3fVIahkLz-8_20.mp4",
+      "gt": "C",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. playing tuning fork"
+    },
+    {
+      "index": "394",
+      "video": "3eD8BuyZEo0_2.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. donkey, ass braying"
+    },
+    {
+      "index": "395",
+      "video": "0nWLXEGgm8k_64.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. playing guiro"
+    },
+    {
+      "index": "396",
+      "video": "3i0GlkevMuQ_24.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. fire crackling"
+    },
+    {
+      "index": "397",
+      "video": "1049Y7NnN5E_216.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. metronome"
+    },
+    {
+      "index": "398",
+      "video": "2ERPPyTjpS0_139.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. rapping"
+    },
+    {
+      "index": "399",
+      "video": "2wm2R1C0VBg_30.mp4",
+      "gt": "D",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. playing cello"
+    },
+    {
+      "index": "400",
+      "video": "45iXudFVQ4E_0.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. cap gun shooting"
+    },
+    {
+      "index": "401",
+      "video": "3-QdcdG1erA_46.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. pheasant crowing"
+    },
+    {
+      "index": "402",
+      "video": "0MHGf8DswjY_311.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. spraying water"
+    },
+    {
+      "index": "403",
+      "video": "1UB94O0p1Ls_140.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. plastic bottle crushing"
+    },
+    {
+      "index": "404",
+      "video": "3xDuWOv09o4_11.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. police car (siren)"
+    },
+    {
+      "index": "405",
+      "video": "1DGgC1sclpY_0.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. air horn."
+    },
+    {
+      "index": "406",
+      "video": "0iEg7FhIf0k_30.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. chicken crowing"
+    },
+    {
+      "index": "407",
+      "video": "Uz-bzWfELCk_0.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. people gargling"
+    },
+    {
+      "index": "408",
+      "video": "0nbon-ub-cc_229.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. car engine starting"
+    },
+    {
+      "index": "409",
+      "video": "2PtCxzVQVvI_59.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. playing harp"
+    },
+    {
+      "index": "410",
+      "video": "0OZ985n1Q1s_5.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. mouse squeaking"
+    },
+    {
+      "index": "411",
+      "video": "1Hd2AciuKcM_140.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. horse clip-clop"
+    },
+    {
+      "index": "412",
+      "video": "2cVk2TTqH0U_130.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. smoke detector beeping"
+    },
+    {
+      "index": "413",
+      "video": "1e-d7LAzw3M_101.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. tractor digging"
+    },
+    {
+      "index": "414",
+      "video": "20lOSdiUEj4_40.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. rain\n\nThe answer is C. raining. The sound described in the video is likely rain. Raindrops are falling from the sky, creating the sound heard in the video. Rain is a common natural occurrence that"
+    },
+    {
+      "index": "415",
+      "video": "1PoQXeRabzk_43.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. cricket chirping"
+    },
+    {
+      "index": "416",
+      "video": "-IgzS3fIrBE_30.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. thunder."
+    },
+    {
+      "index": "417",
+      "video": "2IrsY4kgLTg_30.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. playing clarinet"
+    },
+    {
+      "index": "418",
+      "video": "1mfFt7iUBWg_30.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. lighting firecrackers"
+    },
+    {
+      "index": "419",
+      "video": "38RzA_ZVpWQ_593.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. female speech, woman speaking"
+    },
+    {
+      "index": "420",
+      "video": "1l19aHqNgo0_11.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. dog bow-wow"
+    },
+    {
+      "index": "421",
+      "video": "05tcLjLeBdQ_861.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. baby babbling"
+    },
+    {
+      "index": "422",
+      "video": "0qmhy60KNa8_150.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. crow cawing"
+    },
+    {
+      "index": "423",
+      "video": "0xz4IMyKVGk_30.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. playing acoustic guitar"
+    },
+    {
+      "index": "424",
+      "video": "47iu0vXNcP4_156.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. playing timbales"
+    },
+    {
+      "index": "425",
+      "video": "0kEFHKA484Q_49.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. people burping"
+    },
+    {
+      "index": "426",
+      "video": "-pqoeMKGNE0_26.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. playing trombone"
+    },
+    {
+      "index": "427",
+      "video": "44FbZUhd9bU_35.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. people whistling"
+    },
+    {
+      "index": "428",
+      "video": "0tw6feOOTXI_18.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. people nose blowing"
+    },
+    {
+      "index": "429",
+      "video": "-u-OViTO-UA_1.mp4",
+      "gt": "D",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. owl hooting"
+    },
+    {
+      "index": "430",
+      "video": "-DVM0BK_h5A_30.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. wind rustling leaves"
+    },
+    {
+      "index": "431",
+      "video": "3n768MgJd2Q_87.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. playing acoustic guitar"
+    },
+    {
+      "index": "432",
+      "video": "10d160Gt4Ms_2.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. bee, wasp, etc. buzzing"
+    },
+    {
+      "index": "433",
+      "video": "-1rZFviqTTQ_28.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. people battle cry"
+    },
+    {
+      "index": "434",
+      "video": "1eLjEl8eDqk_30.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. reversing beeps"
+    },
+    {
+      "index": "435",
+      "video": "1sU-714VebM_227.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. tapping guitar"
+    },
+    {
+      "index": "436",
+      "video": "0i_lGB3GshY_220.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. magpie calling"
+    },
+    {
+      "index": "437",
+      "video": "-516tRoxniU_20.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. firing muskets"
+    },
+    {
+      "index": "438",
+      "video": "1fDpeM4ms_s_60.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. pigeon, dove cooing"
+    },
+    {
+      "index": "439",
+      "video": "0JGihvokxrI_10.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. playing bass drum"
+    },
+    {
+      "index": "440",
+      "video": "1yqzK5vYE28_223.mp4",
+      "gt": "D",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. beat boxing"
+    },
+    {
+      "index": "441",
+      "video": "05ri4y9hZJ4_30.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. child singing"
+    },
+    {
+      "index": "442",
+      "video": "2g6MRr5jsKY_79.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. skiing"
+    },
+    {
+      "index": "443",
+      "video": "-GW1J75oAKU_304.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " \"C. cat meowing\""
+    },
+    {
+      "index": "444",
+      "video": "3A0LxYhBvj0_190.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. people clapping"
+    },
+    {
+      "index": "445",
+      "video": "2PgccVMIXFE_5.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. fly, housefly buzzing"
+    },
+    {
+      "index": "446",
+      "video": "3qfJKebhBTU_18.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. coyote howling"
+    },
+    {
+      "index": "447",
+      "video": "3ACjUf9QpAQ_30.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. sailing, flying, housefly buzzing, train horning, playing bongo. The answer is B. train horning."
+    },
+    {
+      "index": "448",
+      "video": "2qDW74WT9Xw_30.mp4",
+      "gt": "C",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. parrot talking"
+    },
+    {
+      "index": "449",
+      "video": "3l4VPdx6iAw_156.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. police radio chatter"
+    },
+    {
+      "index": "450",
+      "video": "3CRc-7pWBcY_30.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. running electric fan"
+    },
+    {
+      "index": "451",
+      "video": "3kS4S8otgOc_172.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. police car (siren)"
+    },
+    {
+      "index": "452",
+      "video": "-6AWljgt55M_509.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. tap dancing"
+    },
+    {
+      "index": "453",
+      "video": "48iqWuaAkSU_140.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. people slurping"
+    },
+    {
+      "index": "454",
+      "video": "3wb2H4dBvh8_49.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. baltimore oriole calling"
+    },
+    {
+      "index": "455",
+      "video": "1ficajioicg_75.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. subway, metro, underground"
+    },
+    {
+      "index": "456",
+      "video": "1WdM3q7yyoo_37.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. police radio chatter"
+    },
+    {
+      "index": "457",
+      "video": "0lSPlC95iSM_30.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. thunder"
+    },
+    {
+      "index": "458",
+      "video": "0Veq3Kqvd54_150.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. people slurping"
+    },
+    {
+      "index": "459",
+      "video": "-3G6bE5PqIQ_30.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. people nose blowing"
+    },
+    {
+      "index": "460",
+      "video": "2W4EL1ZoJrU_16.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. cat hissing"
+    },
+    {
+      "index": "461",
+      "video": "13Ij0Y-m7N0_121.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. playing bugle."
+    },
+    {
+      "index": "462",
+      "video": "40V9PXs5TQI_216.mp4",
+      "gt": "C",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. people crowd"
+    },
+    {
+      "index": "463",
+      "video": "1ma4b_TsEVA_320.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. tap dancing"
+    },
+    {
+      "index": "464",
+      "video": "3sz7nQTcwcE_9.mp4",
+      "gt": "C",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. bull bellowing"
+    },
+    {
+      "index": "465",
+      "video": "04zNqKUsT_8_0.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. car passing by"
+    },
+    {
+      "index": "466",
+      "video": "45JHcLU57B8_20.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. sea lion barking\n\nThe answer is C. sea lion barking. Sea lions are known for their loud vocalizations, which can be heard in the video. They often bark or call out in a manner that sounds like a d"
+    },
+    {
+      "index": "467",
+      "video": "1hqGdxOZdhg_30.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. mouse pattering"
+    },
+    {
+      "index": "468",
+      "video": "1k_KQt2gFA0_0.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. lawn mowing"
+    },
+    {
+      "index": "469",
+      "video": "25mCbCq5tzI_4.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. playing trombone"
+    },
+    {
+      "index": "470",
+      "video": "3JWpqnQ7HoY_2.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. chimpanzee pant-hooting"
+    },
+    {
+      "index": "471",
+      "video": "1BgAcGWShOk_124.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. playing bass drum"
+    },
+    {
+      "index": "472",
+      "video": "2crh5mUPqN0_310.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. playing electric guitar"
+    },
+    {
+      "index": "473",
+      "video": "2wGM6oTIxio_27.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. female singing"
+    },
+    {
+      "index": "474",
+      "video": "1Jb2bUPCU8U_56.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. playing violin, fiddle"
+    },
+    {
+      "index": "475",
+      "video": "0-P5T-NnLS4_53.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. pig oinking"
+    },
+    {
+      "index": "476",
+      "video": "1xZESfMpi9Q_156.mp4",
+      "gt": "D",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. alligators, crocodiles hissing"
+    },
+    {
+      "index": "477",
+      "video": "1TNP5EgCDME_0.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. plastic bottle crushing"
+    },
+    {
+      "index": "478",
+      "video": "3-dHPcYckl4_2.mp4",
+      "gt": "B",
+      "pred": "B",
+      "correct": "True",
+      "output": " B. cat meowing"
+    },
+    {
+      "index": "479",
+      "video": "2N5F01IsCzU_54.mp4",
+      "gt": "C",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. cat growling"
+    },
+    {
+      "index": "480",
+      "video": "-q0m29pHK98_1.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. air horn"
+    },
+    {
+      "index": "481",
+      "video": "3QXLwKgoMlY_30.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. female singing"
+    },
+    {
+      "index": "482",
+      "video": "-Akoz2Fqb4I_60.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. people marching\n\nWhat sound event is this? People marching."
+    },
+    {
+      "index": "483",
+      "video": "1Opecl-HKzY_12.mp4",
+      "gt": "C",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. lions roaring"
+    },
+    {
+      "index": "484",
+      "video": "-Vvs_Dq9E98_324.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. chainsawing trees"
+    },
+    {
+      "index": "485",
+      "video": "334u5Ja0iho_69.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. car passing by"
+    },
+    {
+      "index": "486",
+      "video": "-iDEnaFYOOg_75.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. blowtorch igniting"
+    },
+    {
+      "index": "487",
+      "video": "46Lg2xglZu4_236.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. roller coaster running"
+    },
+    {
+      "index": "488",
+      "video": "-Cv3gOXEoxA_40.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. people eating crisps"
+    },
+    {
+      "index": "489",
+      "video": "1aQSKz2JvFw_71.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. cat caterwauling"
+    },
+    {
+      "index": "490",
+      "video": "-lIxnqaPGzA_882.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. people farting"
+    },
+    {
+      "index": "491",
+      "video": "2Wj_8uQ16AM_101.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. volcano explosion"
+    },
+    {
+      "index": "492",
+      "video": "0_wmKjGSi3M_7.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. heart sounds, heartbeat"
+    },
+    {
+      "index": "493",
+      "video": "0MBfdfqhflk_496.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. elephant trumpeting"
+    },
+    {
+      "index": "494",
+      "video": "0ymH_mTFNH0_1.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. playing electric guitar"
+    },
+    {
+      "index": "495",
+      "video": "1V4dOLDD02Q_5.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. airplane flyby"
+    },
+    {
+      "index": "496",
+      "video": "1b2vXCYYYbs_101.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. fly, housefly buzzing"
+    },
+    {
+      "index": "497",
+      "video": "3RT39tfrYiA_14.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. firing muskets"
+    },
+    {
+      "index": "498",
+      "video": "3_Ll2KrMKdo_23.mp4",
+      "gt": "C",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. people whispering"
+    },
+    {
+      "index": "499",
+      "video": "2Yi4Z9-cuiE_9.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. horse clip-clop"
+    },
+    {
+      "index": "500",
+      "video": "3Gyi7AvDLzc_30.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. wind rustling leaves"
+    },
+    {
+      "index": "501",
+      "video": "3-7zHlOi4T4_225.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. underwater bubbling"
+    },
+    {
+      "index": "502",
+      "video": "3rGVkZS8KL4_293.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. magpie calling"
+    },
+    {
+      "index": "503",
+      "video": "2489JjNIqyA_252.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. airplane\n\nThe answer is D. airplane."
+    },
+    {
+      "index": "504",
+      "video": "45UNrYN8qG4_104.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. mosquito buzzing"
+    },
+    {
+      "index": "505",
+      "video": "0wdNFZhpdQw_368.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. people eating crisps"
+    },
+    {
+      "index": "506",
+      "video": "-4pmCrSdMhg_30.mp4",
+      "gt": "C",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. playing tennis"
+    },
+    {
+      "index": "507",
+      "video": "-6lkiUAf_cQ_30.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. playing congas"
+    },
+    {
+      "index": "508",
+      "video": "-ct58kOlLfs_30.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. motorboat, speedboat acceleration"
+    },
+    {
+      "index": "509",
+      "video": "-gGig7u9o2c_45.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. cheetah chirruping"
+    },
+    {
+      "index": "510",
+      "video": "3GSq_fa_lkA_3.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. hammering nails"
+    },
+    {
+      "index": "511",
+      "video": "2V4_4Y_nVWA_58.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. slot machine"
+    },
+    {
+      "index": "512",
+      "video": "3-kHl1Xvn4U_30.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. owl hooting"
+    },
+    {
+      "index": "513",
+      "video": "26wRRi7pII4_30.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. lighting firecrackers"
+    },
+    {
+      "index": "514",
+      "video": "2HdaWygLPPo_30.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. fire crackling"
+    },
+    {
+      "index": "515",
+      "video": "21Dc8a8X8qg_7.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. volcano explosion"
+    },
+    {
+      "index": "516",
+      "video": "2fdx5Ad69mE_430.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. footsteps on snow"
+    },
+    {
+      "index": "517",
+      "video": "3jfDmY9hqqE_30.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. dog howling"
+    },
+    {
+      "index": "518",
+      "video": "2gecnZTaDV0_1.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. cap gun shooting"
+    },
+    {
+      "index": "519",
+      "video": "1gcKZuQga8k_30.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. people burping\n\nWhat is the sound of people eating ice cream? The answer is C. people burping. Ice cream being consumed often produces a burping-like sound, especially when consumed quickly or in "
+    },
+    {
+      "index": "520",
+      "video": "32-q0b1HKSI_666.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. playing lacrosse"
+    },
+    {
+      "index": "521",
+      "video": "3T3hm1hHCto_228.mp4",
+      "gt": "D",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. playing sitar"
+    },
+    {
+      "index": "522",
+      "video": "3XyW729VjR8_139.mp4",
+      "gt": "A",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. car passing by"
+    },
+    {
+      "index": "523",
+      "video": "1i3_NIKp3Zk_18.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. francolin calling"
+    },
+    {
+      "index": "524",
+      "video": "0RSMUQosl38_30.mp4",
+      "gt": "B",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. lawn mowing"
+    },
+    {
+      "index": "525",
+      "video": "3yl2yTzV0AY_110.mp4",
+      "gt": "C",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. machine gun shooting"
+    },
+    {
+      "index": "526",
+      "video": "26q4l9sxUKY_67.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. ice cracking"
+    },
+    {
+      "index": "527",
+      "video": "2APv1eUSy5g_9.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. motorboat, speedboat acceleration"
+    },
+    {
+      "index": "528",
+      "video": "2jKheXvnT6o_30.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. cat purring"
+    },
+    {
+      "index": "529",
+      "video": "0cLwGNcBgWI_30.mp4",
+      "gt": "B",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. people whistling"
+    },
+    {
+      "index": "530",
+      "video": "-IbJX_oadgs_330.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. playing electric guitar"
+    },
+    {
+      "index": "531",
+      "video": "0sjF_jG4-B4_30.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. mouse clicking"
+    },
+    {
+      "index": "532",
+      "video": "4-DcTjFR4qw_100.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. car passing by"
+    },
+    {
+      "index": "533",
+      "video": "-JXUUIutBS8_55.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. lions growling"
+    },
+    {
+      "index": "534",
+      "video": "-d1lAtyWGrM_7.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. people shuffling"
+    },
+    {
+      "index": "535",
+      "video": "3r6w5lzuUAk_225.mp4",
+      "gt": "B",
+      "pred": "A",
+      "correct": "False",
+      "output": " A. popping popcorn"
+    },
+    {
+      "index": "536",
+      "video": "2J3omJqaPVA_80.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. playing clarinet"
+    },
+    {
+      "index": "537",
+      "video": "2CidaVnd60g_0.mp4",
+      "gt": "D",
+      "pred": "B",
+      "correct": "False",
+      "output": " B. mouse clicking"
+    },
+    {
+      "index": "538",
+      "video": "-x8HgXnpf0s_0.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. alarm clock ringing"
+    },
+    {
+      "index": "539",
+      "video": "40f8VPpM6EU_30.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. waterfall burbling"
+    },
+    {
+      "index": "540",
+      "video": "2bEQQ35Wkdc_31.mp4",
+      "gt": "D",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. playing bongo drums\n\nThe answer is C. playing bongo drums. B. people coughing and D. penguins braying are not related to the primary audio event described in the question. A. playing bagpipes is a"
+    },
+    {
+      "index": "541",
+      "video": "2nXijhmbNFs_30.mp4",
+      "gt": "C",
+      "pred": "C",
+      "correct": "True",
+      "output": " C. printer printing"
+    },
+    {
+      "index": "542",
+      "video": "-vQaeTPsdK8_30.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. people eating"
+    },
+    {
+      "index": "543",
+      "video": "1z8Gt969VXE_56.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. donkey, ass braying"
+    },
+    {
+      "index": "544",
+      "video": "0MJ9_SLMq9Y_78.mp4",
+      "gt": "C",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. car engine knocking"
+    },
+    {
+      "index": "545",
+      "video": "36LRQi1ocvM_84.mp4",
+      "gt": "A",
+      "pred": "C",
+      "correct": "False",
+      "output": " C. train horning"
+    },
+    {
+      "index": "546",
+      "video": "0lyCxY8cG7k_470.mp4",
+      "gt": "A",
+      "pred": "D",
+      "correct": "False",
+      "output": " D. machine gun shooting"
+    },
+    {
+      "index": "547",
+      "video": "0WkfP8GAR4M_55.mp4",
+      "gt": "D",
+      "pred": "D",
+      "correct": "True",
+      "output": " D. yodeling"
+    }
+  ],
+  "elapsed_seconds": 2234.7,
+  "checkpoint": "checkpoints/full_v6/stage3_instruction",
+  "config": {
+    "use_audio": true,
+    "use_temporal_bridge": true,
+    "mm_projector_type": "stc",
+    "audio_mode": "shuffled",
+    "shift_seconds": null
+  }
+}

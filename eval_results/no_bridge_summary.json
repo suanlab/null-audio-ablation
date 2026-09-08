@@ -1,0 +1,19 @@
+{
+  "scores": {
+    "real": 69.38775510204081,
+    "shuffled": 26.53061224489796,
+    "shifted": 65.3061224489796,
+    "noise": 50.0,
+    "silent": 50.0
+  },
+  "delta_real_minus_noise": 19.387755102040813,
+  "delta_real_minus_silent": 19.387755102040813,
+  "delta_real_minus_shuffled": 42.857142857142854,
+  "mvbench_accuracy": 32.35,
+  "training_phase": "ablation_no_bridge",
+  "dataset": "avqa_train_v3.jsonl (25K)",
+  "audio_enabled": true,
+  "bridge_enabled": false,
+  "audio_dropout_prob": 0.3,
+  "base_checkpoint": "qb_v2_stage2"
+}

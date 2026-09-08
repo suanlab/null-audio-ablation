@@ -1,0 +1,15 @@
+{
+  "scores": {
+    "real": 35.714285714285715,
+    "shuffled": 34.69387755102041,
+    "shifted": 34.69387755102041,
+    "noise": 35.714285714285715,
+    "silent": 37.755102040816325
+  },
+  "delta_real_minus_noise": 0.0,
+  "delta_real_minus_silent": -2.04081632653061,
+  "delta_real_minus_shuffled": 1.0204081632653086,
+  "audio_contribution_positive": false,
+  "training_phase": "grpo_rl",
+  "sft_checkpoint": "checkpoints/audio_quick_bridge_v4/stage3_instruction"
+}
