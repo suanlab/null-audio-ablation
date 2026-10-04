@@ -15,7 +15,7 @@
 # Existing outputs are skipped, so a re-run resumes.
 set -uo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-MODEL="${MODEL:?set MODEL=vsalm2|vl2}"
+MODEL="${MODEL:?set MODEL=vsalm2|vl2|qwenomni}"
 GPU="${GPU:-3}"
 FAMILIES="${FAMILIES:-motion_blur occlusion frame_drop downscale}"
 SEVERITIES="${SEVERITIES:-0.33 0.66 1.0}"
@@ -48,6 +48,17 @@ run_cell() {  # run_cell <audio> <visual> <severity> <out> <blank>
             --eval_data "$EVAL_DATA" --video_dir "$VIDEO_DIR" \
             --audio_mode "$audio" --visual_mode "$visual" --visual_severity "$sev" \
             --answer_format vocab --output "$out" >>"$LOG" 2>&1
+    elif [ "$MODEL" = "qwenomni" ]; then
+        # Third front end. Its adapter declared no audio block in the conversation, so the
+        # chat template emitted no <|AUDIO|> placeholder and every audio mode decoded
+        # byte-identically; fixed 2026-09-14, with a guard in the adapter. Runs in the
+        # venv the original attempt used (transformers 5.1), not a conda env.
+        CUDA_VISIBLE_DEVICES="$GPU" POS_BLANK="$blank" \
+        PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True \
+        $VENV/bin/python "$ROOT/scripts/eval_avqa_qwenomni.py" \
+            --eval_data "$EVAL_DATA" --video_dir "$VIDEO_DIR" \
+            --audio_mode "$audio" --visual_mode "$visual" --visual_severity "$sev" \
+            --answer_format vocab --output "$out" >>"$LOG" 2>&1
     else
         ( cd $VIDEOLLAMA2_DIR || exit 1
           CUDA_VISIBLE_DEVICES="$GPU" POS_BLANK="$blank" \
@@ -74,7 +85,7 @@ fi
 for family in ${FAMILIES}; do
     echo "--- family: ${family} ---" | tee -a "$LOG"
     for sev in ${SEVERITIES}; do
-        tag=$(python -c "print('%g' % float('${sev}'))")
+        tag=$($VENV/bin/python -c "print('%g' % float('${sev}'))")
         for audio in ${AUDIO_MODES}; do
             run_cell "$audio" "$family" "$sev" \
                 "${OUT_DIR}/avqa_${PREFIX}_${audio}_vis-${family}-s${tag}.json" 0

@@ -155,20 +155,38 @@ def test_qwen_preserves_dtype_and_shape() -> None:
     assert int(out[0][:, :, H // 2, W // 2].max()) == 0
 
 
-def test_qwen_accepts_float_zero_one_tensors() -> None:
+def test_qwen_accepts_the_float_0_255_tensors_the_library_actually_returns() -> None:
+    """The production case, and the one an earlier version of this test got wrong.
+
+    ``qwen_omni_utils.fetch_video`` decodes uint8 frames and calls ``.float()`` after
+    resizing without dividing, so the adapter is handed float values in 0-255. The
+    previous test fed ``torch.rand`` -- float in ``[0, 1]`` -- which the library never
+    produces, so the suite passed while every sample in every visual-degradation cell
+    raised at runtime and the cell filled with empty predictions.
+    """
     degrade, vd = _qwen_degrade()
-    vids = [torch.rand(T, C, H, W)]
+    vids = [torch.rand(T, C, H, W) * 255.0]
     out = degrade(vids, vd.DegradationConfig(mode="downscale", severity=1.0))
     assert out[0].dtype == vids[0].dtype
     assert out[0].shape == vids[0].shape
+    assert float(out[0].min()) >= 0.0 and float(out[0].max()) <= 255.0, "scale was not preserved"
+    assert float(out[0].max()) > 1.0, "output collapsed into [0, 1]; the 0-255 scale was lost"
+
+
+def test_qwen_degradation_actually_changes_the_frames() -> None:
+    """A hook that silently no-ops is the failure mode this whole axis exists to avoid."""
+    degrade, vd = _qwen_degrade()
+    vids = [torch.rand(T, C, H, W) * 255.0]
+    out = degrade(vids, vd.DegradationConfig(mode="occlusion", severity=1.0, seed=5))
+    assert not torch.equal(out[0], vids[0]), "occlusion at full severity left the frames untouched"
 
 
 def test_qwen_rejects_normalised_float_tensors() -> None:
-    """Silently clamping an already-normalised tensor to [0, 1] would corrupt the input
-    instead of degrading it, so the boundary is validated."""
+    """Mean/std-normalised input has negative values; clamping it into the degradation
+    range would corrupt the frames rather than degrade them, so the boundary is validated."""
     degrade, vd = _qwen_degrade()
-    vids = [torch.randn(T, C, H, W) * 3.0]  # clearly outside [0, 1]
-    with pytest.raises(ValueError, match=r"\[0, 1\]"):
+    vids = [torch.randn(T, C, H, W) * 3.0]  # negatives: clearly not a 0-255 pixel tensor
+    with pytest.raises(ValueError, match=r"\[0, 255\]"):
         degrade(vids, vd.DegradationConfig(mode="occlusion", severity=1.0))
 
 

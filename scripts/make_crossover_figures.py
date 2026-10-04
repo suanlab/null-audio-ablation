@@ -33,20 +33,76 @@ from videollm.cmss import cluster_bootstrap_mean  # noqa: E402 - local package a
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 EVAL_DIR = REPO_ROOT / "eval_results"
-OUT_DIR = REPO_ROOT / "paper_ojsp"
+OUT_DIR = REPO_ROOT / "paper_taslp"
 N_BOOT = 10000
 SEED = 2027
 GATE_PP = 20.0
 FAMILIES = ("motion_blur", "occlusion", "frame_drop", "downscale")
 
 # (display, front end, filename tag) -- the tag differs per domain by construction.
+# Series order for the figures: systems, not front-end families.
+CELLS_ORDERED = (
+    ("MUSIC-AVQA", "music", "video-SALMONN 2+", "Whisper", "cmss_music_vsalm2"),
+    ("MUSIC-AVQA", "music", "VideoLLaMA2.1-AV", "BEATs", "cmss_music_vl2"),
+    ("MUSIC-AVQA", "music", "Qwen2.5-Omni", "Whisper", "cmss_music_qwenomni"),
+)
+
 CELLS = (
     ("MUSIC-AVQA", "music", "VideoLLaMA2.1-AV", "BEATs", "cmss_music_vl2"),
     ("MUSIC-AVQA", "music", "video-SALMONN 2+", "Whisper", "cmss_music_vsalm2"),
     ("AVUT", "speech", "VideoLLaMA2.1-AV", "BEATs", "cmss_avut_vl2"),
     ("AVUT", "speech", "video-SALMONN 2+", "Whisper", "cmss_avut_vsalm2"),
+    ("MUSIC-AVQA", "music", "Qwen2.5-Omni", "Whisper", "cmss_music_qwenomni"),
+    ("AVUT", "speech", "Qwen2.5-Omni", "Whisper", "cmss_avut_qwenomni"),
 )
-FRONTEND_STYLE = {"Whisper": ("#0072B2", "o"), "BEATs": ("#D55E00", "s")}
+# Colour carries the front-end family, marker carries the system. Two systems now share
+# the Whisper family and behave differently, which is the paper's point: same colour,
+# different marker states it on the page. Keying the figures on the family alone would be
+# worse than a colour clash -- the row lookups below use next(), so the second Whisper
+# system would be silently dropped from every panel.
+FRONTEND_COLOUR = {"Whisper": "#0072B2", "BEATs": "#D55E00"}
+SYSTEM_MARKER = {"video-SALMONN 2+": "o", "VideoLLaMA2.1-AV": "s", "Qwen2.5-Omni": "^"}
+
+
+# Macro suffix per system. Keyed on the system, not the front-end family: two systems now
+# share the Whisper family, and a family-keyed suffix silently overwrote video-SALMONN 2+'s
+# macros with Qwen's -- the body would have cited one model's numbers under the other's
+# name with no build error. The first two keep their historical suffixes so existing
+# \DelivMusicWhisper-style references in the body stay valid.
+SYSTEM_SUFFIX = {
+    "video-SALMONN 2+": "Whisper",
+    "VideoLLaMA2.1-AV": "BEATs",
+    "Qwen2.5-Omni": "Qwen",
+}
+
+
+def macro_suffix(domain: str, model: str) -> str:
+    """Unique macro suffix for one model x domain cell."""
+    if model not in SYSTEM_SUFFIX:
+        raise ValueError(f"no macro suffix registered for system {model!r}")
+    return f"{'Music' if domain == 'MUSIC-AVQA' else 'Avut'}{SYSTEM_SUFFIX[model]}"
+
+
+def style_for(model: str, frontend: str) -> tuple[str, str]:
+    """Colour from the front-end family, marker from the system."""
+    if frontend not in FRONTEND_COLOUR:
+        raise ValueError(f"no colour registered for front end {frontend!r}")
+    if model not in SYSTEM_MARKER:
+        raise ValueError(f"no marker registered for system {model!r}")
+    return FRONTEND_COLOUR[frontend], SYSTEM_MARKER[model]
+
+# (domain, model tag, macro suffix) for the per-model macro generators below. Qwen2.5-Omni
+# is a Whisper-family front end like video-SALMONN 2+, so its suffix names the system, not
+# the family: the two dissociate, which is the point. Generators skip a row whose cells are
+# absent, so listing a model before its grid finishes is safe.
+MODEL_CELLS = (
+    ("music", "vl2", "MusicBEATs"),
+    ("music", "vsalm2", "MusicWhisper"),
+    ("music", "qwenomni", "MusicQwen"),
+    ("avut", "vl2", "AvutBEATs"),
+    ("avut", "vsalm2", "AvutWhisper"),
+    ("avut", "qwenomni", "AvutQwen"),
+)
 
 
 def correctness(path: Path) -> tuple[np.ndarray, list[str]]:
@@ -103,17 +159,18 @@ def figure_crossover(rows: list[dict[str, object]]) -> None:
     ax.axhline(GATE_PP, color="#009E73", lw=1.1, ls=":", zorder=1)
     ax.text(-0.30, GATE_PP + 1.0, "20 pp gate", fontsize=6, color="#009E73", ha="left")
 
-    for frontend in ("Whisper", "BEATs"):
-        pts = [next((r for r in rows if r["frontend"] == frontend and r["domain"] == d), None) for d in domains]
+    for model in [c[2] for c in CELLS_ORDERED]:
+        pts = [next((r for r in rows if r["model"] == model and r["domain"] == d), None) for d in domains]
         if any(p is None for p in pts):
             continue
-        colour, marker = FRONTEND_STYLE[frontend]
+        frontend = str(pts[0]["frontend"])  # type: ignore[index]
+        colour, marker = style_for(model, frontend)
         xs = np.arange(len(domains))
         ys = [float(p["deliv"]) for p in pts]  # type: ignore[index]
         err = [[float(p["deliv"]) - float(p["deliv_lo"]) for p in pts],  # type: ignore[index]
                [float(p["deliv_hi"]) - float(p["deliv"]) for p in pts]]  # type: ignore[index]
         ax.errorbar(xs, ys, yerr=err, color=colour, marker=marker, ms=5, lw=1.8,
-                    capsize=3, elinewidth=1.0, label=f"{frontend}-fronted", zorder=3)
+                    capsize=3, elinewidth=1.0, label=f"{model} ({frontend})", zorder=3)
         for x, y in zip(xs, ys, strict=True):
             # Labels sit outward from the crossing so neither the gate line nor the
             # opposite series' label is overwritten.
@@ -145,7 +202,7 @@ def figure_fusion(rows: list[dict[str, object]]) -> None:
     ax.axvline(0.0, color="0.8", lw=0.7, zorder=0)
 
     for row in rows:
-        colour, marker = FRONTEND_STYLE[str(row["frontend"])]
+        colour, marker = style_for(str(row["model"]), str(row["frontend"]))
         x, y = float(row["deliv"]), float(row["dA"])
         if x - y > 5.0:  # audio arrived and was discarded: show the drop
             ax.plot([x, x], [x, y], color=colour, lw=1.0, ls=":", zorder=2)
@@ -289,6 +346,13 @@ def _matched_coverage_macros() -> list[str]:
             f"\\newcommand{{\\FullDeliv{tag}}}{{{mean:+.2f}}}",
             f"\\newcommand{{\\FullDelivCI{tag}}}{{[{lo:+.2f}, {hi:+.2f}]}}",
         ]
+        # Fusion loss at matched coverage, derived here rather than in the prose: a
+        # hand-entered derived digit is what desynchronised the interaction last round.
+        clean_real = EVAL_DIR / f"avqa_cmss_{domain}_vl2_real.json"
+        clean_silent = EVAL_DIR / f"avqa_cmss_{domain}_vl2_silent.json"
+        if clean_real.exists() and clean_silent.exists():
+            d_clean, _, _ = paired_gain(clean_real, clean_silent)
+            out.append(f"\\newcommand{{\\FullFusionLoss{tag}}}{{{mean - d_clean:.2f}}}")
     return out
 
 
@@ -302,8 +366,7 @@ def _shuffled_macros() -> list[str]:
     condition and none of its answer content, so a gain that survives it is content-driven.
     """
     out: list[str] = []
-    for domain, model, tag in (("music", "vl2", "MusicBEATs"), ("music", "vsalm2", "MusicWhisper"),
-                               ("avut", "vl2", "AvutBEATs"), ("avut", "vsalm2", "AvutWhisper")):
+    for domain, model, tag in MODEL_CELLS:
         cell = EVAL_DIR / f"shuf_poscontrol_cmss_{domain}_{model}.json"
         real = EVAL_DIR / f"poscontrol_cmss_{domain}_{model}_real.json"
         if not (cell.exists() and real.exists()):
@@ -312,6 +375,206 @@ def _shuffled_macros() -> list[str]:
         out += [
             f"\\newcommand{{\\ShufDeliv{tag}}}{{{mean:+.2f}}}",
             f"\\newcommand{{\\ShufDelivCI{tag}}}{{[{lo:+.2f}, {hi:+.2f}]}}",
+        ]
+    return out
+
+
+def _census_macros() -> list[str]:
+    """Cell counts and the small-sample replication, generated so prose cannot drift.
+
+    Two numbers in this paper were previously typed by hand and both went stale as cells
+    were added: the census of cells cited, and the size of the replication used to argue
+    that the delivery gate's straddle is not a sample-size problem. Deriving them here keeps
+    them true.
+    """
+    import glob as _glob
+
+    paths = set()
+    for pattern in ("avqa_cmss_music_*.json", "poscontrol_cmss_music_*.json",
+                    "avqa_cmss_avut_*.json", "poscontrol_cmss_avut_*.json",
+                    "full_poscontrol_*.json", "shuf_poscontrol_*.json"):
+        paths |= set(_glob.glob(str(EVAL_DIR / pattern)))
+    for extra in ("poscontrol_cmss_vl2_real.json", "poscontrol_cmss_vl2_silent.json",
+                  "contig_poscontrol_cmss_vl2_real.json", "contig_poscontrol_cmss_avut_vl2_real.json"):
+        if (EVAL_DIR / extra).exists():
+            paths.add(str(EVAL_DIR / extra))
+    total = sum(len(json.loads(Path(p).read_text())["predictions"]) for p in paths)
+
+    out = [
+        f"\\newcommand{{\\CitedCells}}{{{len(paths)}}}",
+        f"\\newcommand{{\\CitedPredictions}}{{{total:,}}}".replace(",", "{,}"),
+    ]
+
+    # The grid proper: three systems x two domains x 28 cells. Counted here for the same
+    # reason as the census above -- the body previously carried "112-cell grid" and an
+    # unparseable count as literals, and a third system silently made both wrong.
+    grid = set()
+    for dom in ("music", "avut"):
+        for model in ("vsalm2", "vl2", "qwenomni"):
+            grid |= set(_glob.glob(str(EVAL_DIR / f"avqa_cmss_{dom}_{model}*.json")))
+            grid |= set(_glob.glob(str(EVAL_DIR / f"poscontrol_cmss_{dom}_{model}_*.json")))
+    grid_preds = 0
+    grid_unparsed = 0
+    for path in grid:
+        preds = json.loads(Path(path).read_text())["predictions"]
+        grid_preds += len(preds)
+        grid_unparsed += sum(1 for r in preds if not str(r["pred"]).strip())
+    out += [
+        f"\\newcommand{{\\GridCells}}{{{len(grid)}}}",
+        f"\\newcommand{{\\GridPredictions}}{{{grid_preds:,}}}".replace(",", "{,}"),
+        f"\\newcommand{{\\GridUnparsed}}{{{grid_unparsed}}}",
+        f"\\newcommand{{\\GridUnparsedPct}}{{{100.0 * grid_unparsed / max(grid_preds, 1):.3f}}}",
+    ]
+    rep_a = EVAL_DIR / "pre_music_vl2_blank_real.json"
+    rep_b = EVAL_DIR / "pre_music_vl2_blank_silent.json"
+    if rep_a.exists() and rep_b.exists():
+        mean, lo, hi = paired_gain(rep_a, rep_b)
+        _, videos = correctness(rep_a)
+        out += [
+            f"\\newcommand{{\\RepItems}}{{{len(videos)}}}",
+            f"\\newcommand{{\\RepVideos}}{{{len(set(videos))}}}",
+            f"\\newcommand{{\\RepGain}}{{{mean:+.2f}}}",
+            f"\\newcommand{{\\RepCI}}{{[{lo:+.2f}, {hi:+.2f}]}}",
+        ]
+    return out
+
+
+def _degeneration_macros() -> list[str]:
+    """How much of the delivery gain is content, and how much is silence de-degenerating.
+
+    G_A compares real audio with silence. If silence itself collapses the model's output
+    distribution, part of G_A is the model recovering from that collapse rather than using
+    audio content. Shuffled audio -- a donor clip's waveform, matched in duration, carrying
+    no answer -- has the acoustic character of the real condition, so `shuffled - silent`
+    isolates the de-degeneration component and `real - shuffled` the content component.
+
+    Reporting only `real - shuffled`, as an earlier draft did, hides the decomposition and
+    happens to flatter the headline: on the anchor cell 3.00 of the 18.00 pp is
+    de-degeneration, and in the AVUT cell shuffled audio is an active distractor, so the
+    content component there *exceeds* the silence-referenced gain.
+    """
+    out: list[str] = []
+    for domain, model, tag in MODEL_CELLS:
+        shuf = EVAL_DIR / f"shuf_poscontrol_cmss_{domain}_{model}.json"
+        silent = EVAL_DIR / f"poscontrol_cmss_{domain}_{model}_silent.json"
+        clean_real = EVAL_DIR / f"avqa_cmss_{domain}_{model}_real.json"
+        clean_silent = EVAL_DIR / f"avqa_cmss_{domain}_{model}_silent.json"
+        if not (shuf.exists() and silent.exists()):
+            continue
+        mean, lo, hi = paired_gain(shuf, silent)
+        out += [
+            f"\\newcommand{{\\Degen{tag}}}{{{mean:+.2f}}}",
+            f"\\newcommand{{\\DegenCI{tag}}}{{[{lo:+.2f}, {hi:+.2f}]}}",
+        ]
+        if clean_real.exists() and clean_silent.exists():
+            # Fusion loss referenced to shuffled rather than silence.
+            shuf_gain, _, _ = paired_gain(EVAL_DIR / f"poscontrol_cmss_{domain}_{model}_real.json", shuf)
+            d_clean, _, _ = paired_gain(clean_real, clean_silent)
+            out.append(f"\\newcommand{{\\FusionLossShuf{tag}}}{{{shuf_gain - d_clean:.2f}}}")
+    return out
+
+
+def _access_macros() -> list[str]:
+    """The audio-access intervention, generated rather than transcribed.
+
+    Three numbers in the access section were still typed by hand: the AVUT gain under the
+    default sampled path, the same cell under a contiguous 30 s window, and the short-clip
+    inertness control that must be identical under both paths. The last is the one that
+    licenses reading the AVUT result as a front-end effect, so it is exactly the number that
+    should not depend on a human copying it correctly.
+    """
+    out: list[str] = []
+    pairs = {
+        "AvutSampled": ("poscontrol_cmss_avut_vl2_real.json", "poscontrol_cmss_avut_vl2_silent.json"),
+        "AvutContig": ("contig_poscontrol_cmss_avut_vl2_real.json", "poscontrol_cmss_avut_vl2_silent.json"),
+        "ShortClipSampled": ("poscontrol_cmss_vl2_real.json", "poscontrol_cmss_vl2_silent.json"),
+        "ShortClipContig": ("contig_poscontrol_cmss_vl2_real.json", "poscontrol_cmss_vl2_silent.json"),
+    }
+    for tag, (a, b) in pairs.items():
+        pa, pb = EVAL_DIR / a, EVAL_DIR / b
+        if not (pa.exists() and pb.exists()):
+            continue
+        mean, _lo, _hi = paired_gain(pa, pb)
+        out.append(f"\\newcommand{{\\Access{tag}}}{{{mean:+.2f}}}")
+    return out
+
+
+def _contrast_macros() -> list[str]:
+    """Item-paired Delta_A contrast between the two Whisper-family systems, per cell.
+
+    The revised claim in Sec. V rests on these: the two systems that share an encoder
+    family separate on music and not on speech. Stating it from two conditions in prose
+    invites the reader to wonder about the other six, so all eight are generated here and
+    tabulated. Contrasts are differenced within item before bootstrapping, which is what
+    makes them a test of a difference rather than a comparison of two intervals.
+    """
+    out: list[str] = []
+    for domain in ("music", "avut"):
+        for family in FAMILIES:
+            paths = {}
+            for model in ("qwenomni", "vsalm2"):
+                paths[model] = (
+                    EVAL_DIR / f"avqa_cmss_{domain}_{model}_real_vis-{family}-s1.json",
+                    EVAL_DIR / f"avqa_cmss_{domain}_{model}_silent_vis-{family}-s1.json",
+                )
+            if not all(f.exists() for pair in paths.values() for f in pair):
+                continue
+            diffs = {}
+            videos = None
+            for model, (real_p, silent_p) in paths.items():
+                real, vids = correctness(real_p)
+                silent, _ = correctness(silent_p)
+                if videos is None:
+                    videos = vids
+                elif vids != videos:
+                    raise ValueError(f"{domain}/{family}: cells are not item-aligned across models")
+                diffs[model] = real - silent
+            index = {v: i for i, v in enumerate(sorted(set(videos or [])))}
+            cid = np.array([index[v] for v in (videos or [])])
+            mean, lo, hi = cluster_bootstrap_mean(
+                (diffs["qwenomni"] - diffs["vsalm2"]) * 100.0, cid, n_boot=N_BOOT, seed=SEED
+            )
+            tag = f"{'Music' if domain == 'music' else 'Avut'}{family.title().replace('_', '')}"
+            out += [
+                f"\\newcommand{{\\Contrast{tag}}}{{{mean:+.2f}}}",
+                f"\\newcommand{{\\ContrastCI{tag}}}{{[{lo:+.2f}, {hi:+.2f}]}}",
+            ]
+    return out
+
+
+def _ceiling_macros() -> list[str]:
+    """The item-level ceiling on what audio can add, and how much of it is realised.
+
+    ``G_A - Delta_A(0)`` is a difference of two *marginal* accuracies and is silent on
+    whether the items audio answers alone are the items vision already answers. Where they
+    coincide, a near-zero ``Delta_A(0)`` is benchmark redundancy, not discarded information.
+    The quantity that separates the two is the share of items audio alone gets right and
+    vision alone gets wrong: no fusion, however good, can add more than that. On the anchor
+    cell it is 6.00 pp against a marginal fusion loss of 18.33 pp, so the marginal figure
+    attributes to fusion roughly three times what fusion could ever have delivered.
+    """
+    out: list[str] = []
+    for domain, model, tag in MODEL_CELLS:
+        audio = EVAL_DIR / f"poscontrol_cmss_{domain}_{model}_real.json"
+        vision = EVAL_DIR / f"avqa_cmss_{domain}_{model}_silent.json"
+        both = EVAL_DIR / f"avqa_cmss_{domain}_{model}_real.json"
+        if not all(f.exists() for f in (audio, vision, both)):
+            continue
+        a, _ = correctness(audio)
+        v, _ = correctness(vision)
+        b, videos = correctness(both)
+        unique = (a == 1) & (v == 0)          # audio answers, vision does not
+        ceiling = 100.0 * unique.mean()
+        realised = 100.0 * (b - v).mean()
+        index = {x: i for i, x in enumerate(sorted(set(videos)))}
+        cid = np.array([index[x] for x in videos])
+        _m, lo, hi = cluster_bootstrap_mean(unique * 100.0, cid, n_boot=N_BOOT, seed=SEED)
+        out += [
+            f"\\newcommand{{\\Ceiling{tag}}}{{{ceiling:.2f}}}",
+            f"\\newcommand{{\\CeilingCI{tag}}}{{[{lo:.2f}, {hi:.2f}]}}",
+            f"\\newcommand{{\\CeilingN{tag}}}{{{int(unique.sum())}}}",
+            f"\\newcommand{{\\Realised{tag}}}{{{100.0 * realised / ceiling:.0f}}}" if ceiling > 0.5
+            else f"\\newcommand{{\\Realised{tag}}}{{n/a}}",
         ]
     return out
 
@@ -343,15 +606,15 @@ def figure_surfaces(rows: list[dict[str, object]]) -> None:
     where the bound is at zero there is nothing to rise into.
     """
     x = [0.0, 0.33, 0.66, 1.0]
-    order = [("MUSIC-AVQA", "BEATs"), ("MUSIC-AVQA", "Whisper"),
-             ("AVUT", "BEATs"), ("AVUT", "Whisper")]
-    fig, axes = plt.subplots(2, 2, figsize=(7.0, 4.0), sharex=True, sharey=True)
-    for ax, (domain, frontend) in zip(axes.ravel(), order, strict=True):
-        row = next((r for r in rows if r["domain"] == domain and r["frontend"] == frontend), None)
+    order = [(d, m) for d in ("MUSIC-AVQA", "AVUT")
+             for m in ("VideoLLaMA2.1-AV", "video-SALMONN 2+", "Qwen2.5-Omni")]
+    fig, axes = plt.subplots(2, 3, figsize=(10.0, 4.0), sharex=True, sharey=True)
+    for ax, (domain, model) in zip(axes.ravel(), order, strict=True):
+        row = next((r for r in rows if r["domain"] == domain and r["model"] == model), None)
         if row is None:
             ax.set_visible(False)
             continue
-        colour, marker = FRONTEND_STYLE[frontend]
+        colour, marker = style_for(model, str(row["frontend"]))
         curve = delta_curve(str(row["tag"]))
         mean = [c[0] for c in curve]
         lo = [c[1] for c in curve]
@@ -362,7 +625,7 @@ def figure_surfaces(rows: list[dict[str, object]]) -> None:
         ax.text(0.02, gain + 0.8, f"delivery ceiling {gain:+.2f}", fontsize=5.8, color="0.25")
         ax.fill_between(x, lo, hi, color=colour, alpha=0.15, lw=0, zorder=2)
         ax.plot(x, mean, color=colour, marker=marker, ms=4, lw=1.7, zorder=3)
-        ax.set_title(f"{frontend} / {domain}   SG = {mean[-1] - mean[0]:+.2f} pp", fontsize=7.5)
+        ax.set_title(f"{model} / {domain}   SG = {mean[-1] - mean[0]:+.2f} pp", fontsize=7.5)
         ax.set_xticks(x)
         ax.tick_params(labelsize=6.5)
         ax.grid(alpha=0.25, lw=0.5)
@@ -404,7 +667,7 @@ def main() -> None:
     print(f"{'front end':10s} {'domain':12s} {'floor':>7s} {'audio':>7s} {'vision':>7s} "
           f"{'both':>7s} {'delivery':>20s} {'Delta_A(0)':>20s} {'loss':>7s}")
     for row in rows:
-        tag = f"{'Music' if row['domain'] == 'MUSIC-AVQA' else 'Avut'}{row['frontend']}"
+        tag = macro_suffix(str(row["domain"]), str(row["model"]))
         loss = float(row["deliv"]) - float(row["dA"])
         macros += [
             f"\\newcommand{{\\Deliv{tag}}}{{{float(row['deliv']):+.2f}}}",
@@ -435,6 +698,11 @@ def main() -> None:
     macros += _probe_macros()
     macros += _matched_coverage_macros()
     macros += _shuffled_macros()
+    macros += _census_macros()
+    macros += _degeneration_macros()
+    macros += _access_macros()
+    macros += _ceiling_macros()
+    macros += _contrast_macros()
 
     (OUT_DIR / "numbers_crossover.tex").write_text("\n".join(sorted(macros)) + "\n")
     figure_crossover(rows)

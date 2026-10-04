@@ -65,9 +65,29 @@ run_vl2() {
     done
 }
 
+run_qwenomni() {
+    # Third front end, added 2026-09-14. AVUT is 4-way multiple choice, so the reader stays
+    # --answer_format letter (the default) rather than the MUSIC-AVQA closed vocabulary.
+    local log=/tmp/cmss_avut_poscontrol_qwenomni.log
+    export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+    export CUDA_VISIBLE_DEVICES="${QWEN_GPU:-2}"
+    cd "$ROOT" || return 1
+    for audio in real silent; do
+        local out="$OUT_DIR/poscontrol_cmss_avut_qwenomni_${audio}.json"
+        if [ -s "$out" ]; then echo "[skip] $out" | tee -a "$log"; continue; fi
+        echo "[$(date +%T)] [run ] qwenomni poscontrol audio=${audio} blank-video" | tee -a "$log"
+        POS_BLANK=1 $VENV/bin/python scripts/eval_avqa_qwenomni.py \
+            --eval_data "$EVAL_DATA" --video_dir "$VIDEO_DIR" \
+            --audio_mode "$audio" --visual_mode clean --visual_severity 1.0 \
+            --output "$out" >>"$log" 2>&1
+        echo "[$(date +%T)] DONE exit=$? -> $out" | tee -a "$log"
+    done
+}
+
 case "$WHICH" in
-    vsalm2) run_vsalm2 ;;
-    vl2)    run_vl2 ;;
-    both)   run_vl2 & run_vsalm2 & wait ;;
-    *)      echo "usage: $0 [vsalm2|vl2|both]" >&2; exit 1 ;;
+    vsalm2)   run_vsalm2 ;;
+    vl2)      run_vl2 ;;
+    qwenomni) run_qwenomni ;;
+    both)     run_vl2 & run_vsalm2 & wait ;;
+    *)        echo "usage: $0 [vsalm2|vl2|qwenomni|both]" >&2; exit 1 ;;
 esac

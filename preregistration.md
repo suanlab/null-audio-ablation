@@ -507,3 +507,70 @@ formulated after the confirmatory grid, prompted by review. The manuscript label
 
 **Outcome unchanged.** The preregistered primary claim (M1) remains **NOT MET**. No
 threshold was altered at any point in this replacement.
+
+### 2026-09-14 — Third front end reinstated: Qwen2.5-Omni-7B, and the configuration it will run under
+
+**Status when this entry was written: no Qwen2.5-Omni outcome has been observed.** The
+adapter has been repaired and its configuration fixed, but no delivery control and no grid
+cell has been scored. This entry is written before the result so the configuration cannot
+be read as having been chosen to produce one.
+
+**Why it is being reinstated.** The manuscript records two front ends that could not be
+reported (Sec. "Two Front Ends We Could Not Report"), and names two-front-ends-only as the
+paper's largest open weakness. Qwen2.5-Omni was excluded for what was described as a
+harness failure producing byte-identical generations. That description was correct but
+incomplete, and the underlying defect is now identified and fixed.
+
+**Defect 1: the audio never reached the model.** `scripts/eval_avqa_qwenomni.py` built its
+conversation with a video block and a text block and no audio block, so the chat template
+emitted no `<|AUDIO|>` placeholder. The waveform was computed into `input_features` and
+never referenced by any token position. Measured on the rendered prompt: 42 input tokens
+without the audio block, 144 with it. Verified identically under transformers 4.57.6 and
+5.1.0. Confirmed by a before/after control on the same 8 items, same seed, same model, the
+adapter being the only difference: pre-fix `real` and `silent` share one generation hash;
+post-fix they do not.
+
+Note that byte-identical output across audio conditions is *also* what a model that
+perfectly ignores audio produces under greedy decoding. The two are separated by the
+delivery control, not by the grid, and the delivery control agreed real-vs-silent on 47/47
+items -- which is what identifies this as delivery failure inside our harness rather than a
+property of the model. Had the distinction not been drawn, this paper would have reported a
+fusion finding that was an artefact of its own code.
+
+**Defect 2: superseded benchmark.** The stored `qwenomni_*.json` cells used the 98-item A--D
+subset replaced on 2026-09-06. They are retained, not deleted, and marked in
+`eval_results/QWENOMNI_STALE.md`. No number from them enters any table.
+
+**Defect 3: silent context overflow, and the configuration change this registers.**
+`qwen_omni_utils` budgets a video's pixels from `MODEL_SEQ_LEN`, which defaults to 128000.
+This checkpoint's context is 32768. At the default, high-resolution MUSIC-AVQA clips render
+to about 43.5k tokens. The overflow is silent: the tokenizer emits its length warning once
+per process, and the adapter records no per-sample failure, so affected items would decode
+past the end of the position embeddings and be scored as ordinary answers. Two of the first
+six items measured were over the limit.
+
+Registered configuration: **`MODEL_SEQ_LEN = 28000`**, set in the adapter before
+`qwen_omni_utils` is imported, together with a hard guard that raises if an item's sequence
+plus its 64 generated tokens would exceed 32768. The guard is deliberate: an item that
+cannot be measured is recorded as a failure rather than silently mis-decoded.
+
+*What this costs, stated plainly.* The cap reduces spatial resolution on clips that exceed
+the budget, so for those items "clean" means clean at this model's token budget. It is
+applied identically to every cell and every audio condition, so the paired estimand
+$\Delta_A = $ real $-$ silent is differenced within an item at a fixed visual budget. On the
+12 items measured, only the two over-budget clips changed (43{,}465 to 24{,}565 and 43{,}470
+to 24{,}570); the other ten rendered unchanged. This is the same class of disclosure as the
+model-level audio coverage asymmetry already reported for BEATs and Whisper, and it is
+reported the same way: as a per-model configuration, not hidden in a footnote.
+
+**What is not being changed.** The pilot, the split, the seed, the closed-vocabulary
+scoring, the delivery-control ordering, and every threshold remain as registered. The
+preregistered primary claim (M1) stands at **NOT MET**; a third front end can change the
+scope of what the exploratory crossover claim covers, and it cannot retroactively satisfy
+M1, which was resolved on 2026-08-16.
+
+**Eligibility.** Qwen2.5-Omni enters the grid only if it passes the same delivery gate the
+other models faced: $G_A$ = (blank video, real audio) $-$ (blank video, silent) significantly
+positive on the 60 held-out items. If it fails, that is a result and not an exclusion --
+a third instance of the delivery-versus-fusion distinction the paper is about -- and it
+will be reported as one.

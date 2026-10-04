@@ -7,7 +7,9 @@ scripts/aggregate_matched_98.py as a 5th model (prefix ``qwenomni``).
 
 Audio-only intervention; video frames are always the real frames. We supply
 our own controlled 16 kHz waveform and set use_audio_in_video=False so the
-model consumes exactly the audio we pass.
+model consumes exactly the audio we pass. The conversation must declare an
+audio block or the template emits no <|AUDIO|> placeholder and the waveform is
+silently ignored -- see the guard in run().
 
 Usage (videollm venv, transformers 5.1 has Qwen2.5-Omni):
     CUDA_VISIBLE_DEVICES=2 python scripts/eval_avqa_qwenomni.py \
@@ -21,6 +23,7 @@ from __future__ import annotations
 import argparse
 import importlib.util
 import json
+import os
 import random
 import re
 import sys
@@ -35,6 +38,17 @@ CLIP_SECONDS = 30
 CHOICE_RE = re.compile(r"[A-D]")
 AUDIO_MODES = ("real", "silent", "noise", "shuffled", "shifted")
 
+# qwen_omni_utils budgets a video's pixels from MODEL_SEQ_LEN, which defaults to 128000 --
+# nearly 4x this checkpoint's real context of 32768. Left at the default, high-resolution
+# clips render to ~43.5k tokens and overflow silently: the tokenizer warns only once per
+# process, and the adapter records no per-sample failure, so roughly a third of MUSIC-AVQA
+# items would decode past the end of the position embeddings. Set before qwen_omni_utils
+# is imported, since the module reads it at import time. 28000 leaves room for the audio
+# placeholder (~1.5k tokens for a 60 s clip) and the 64 generated tokens; it only bites on
+# clips that were over budget -- items already under it render unchanged.
+MODEL_SEQ_LEN = int(os.environ.setdefault("MODEL_SEQ_LEN", "28000"))
+CONTEXT_LIMIT = 32768
+
 # CMSS visual axis. Imported by path rather than as `videollm.…` so this adapter
 # also works in environments where that package is not installed.
 _VD_PATH = Path(__file__).resolve().parent.parent / "src" / "videollm" / "data" / "video_degradation.py"
@@ -45,6 +59,30 @@ _VD = importlib.util.module_from_spec(_VD_SPEC)
 sys.modules["video_degradation"] = _VD
 _VD_SPEC.loader.exec_module(_VD)
 VISUAL_MODES = _VD.VISUAL_MODES
+
+# Closed-vocabulary reader (MUSIC-AVQA). Loaded by path so all three adapters read model
+# output with byte-identical logic; a divergence here would surface as a between-model
+# difference that is really a between-parser difference.
+_AM_PATH = Path(__file__).resolve().parent.parent / "src" / "videollm" / "data" / "answer_match.py"
+_AM_SPEC = importlib.util.spec_from_file_location("answer_match", _AM_PATH)
+assert _AM_SPEC is not None and _AM_SPEC.loader is not None
+_AM = importlib.util.module_from_spec(_AM_SPEC)
+sys.modules["answer_match"] = _AM
+_AM_SPEC.loader.exec_module(_AM)
+
+_VOCAB_RE = re.compile(r"one of the following words:\s*\n(.+?)\n", re.DOTALL)
+
+
+def prompt_vocabulary(prompt: str) -> tuple[str, ...]:
+    """Read the candidate list out of the item's own prompt.
+
+    Deriving it from the prompt rather than a side file guarantees the reader scores
+    against exactly the words the model was shown, per item.
+    """
+    m = _VOCAB_RE.search(prompt)
+    if not m:
+        return ()
+    return tuple(w.strip() for w in m.group(1).split(",") if w.strip())
 
 
 def degrade_videos(vids, degradation):
@@ -58,33 +96,46 @@ def degrade_videos(vids, degradation):
         vids: List of video tensors ``(T, C, H, W)``, or None.
         degradation: The intervention to apply.
 
+    ``qwen_omni_utils.fetch_video`` decodes frames as uint8 and calls ``.float()`` after
+    resizing without dividing, so at this hook point a float tensor carries **0-255**
+    values, not the ``[0, 1]`` the degradation contract expects. An earlier version of
+    this function assumed float meant ``[0, 1]`` and raised on everything the library
+    actually produces, which is why the visual axis never ran for this model: every
+    sample failed, and a cell of empty predictions is not distinguishable from a cell of
+    wrong ones without reading the log. The sibling adapters take uint8 from their
+    upstreams and divide by 255 themselves; this one divides the float.
+
+    Args:
+        vids: List of video tensors ``(T, C, H, W)``, or None.
+        degradation: The intervention to apply.
+
     Returns:
-        Degraded tensors with the input dtype and shape preserved.
+        Degraded tensors with the input dtype, scale, and shape preserved.
 
     Raises:
-        ValueError: If a float tensor falls outside ``[0, 1]``; the degradation
-            contract clamps to that range, so a normalised tensor would be corrupted.
+        ValueError: If a tensor is outside ``[0, 255]``. Mean/std-normalised input has
+            negative values, and clamping it into the degradation range would corrupt
+            the frames rather than degrade them.
     """
     if vids is None or degradation is None or degradation.mode == "clean" or degradation.severity == 0.0:
         return vids
     out = []
     for v in vids:
-        if v.dtype == torch.uint8:
-            frames = v.float() / 255.0  # (T, C, H, W)
-        else:
-            frames = v.float()  # (T, C, H, W)
-            if float(frames.min()) < 0.0 or float(frames.max()) > 1.0:
-                raise ValueError(
-                    f"expected uint8 or float in [0, 1], got float range "
-                    f"[{float(frames.min()):.3f}, {float(frames.max()):.3f}]"
-                )
+        lo, hi = float(v.min()), float(v.max())
+        if lo < 0.0 or hi > 255.0:
+            raise ValueError(
+                f"expected uint8 or float in [0, 255], got {v.dtype} range [{lo:.3f}, {hi:.3f}]"
+            )
+        frames = v.float() / 255.0  # (T, C, H, W) in [0, 1] for the degradation contract
         degraded = _VD.apply_visual_degradation(frames, degradation)  # (T, C, H, W)
+        restored = (degraded * 255.0).clamp(0, 255)  # (T, C, H, W) back to the 0-255 scale
         if v.dtype == torch.uint8:
-            out.append((degraded * 255.0).round().clamp(0, 255).to(torch.uint8))
+            out.append(restored.round().to(torch.uint8))
         else:
-            out.append(degraded.to(v.dtype))
+            out.append(restored.to(v.dtype))
     return out
 MODEL_ID = "Qwen/Qwen2.5-Omni-7B"
+
 SYS = ("You are Qwen, a virtual human able to perceive auditory and visual "
        "inputs, as well as generate text and speech.")
 
@@ -156,6 +207,17 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--visual_severity", type=float, default=1.0,
                    help="Visual degradation severity in [0, 1]")
     p.add_argument("--seed", type=int, default=42)
+    p.add_argument(
+        "--answer_format",
+        default="letter",
+        choices=("letter", "vocab"),
+        help=(
+            "How to read the model's answer. 'letter' (default) extracts an A-D choice, for "
+            "4-way multiple-choice sets such as AVUT. 'vocab' matches the reply against the "
+            "closed answer vocabulary listed in the item's own prompt, for MUSIC-AVQA, whose "
+            "41 answers are words rather than letters."
+        ),
+    )
     p.add_argument("--output", required=True)
     return p.parse_args()
 
@@ -196,17 +258,33 @@ def main() -> None:
         try:
             donor = str(vdir / str(recs[shuf[i]]["video"])) if a.audio_mode == "shuffled" else None
             wav = mode_wav(a.audio_mode, vpath, donor, a.shift_seconds)
-            conv = [
-                {"role": "system", "content": [{"type": "text", "text": SYS}]},
-                {"role": "user", "content": [
-                    {"type": "video", "video": vpath},
-                    {"type": "text", "text": q},
-                ]},
+            # The chat template only emits <|audio_bos|><|AUDIO|><|audio_eos|> when the
+            # conversation carries an audio block. Without it the rendered prompt has no
+            # audio position, the waveform we pass rides along as an inert input_features
+            # tensor, and every audio mode decodes byte-identically. Render the template
+            # from a conversation that declares audio, but run process_mm_info on a
+            # video-only copy so it never loads audio off disk -- we still supply exactly
+            # the waveform mode_wav() built.
+            user_mm = [
+                {"type": "video", "video": vpath},
+                {"type": "text", "text": q},
             ]
-            chat = proc.apply_chat_template(conv, add_generation_prompt=True, tokenize=False)
+            conv_mm = [
+                {"role": "system", "content": [{"type": "text", "text": SYS}]},
+                {"role": "user", "content": user_mm},
+            ]
+            conv_tmpl = [
+                {"role": "system", "content": [{"type": "text", "text": SYS}]},
+                {"role": "user", "content": [{"type": "audio", "audio": vpath}, *user_mm]},
+            ]
+            chat = proc.apply_chat_template(conv_tmpl, add_generation_prompt=True, tokenize=False)
+            if "<|AUDIO|>" not in chat:
+                raise RuntimeError(
+                    "chat template emitted no <|AUDIO|> placeholder; audio would be ignored"
+                )
             from qwen_omni_utils import process_mm_info
 
-            _au, imgs, vids = process_mm_info(conv, use_audio_in_video=False)
+            _au, imgs, vids = process_mm_info(conv_mm, use_audio_in_video=False)
             if _pos_blank and vids is not None:
                 vids = [torch.zeros_like(v) for v in vids]
             # Visual axis: per-item deterministic seed, same contract as eval_avqa.py.
@@ -218,6 +296,12 @@ def main() -> None:
                 text=chat, audio=[wav], images=imgs, videos=vids,
                 return_tensors="pt", padding=True, use_audio_in_video=False,
             ).to(model.device)
+            n_tok = int(inputs["input_ids"].shape[1])
+            if n_tok + 64 > CONTEXT_LIMIT:
+                raise RuntimeError(
+                    f"sequence {n_tok} + 64 generated exceeds context {CONTEXT_LIMIT}; "
+                    f"lower MODEL_SEQ_LEN (currently {MODEL_SEQ_LEN})"
+                )
             with torch.inference_mode():
                 out_ids = model.generate(
                     **inputs, max_new_tokens=64, do_sample=False,
@@ -229,6 +313,10 @@ def main() -> None:
             print(f"[warn] sample {i} ({video}) failed: {exc}")
             txt = ""
         pred = ans_letter(txt)
+        if a.answer_format == "vocab":
+            vocab = prompt_vocabulary(rec["conversations"][0]["value"])
+            pred = _AM.match_answer(txt, vocab)
+            gt = _AM.match_answer(rec["conversations"][1]["value"], vocab)
         good = pred == gt and gt != ""
         correct += int(good)
         preds.append({"index": str(i), "video": video, "gt": gt,
@@ -240,6 +328,8 @@ def main() -> None:
     Path(a.output).write_text(json.dumps({
         "accuracy": 100.0 * correct / total if total else 0.0,
         "correct": correct, "total": total, "audio_mode": a.audio_mode,
+        "answer_format": a.answer_format,
+        "model_seq_len": MODEL_SEQ_LEN,
         "shift_seconds": a.shift_seconds if a.audio_mode == "shifted" else None,
         "visual_mode": a.visual_mode,
         "visual_severity": a.visual_severity if a.visual_mode != "clean" else 0.0,
