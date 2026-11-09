@@ -487,8 +487,11 @@ def _census_macros() -> list[str]:
         if (EVAL_DIR / extra).exists():
             paths.add(str(EVAL_DIR / extra))
     total = sum(len(json.loads(Path(p).read_text())["predictions"]) for p in paths)
+    cited_unparsed = sum(1 for p in paths for r in json.loads(Path(p).read_text())["predictions"]
+                         if not str(r["pred"]).strip())
 
     out = [
+        f"\\newcommand{{\\CitedUnparsed}}{{{cited_unparsed}}}",
         f"\\newcommand{{\\CitedCells}}{{{len(paths)}}}",
         f"\\newcommand{{\\CitedPredictions}}{{{total:,}}}".replace(",", "{,}"),
     ]
@@ -501,6 +504,8 @@ def _census_macros() -> list[str]:
         for model in ("vsalm2", "vl2", "qwenomni"):
             grid |= set(_glob.glob(str(EVAL_DIR / f"avqa_cmss_{dom}_{model}*.json")))
             grid |= set(_glob.glob(str(EVAL_DIR / f"poscontrol_cmss_{dom}_{model}_*.json")))
+    # The whole-track reruns are a sensitivity check on the grid, not part of it.
+    grid = {p for p in grid if "_fulltrack_" not in p}
     grid_preds = 0
     grid_unparsed = 0
     for path in grid:
