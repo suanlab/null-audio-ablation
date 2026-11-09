@@ -22,7 +22,7 @@ $CONDA_ENVS/videosalmonn2/bin/python "$ROOT/scripts/eval_avqa_videosalmonn2.py" 
     --audio_mode real --visual_mode clean --visual_severity 1.0 \
     --answer_format vocab \
     --output "$ROOT/eval_results/fmtcheck_music_avqa_vsalm2.json" >>"$LOG" 2>&1
-echo "[$(date +%T)] vsalm2 exit=$?" | tee -a "$LOG"
+rc=$?; echo "[$(date +%T)] vsalm2 exit=$rc" | tee -a "$LOG"
 
 echo "[$(date +%T)] VideoLLaMA2.1-AV" | tee -a "$LOG"
 cd $VIDEOLLAMA2_DIR || exit 1
@@ -33,4 +33,4 @@ $CONDA_ENVS/videollama2/bin/python eval_avqa_5mode.py \
     --audio_mode real --visual_mode clean --visual_severity 1.0 \
     --answer_format vocab \
     --output "$ROOT/eval_results/fmtcheck_music_avqa_vl2.json" >>"$LOG" 2>&1
-echo "[$(date +%T)] vl2 exit=$?" | tee -a "$LOG"
+rc=$?; echo "[$(date +%T)] vl2 exit=$rc" | tee -a "$LOG"

@@ -25,7 +25,7 @@ vs() {  # vs <audio_mode> <blank> <out>
         --eval_data "$DATA" --video_dir "$VIDS" --audio_mode "$1" \
         --visual_mode clean --visual_severity 1.0 --answer_format vocab \
         --output "$3" >>"$LOG" 2>&1
-    echo "[$(date +%T)] vsalm2 audio=$1 blank=$2 exit=$? -> $3" | tee -a "$LOG"
+    rc=$?; echo "[$(date +%T)] vsalm2 audio=$1 blank=$2 exit=$rc -> $3" | tee -a "$LOG"
 }
 vl() {
     skip "$3" && return 0
@@ -36,7 +36,7 @@ vl() {
         --eval_data "$DATA" --video_dir "$VIDS" --audio_mode "$1" \
         --visual_mode clean --visual_severity 1.0 --answer_format vocab \
         --output "$3" >>"$LOG" 2>&1 )
-    echo "[$(date +%T)] vl2 audio=$1 blank=$2 exit=$? -> $3" | tee -a "$LOG"
+    rc=$?; echo "[$(date +%T)] vl2 audio=$1 blank=$2 exit=$rc -> $3" | tee -a "$LOG"
 }
 qo() {  # third front end; audio path fixed 2026-09-14 (see eval_results/QWENOMNI_STALE.md)
     skip "$3" && return 0
@@ -46,7 +46,7 @@ qo() {  # third front end; audio path fixed 2026-09-14 (see eval_results/QWENOMN
         --eval_data "$DATA" --video_dir "$VIDS" --audio_mode "$1" \
         --visual_mode clean --visual_severity 1.0 --answer_format vocab \
         --output "$3" >>"$LOG" 2>&1
-    echo "[$(date +%T)] qwenomni audio=$1 blank=$2 exit=$? -> $3" | tee -a "$LOG"
+    rc=$?; echo "[$(date +%T)] qwenomni audio=$1 blank=$2 exit=$rc -> $3" | tee -a "$LOG"
 }
 
 R=$ROOT/eval_results

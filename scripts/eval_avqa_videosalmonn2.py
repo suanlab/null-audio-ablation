@@ -116,7 +116,7 @@ CHOICE_RE = re.compile(r"[A-D]")
 # Loaded by path so both adapters read model output with byte-identical logic; a
 # divergence here would show up as a between-model difference that is really a
 # between-parser difference.
-_AM_PATH = Path("$REPO_ROOT") / "src" / "videollm" / "data" / "answer_match.py"
+_AM_PATH = Path(__file__).resolve().parent.parent / "src" / "videollm" / "data" / "answer_match.py"
 _AM_SPEC = importlib.util.spec_from_file_location("answer_match", _AM_PATH)
 _AM = importlib.util.module_from_spec(_AM_SPEC)
 sys.modules["answer_match"] = _AM
@@ -150,8 +150,15 @@ sys.modules["video_degradation"] = _VD
 _VD_SPEC.loader.exec_module(_VD)
 VISUAL_MODES = _VD.VISUAL_MODES
 
+
+def _env(name: str, default: str | None = None) -> str:
+    """A path variable from PATHS.md; fail naming the variable rather than with a bad path."""
+    value = os.environ.get(name) or default
+    if not value:
+        raise SystemExit(f"set ${name} first -- see PATHS.md")
+    return value
+
 # Repo paths (Strategy A requirement 1: sys.path insert the repo subdir).
-REPO_DIR = Path("$WORK_DIR/video-SALMONN-2/video_SALMONN2_plus")
 
 
 def build_shuffled_mapping(n: int, seed: int) -> list[int]:
@@ -180,7 +187,8 @@ def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description="video-SALMONN2+ 7B five-mode AVQA eval")
     p.add_argument(
         "--model_path",
-        default="$MODELS_DIR/video-SALMONN2_plus_7B_full",
+        default=None,
+        help="checkpoint directory; defaults to $MODELS_DIR/video-SALMONN2_plus_7B_full",
     )
     p.add_argument("--eval_data", required=True)
     p.add_argument("--video_dir", required=True)
@@ -203,7 +211,11 @@ def parse_args() -> argparse.Namespace:
         ),
     )
     p.add_argument("--output", required=True)
-    return p.parse_args()
+    args = p.parse_args()
+    if args.model_path is None:
+        args.model_path = os.path.join(_env("MODELS_DIR"),
+                                       "video-SALMONN2_plus_7B_full")
+    return args
 
 
 # --- Per-mode waveform math (mirrors contract get_mode_fbank, but STOPS at the
@@ -383,7 +395,8 @@ def main() -> None:
     torch.cuda.manual_seed_all(args.seed)
 
     # Strategy A req 1: sys.path insert the repo subdir BEFORE repo imports.
-    sys.path.insert(0, str(REPO_DIR))
+    repo_dir = Path(_env("WORK_DIR")) / "video-SALMONN-2" / "video_SALMONN2_plus"
+    sys.path.insert(0, str(repo_dir))
 
     import transformers  # noqa: F401  (ensures repo's transformers is importable)
     from qwenvl.data.dataset import make_supervised_data_module

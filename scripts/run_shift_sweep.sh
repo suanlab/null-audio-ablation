@@ -15,7 +15,7 @@ DATA=$ROOT/data/instruct/avqa_test_clean.jsonl   # the 98-sample matched subset
 VID=$ROOT/data/videos
 OUT=$ROOT/eval_results/shift_sweep
 LOG=/tmp/shift_sweep.log
-PY_IH=python
+PY_IH=$VENV/bin/python
 PY_VL=$CONDA_ENVS/videollama2/bin/python
 AGTA_CKPT=$ROOT/checkpoints/full_v6/stage3_instruction
 mkdir -p "$OUT"
@@ -48,7 +48,7 @@ for S in 0.10 0.25 0.50 2.0 5.0; do
   $PY_IH scripts/eval_avqa.py \
     --checkpoint "$AGTA_CKPT" --eval_data "$DATA" --video_dir "$VID" \
     --audio_mode shifted --shift_seconds "$S" --output "$O" >>"$LOG" 2>&1
-  echo "[$(date +%T)] DONE AGTA shift=$S exit=$? -> $O" | tee -a "$LOG"
+  rc=$?; echo "[$(date +%T)] DONE AGTA shift=$S exit=$rc -> $O" | tee -a "$LOG"
 done
 
 # VideoLLaMA2.1-AV: new magnitudes only (real/3.0 reused from canonical JSONs).
@@ -63,7 +63,7 @@ for S in 0.10 0.25 0.50 1.0 2.0 5.0; do
     --model_path DAMO-NLP-SG/VideoLLaMA2.1-7B-AV \
     --eval_data "$DATA" --video_dir "$VID" \
     --audio_mode shifted --shift_seconds "$S" --output "$O" >>"$LOG" 2>&1
-  echo "[$(date +%T)] DONE VL2 shift=$S exit=$? -> $O" | tee -a "$LOG"
+  rc=$?; echo "[$(date +%T)] DONE VL2 shift=$S exit=$rc -> $O" | tee -a "$LOG"
 done
 
 echo "[$(date +%T)] SWEEP ALL DONE" | tee -a "$LOG"

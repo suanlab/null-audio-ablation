@@ -42,7 +42,7 @@ run_vsalm2() {
             --eval_data "$EVAL_DATA" --video_dir "$VIDEO_DIR" \
             --audio_mode "$audio" --visual_mode clean --visual_severity 1.0 \
             --output "$out" >>"$log" 2>&1
-        echo "[$(date +%T)] DONE exit=$? -> $out" | tee -a "$log"
+        rc=$?; echo "[$(date +%T)] DONE exit=$rc -> $out" | tee -a "$log"
     done
 }
 
@@ -61,7 +61,7 @@ run_vl2() {
             --eval_data "$EVAL_DATA" --video_dir "$VIDEO_DIR" \
             --audio_mode "$audio" --visual_mode clean --visual_severity 1.0 \
             --output "$out" >>"$log" 2>&1
-        echo "[$(date +%T)] DONE exit=$? -> $out" | tee -a "$log"
+        rc=$?; echo "[$(date +%T)] DONE exit=$rc -> $out" | tee -a "$log"
     done
 }
 
@@ -80,7 +80,7 @@ run_qwenomni() {
             --eval_data "$EVAL_DATA" --video_dir "$VIDEO_DIR" \
             --audio_mode "$audio" --visual_mode clean --visual_severity 1.0 \
             --output "$out" >>"$log" 2>&1
-        echo "[$(date +%T)] DONE exit=$? -> $out" | tee -a "$log"
+        rc=$?; echo "[$(date +%T)] DONE exit=$rc -> $out" | tee -a "$log"
     done
 }
 

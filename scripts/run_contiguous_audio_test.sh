@@ -34,7 +34,7 @@ run() {  # run <tag> <eval_data> <video_dir> <out>
         --audio_mode real --visual_mode clean --visual_severity 1.0 \
         --audio_access contiguous \
         --output "$out" >>"$LOG" 2>&1
-    echo "[$(date +%T)] DONE exit=$? -> $out" | tee -a "$LOG"
+    rc=$?; echo "[$(date +%T)] DONE exit=$rc -> $out" | tee -a "$LOG"
 }
 
 run "AVUT"   "$ROOT/data/instruct/avut_pilot_300.jsonl" "$ROOT/data/avut/videos" \

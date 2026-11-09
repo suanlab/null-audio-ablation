@@ -68,7 +68,7 @@ run_cell() {  # run_cell <audio> <visual> <severity> <out> <blank>
             --audio_mode "$audio" --visual_mode "$visual" --visual_severity "$sev" \
             --answer_format vocab --output "$out" >>"$LOG" 2>&1 )
     fi
-    echo "[$(date +%T)] DONE exit=$? -> $(basename "$out")" | tee -a "$LOG"
+    rc=$?; echo "[$(date +%T)] DONE exit=$rc -> $(basename "$out")" | tee -a "$LOG"
 }
 
 if [ "$DO_CONTROLS" = "1" ]; then

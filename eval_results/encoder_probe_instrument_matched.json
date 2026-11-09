@@ -1,0 +1,79 @@
+{
+  "items": 1319,
+  "classes": 20,
+  "majority_baseline": 13.267626990144048,
+  "task": "instrument identity (20-way)",
+  "audio": "first 30 s of each clip, all encoders",
+  "seconds_fed": {
+    "median": 30.0,
+    "clips_shorter_than_window": 12
+  },
+  "encoders": {
+    "BEATs": {
+      "mean": 54.58680818802123,
+      "ci": [
+        51.85746777862017,
+        57.240333586050035
+      ],
+      "dim": 768
+    },
+    "Whisper-large-v3": {
+      "mean": 35.70887035633055,
+      "ci": [
+        33.206974981046244,
+        38.28658074298711
+      ],
+      "dim": 1280
+    },
+    "Qwen2.5-Omni audio tower": {
+      "mean": 49.35557240333586,
+      "ci": [
+        46.70204700530705,
+        52.084912812736924
+      ],
+      "dim": 1280
+    }
+  },
+  "paired_differences": {
+    "BEATs - Whisper-large-v3": {
+      "mean": 18.877937831690677,
+      "lo": 15.769522365428355,
+      "hi": 21.910538286580742
+    },
+    "Qwen2.5-Omni audio tower - Whisper-large-v3": {
+      "mean": 13.646702047005308,
+      "lo": 10.462471569370736,
+      "hi": 16.755117513267628
+    },
+    "BEATs - Qwen2.5-Omni audio tower": {
+      "mean": 5.231235784685368,
+      "lo": 2.274450341167551,
+      "hi": 8.188021228203183
+    }
+  },
+  "label_audit": {
+    "label_question_types": {
+      "[\"Audio-Visual\", \"Location\"]": 368,
+      "[\"Audio-Visual\", \"Temporal\"]": 314,
+      "[\"Visual\", \"Location\"]": 637
+    },
+    "audio_typed_subset": {
+      "items": 682,
+      "BEATs": {
+        "mean": 52.34604105571847,
+        "lo": 48.53372434017595,
+        "hi": 56.158357771260995
+      },
+      "Whisper-large-v3": {
+        "mean": 36.070381231671554,
+        "lo": 32.551319648093845,
+        "hi": 39.73607038123167
+      },
+      "Qwen2.5-Omni audio tower": {
+        "mean": 48.240469208211145,
+        "lo": 44.42815249266862,
+        "hi": 52.05278592375367
+      }
+    }
+  }
+}

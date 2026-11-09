@@ -574,3 +574,27 @@ other models faced: $G_A$ = (blank video, real audio) $-$ (blank video, silent) 
 positive on the 60 held-out items. If it fails, that is a result and not an exclusion --
 a third instance of the delivery-versus-fusion distinction the paper is about -- and it
 will be reported as one.
+
+### 2026-11-10 — RETROSPECTIVE: corrections found in pre-submission review
+
+**This entry is written after the data it describes** and changes no registered rule. It
+records four facts that earlier entries or the manuscript had wrong or left unstated.
+
+1. **Dates of the AVUT cells.** The 2026-09-06 entry says every cell in the manuscript dates
+   from 2026-08-21 to 2026-08-30. That holds for the MUSIC-AVQA cells. The AVUT delivery and
+   clean cells for VideoLLaMA2.1-AV and video-SALMONN 2+ date from 2026-08-14 to 2026-08-16;
+   the anchor replacement did not affect them.
+2. **Primary family.** The 2026-08-16 entries rule that no AVUT cell enters a confirmatory
+   family. A manuscript draft nevertheless corrected over an eight-test family that kept the
+   AVUT tests. The registered family is the four MUSIC-AVQA tests (Holm: two rejections,
+   VideoLLaMA2.1-AV delivery and SG). The eight-test version is reported only as a labelled
+   sensitivity analysis (`scripts/primary_family.py`, `eval_results/primary_family_holm.json`).
+3. **Qwen2.5-Omni input.** The adapter registered on 2026-09-14 fed the first 30 s of each
+   track, zero-padded, with 30 s of silence as the null. A manuscript draft said the model
+   received the full track. Its four estimand conditions were rerun with the whole track and
+   silence matched to each item's length (`*_qwenomni_fulltrack_*`). These are exploratory,
+   and the as-run cells remain the reported grid.
+4. **Held-out videos used.** The encoder probe (1,319 clips) and the two 60-item checks drew on
+   MUSIC-AVQA videos held out from the pilot: 1,361 of the 4,920 in total. Those videos must not
+   be used for a final confirmatory test. The other 3,559, and all 574 held-out AVUT videos,
+   are untouched.

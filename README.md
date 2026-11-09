@@ -1,33 +1,30 @@
-# What a Null Audio Ablation Measures
+# Interpreting Null Audio Ablations
 
-Code, preregistration, and per-cell predictions for *"What a Null Audio Ablation Measures:
-Separating Delivery, Front-End Capability, and Fusion"* (submitted to IEEE/ACM Transactions
-on Audio, Speech, and Language Processing).
+Code, preregistration, and per-cell predictions for *"Interpreting Null Audio Ablations:
+System-Level Controls and Their Limits"* (submitted to IEEE/ACM Transactions on Audio, Speech,
+and Language Processing).
 
 ## What the paper argues
 
 The standard test of whether an audio-visual LLM uses sound is to replace the audio with
 silence and report the accuracy drop, `Δ_A`. A near-zero `Δ_A` is read as the model
-ignoring what it hears. At least three different situations produce that number, and the
-measurement cannot tell them apart:
+ignoring what it hears. At least three different situations produce that number:
 
 1. **Not delivered** — the audio never reached the model in a usable form.
-2. **Delivered but not fused** — audio alone carries the answer, and it adds nothing once
+2. **Delivered but not fused** — audio alone changes the answers, and it adds nothing once
    vision is present.
 3. **Redundant benchmark** — either channel alone nearly solves the task.
 
-Adding a blank-channel *delivery control* separates the first from the others; pairing it
-with `Δ_A` quantifies the second.
+The paper studies what two controls add: a blank-video *delivery control*, and an item-level
+split of the clean-input gain (answers audio alone supplies and vision alone misses, checked
+against the same count under silence). They **constrain** which reading applies; they do not
+identify the cause, and some cells stay undetermined.
 
-A third audio-visual LLM, added after the first draft, sharpens the point. It is fronted by
-the same encoder family as one of the other two and behaves differently: the two systems
-fall on opposite sides of the delivery gate on music audio while being indistinguishable on
-speech at every one of thirteen visual conditions. So naming the audio front end does not
-tell you whether audio reached the model --- the delivery control has to be run per system.
-Delivery is a property of the system, not of its encoder family. Heavy delivery does not
-make an ablation informative either: the same model delivers the most music audio of
-anything tested here, yet on music shows no audio-unique signal beyond chance, while on
-speech it realises 71 % of its ceiling.
+Two systems on the same Whisper encoder family gain −0.33 and +22.33 pp from audio delivery on
+the same music items, so the encoder family does not predict whether audio reaches the model.
+On speech no difference between them is detected, and the paper does not claim equivalence.
+The system that delivers the most music audio shows no detectable audio-unique signal on
+music, yet recovers 66 % of its audio-unique speech items.
 
 ## What is here
 
@@ -55,26 +52,32 @@ cannot return silently; `eval_results/QWENOMNI_STALE.md` marks the cells they pr
 the manuscript from the files in `eval_results/`, emitting the macro file the paper cites
 rather than digits typed by hand. A handful of in-text quantities (answer-diversity
 percentages, audio-coverage fractions) are computed outside that script and are not
-covered by it. The numbers were produced under `requirements-frozen.txt`; the looser bounds
-in `pyproject.toml` are for installation, not reproduction.
+covered by it. The numbers were produced under `requirements-frozen.txt`, an exact
+`pip list --format=freeze` of the analysis environment; the looser bounds in `pyproject.toml`
+are for installation, not reproduction.
 
-Four checks were added before submission, all exploratory:
+Checks added before submission, all exploratory:
 
-- **Shuffled audio for the third system** (`eval_results/shuf_poscontrol_cmss_*_qwenomni.json`,
-  `scripts/run_shuffled_delivery.sh`, `ARM=qwen_music|qwen_avut`). These cells split its music
-  delivery gain into de-degeneration (+2.00 pp) and audio content (+20.33 pp), so the gain is
-  content. On speech, shuffled audio is an active distractor (−5.33 pp).
-- **Encoder weights against Whisper-large-v3** (`scripts/check_encoder_weights.py` →
-  `eval_results/encoder_weight_check.json`). video-SALMONN 2+'s encoder is bit-identical to
-  Whisper-large-v3 after bf16 rounding. Qwen2.5-Omni's tower was trained from that
-  initialisation (global relative difference 0.65).
-- **Instrument probe on Qwen2.5-Omni's own tower** (`scripts/run_encoder_probe_qwen.py` →
-  `eval_results/encoder_probe_instrument_qwen.json`). It scores 49.4 %, against 35.7 % for
-  Whisper-large-v3 and 54.8 % for BEATs on the same clips.
-- **The item-wise ceiling against its chance analogue**, computed in
-  `make_crossover_figures.py`. C₀ is the same count with blank video and silence. On music,
-  C − C₀ includes zero for every system, so those cells read as redundancy with vision, not as
-  failed fusion.
+- **Whole-track rerun of the third system.** The Qwen2.5-Omni adapter fed the model the first 30 s
+  of each track; an earlier draft said it received the whole track. The four estimand conditions were
+  rerun with `QWEN_AUDIO_SECONDS=full` and silence matched to each item's length
+  (`scripts/run_qwen_fulltrack.sh`, `eval_results/*_qwenomni_fulltrack_*.json`). The delivery gain is
+  unchanged: +0.00 pp [−3.03, +3.03] on music and +1.00 pp [−2.61, +4.45] on speech, and no reading
+  changes.
+- **Shuffled audio for the third system** (`eval_results/shuf_poscontrol_cmss_*_qwenomni.json`).
+  These cells split its music delivery gain into de-degeneration (+2.00 pp) and content
+  (+20.33 pp).
+- **Encoder weights against Whisper-large-v3** (`scripts/check_encoder_weights.py`).
+  video-SALMONN 2+'s encoder is bit-identical in bf16. Qwen2.5-Omni's tower was trained from
+  that initialisation (relative difference 0.65).
+- **Instrument probe on matched input** (`scripts/run_encoder_probe_matched.py`). All three encoders
+  get the same first 30 s, with paired intervals over clips: BEATs 54.6 %, Qwen2.5-Omni tower
+  49.4 %, Whisper-large-v3 35.7 %. The ordering holds on the 682 clips whose label comes from an
+  audio-visual question.
+- **Item-level split** of the clean-input gain (recovered, synergy, lost), with the selection
+  headroom checked against its blank-channel floor, computed in `make_crossover_figures.py`.
+- **The registered Holm family** (`scripts/primary_family.py`). It holds four MUSIC-AVQA tests, per
+  the 2026-08-16 amendment, and an eight-test version with AVUT is a labelled sensitivity analysis.
 
 The manuscript itself is not included here while it is under review.
 
@@ -98,12 +101,17 @@ reconstructible once you have obtained the media yourself.
 ## Reproducing
 
 ```bash
-pip install -e ".[dev]"
+pip install -e ".[dev,analysis]"                # or: pip install -r requirements-frozen.txt
 pytest tests/                                   # regression suite
 python scripts/make_crossover_figures.py        # figures + every quoted number
+python scripts/primary_family.py                # the registered 8-test Holm family
 python scripts/delivery_gain.py                 # delivery gate G_A for every model
 python scripts/pooled_sg.py --model cmss_music_vsalm2
 ```
+
+These need no media, checkpoints or path variables. Running a model adapter does: see
+`PATHS.md` for the variables, `MODELS.md` for checkpoint and upstream-code revisions, and
+`envs/` for each adapter's exact environment.
 
 The grid runners require the media and the model checkpoints, and are provided so the
 procedure is inspectable rather than because they can be run from this repository alone.

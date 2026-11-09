@@ -35,7 +35,7 @@ vl_run() {  # $1=mode $2=out  $3...=extra
   $PY_VL "$ROOT/../VideoLLaMA2/eval_avqa_5mode.py" \
     --model_path DAMO-NLP-SG/VideoLLaMA2.1-7B-AV \
     --eval_data "$DATA" --video_dir "$VID" --audio_mode "$mode" --output "$out" "$@" >>"$LOG" 2>&1
-  echo "[$(date +%T)] DONE VL2 $mode exit=$? -> $out" | tee -a "$LOG"
+  rc=$?; echo "[$(date +%T)] DONE VL2 $mode exit=$rc -> $out" | tee -a "$LOG"
 }
 vs_run() {  # $1=mode $2=out  $3...=extra
   local mode="$1" out="$2"; shift 2
@@ -45,7 +45,7 @@ vs_run() {  # $1=mode $2=out  $3...=extra
   $PY_VS scripts/eval_avqa_videosalmonn2.py \
     --model_path "$VS_MODEL" --eval_data "$DATA" --video_dir "$VID" \
     --audio_mode "$mode" --output "$out" "$@" >>"$LOG" 2>&1
-  echo "[$(date +%T)] DONE VS2 $mode exit=$? -> $out" | tee -a "$LOG"
+  rc=$?; echo "[$(date +%T)] DONE VS2 $mode exit=$rc -> $out" | tee -a "$LOG"
 }
 
 for M in real silent; do

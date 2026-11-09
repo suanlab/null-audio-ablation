@@ -34,7 +34,13 @@ import torch
 from transformers import Qwen2_5OmniForConditionalGeneration, Qwen2_5OmniProcessor
 
 SR = 16000
-CLIP_SECONDS = 30
+# Audio fed to the model. Every cell cited before 2026-11-09 was run at the default: the first
+# 30 s of each track, zero-padded to 30 s, with silence and noise also 30 s long. "full" passes
+# the whole track up to the processor's 300 s limit, and sizes silence and noise to that item's
+# real length so that the null differs from real audio in content only, not in length.
+AUDIO_SECONDS = os.environ.get("QWEN_AUDIO_SECONDS", "30")
+FULL_TRACK = AUDIO_SECONDS == "full"
+CLIP_SECONDS = 300 if FULL_TRACK else int(AUDIO_SECONDS)
 CHOICE_RE = re.compile(r"[A-D]")
 AUDIO_MODES = ("real", "silent", "noise", "shuffled", "shifted")
 
@@ -152,13 +158,22 @@ def load_wav16(video_path: str) -> np.ndarray:
         return np.zeros(SR, dtype=np.float32)
 
 
-def fit_len(w: np.ndarray) -> np.ndarray:
-    t = CLIP_SECONDS * SR
+def fit_len(w: np.ndarray, t: int | None = None) -> np.ndarray:
+    """Truncate or zero-pad to ``t`` samples; in full-track mode only cap at the processor limit."""
+    if t is None:
+        if FULL_TRACK:
+            return w[: CLIP_SECONDS * SR]
+        t = CLIP_SECONDS * SR
     if len(w) > t:
         return w[:t]
     if len(w) < t:
         return np.pad(w, (0, t - len(w)))
     return w
+
+
+def null_len(vpath: str) -> int:
+    """Length of the silence/noise null: 30 s by default, the item's own real length in full mode."""
+    return len(fit_len(load_wav16(vpath))) if FULL_TRACK else CLIP_SECONDS * SR
 
 
 def build_shuffled_mapping(n: int, seed: int) -> list[int]:
@@ -176,11 +191,12 @@ def mode_wav(mode: str, vpath: str, donor: str | None, shift_s: float) -> np.nda
     if mode == "real":
         return fit_len(load_wav16(vpath))
     if mode == "silent":
-        return np.zeros(CLIP_SECONDS * SR, dtype=np.float32)
+        return np.zeros(null_len(vpath), dtype=np.float32)
     if mode == "noise":
-        return np.random.randn(CLIP_SECONDS * SR).astype(np.float32)
+        return np.random.randn(null_len(vpath)).astype(np.float32)
     if mode == "shuffled":
-        return fit_len(load_wav16(donor or vpath))
+        donor_wav = load_wav16(donor or vpath)
+        return fit_len(donor_wav, null_len(vpath)) if FULL_TRACK else fit_len(donor_wav)
     if mode == "shifted":
         return np.roll(fit_len(load_wav16(vpath)), int(shift_s * SR))
     raise ValueError(mode)
@@ -246,6 +262,9 @@ def main() -> None:
     _pos_idx = set(json.loads(Path(_pos_idx_path).read_text())) if _pos_idx_path else None
     _pos_blank = _os.environ.get("POS_BLANK") == "1"
 
+    import hashlib
+
+    adapter_sha256 = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
     shuf = build_shuffled_mapping(len(recs), a.seed)
     preds, correct = [], 0
     for i, rec in enumerate(recs):
@@ -255,6 +274,7 @@ def main() -> None:
         vpath = str(vdir / video)
         gt = gt_letter(rec["conversations"][1]["value"])
         q = rec["conversations"][0]["value"].replace("<video>", "").replace("<audio>", "").strip()
+        wav = np.zeros(0, dtype=np.float32)
         try:
             donor = str(vdir / str(recs[shuf[i]]["video"])) if a.audio_mode == "shuffled" else None
             wav = mode_wav(a.audio_mode, vpath, donor, a.shift_seconds)
@@ -320,7 +340,8 @@ def main() -> None:
         good = pred == gt and gt != ""
         correct += int(good)
         preds.append({"index": str(i), "video": video, "gt": gt,
-                       "pred": pred, "correct": str(good), "output": txt})
+                       "pred": pred, "correct": str(good), "output": txt,
+                       "audio_samples": int(len(wav))})
         if (i + 1) % 10 == 0:
             print(f"[{i+1}/{len(recs)}] acc={100*correct/(i+1):.1f}% mode={a.audio_mode}")
 
@@ -330,6 +351,8 @@ def main() -> None:
         "correct": correct, "total": total, "audio_mode": a.audio_mode,
         "answer_format": a.answer_format,
         "model_seq_len": MODEL_SEQ_LEN,
+        "audio_seconds": AUDIO_SECONDS, "sample_rate": SR, "blank_video": _pos_blank,
+        "seed": a.seed, "eval_data": a.eval_data, "adapter_sha256": adapter_sha256,
         "shift_seconds": a.shift_seconds if a.audio_mode == "shifted" else None,
         "visual_mode": a.visual_mode,
         "visual_severity": a.visual_severity if a.visual_mode != "clean" else 0.0,

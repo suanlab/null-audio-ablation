@@ -38,7 +38,7 @@ run() {  # $1=output  $2=audio_mode  $3...=extra args
   "$PY" scripts/eval_avqa_videosalmonn2.py \
     --model_path "$MODEL" --eval_data "$DATA" --video_dir "$VID" \
     --audio_mode "$mode" --output "$out" "$@" >>"$LOG" 2>&1
-  echo "[$(date +%T)] DONE $mode exit=$? -> $out" | tee -a "$LOG"
+  rc=$?; echo "[$(date +%T)] DONE $mode exit=$rc -> $out" | tee -a "$LOG"
 }
 
 # --- five-mode protocol on the matched 98-subset ---

@@ -154,10 +154,17 @@ def collect() -> list[dict[str, object]]:
 def figure_crossover(rows: list[dict[str, object]]) -> None:
     """Interaction plot: delivery gain by domain, one line per audio front end."""
     domains = ["MUSIC-AVQA", "AVUT"]
-    fig, ax = plt.subplots(figsize=(3.4, 2.6))
+    fig, ax = plt.subplots(figsize=(3.4, 2.35))
     ax.axhline(0.0, color="0.55", lw=0.8, ls="--", zorder=1)
     ax.axhline(GATE_PP, color="#009E73", lw=1.1, ls=":", zorder=1)
-    ax.text(-0.30, GATE_PP + 1.0, "20 pp gate", fontsize=6, color="#009E73", ha="left")
+    ax.text(0.5, GATE_PP + 0.8, "20 pp gate", fontsize=6, color="#009E73", ha="center")
+    # Point labels are placed per system and domain: on MUSIC-AVQA two systems sit near the
+    # gate and on AVUT the two Whisper-family systems sit within 1 pp of each other.
+    label_offsets = {
+        ("Qwen2.5-Omni", "MUSIC-AVQA"): (-24, 5), ("VideoLLaMA2.1-AV", "MUSIC-AVQA"): (-24, -4),
+        ("video-SALMONN 2+", "MUSIC-AVQA"): (0, -13), ("video-SALMONN 2+", "AVUT"): (24, 5),
+        ("Qwen2.5-Omni", "AVUT"): (24, -5), ("VideoLLaMA2.1-AV", "AVUT"): (0, -13),
+    }
 
     for model in [c[2] for c in CELLS_ORDERED]:
         pts = [next((r for r in rows if r["model"] == model and r["domain"] == d), None) for d in domains]
@@ -171,20 +178,22 @@ def figure_crossover(rows: list[dict[str, object]]) -> None:
                [float(p["deliv_hi"]) - float(p["deliv"]) for p in pts]]  # type: ignore[index]
         ax.errorbar(xs, ys, yerr=err, color=colour, marker=marker, ms=5, lw=1.8,
                     capsize=3, elinewidth=1.0, label=f"{model} ({frontend})", zorder=3)
-        for x, y in zip(xs, ys, strict=True):
-            # Labels sit outward from the crossing so neither the gate line nor the
-            # opposite series' label is overwritten.
-            dx, dy = (-34, -2) if (x == 0 and y > 5) else (0, 9 if y > 5 else -14)
+        for x, y, d in zip(xs, ys, domains, strict=True):
+            dx, dy = label_offsets[(model, d)]
             ax.annotate(f"{y:+.2f}", (x, y), textcoords="offset points",
                         xytext=(dx, dy), ha="center", fontsize=6.5, color=colour)
 
     ax.set_xticks(np.arange(len(domains)))
     ax.set_xticklabels([f"{d}\n({'music' if d == 'MUSIC-AVQA' else 'speech'} audio)" for d in domains], fontsize=7)
-    ax.set_xlim(-0.35, 1.45)
+    ax.set_xlim(-0.45, 1.45)
     ax.set_ylabel("audio delivery gain (pp)", fontsize=8)
     ax.tick_params(axis="y", labelsize=7)
-    ax.set_ylim(-7.0, 27.0)
-    ax.legend(fontsize=6.5, frameon=False, loc="lower center", ncol=2, columnspacing=1.0)
+    # The top must clear the highest CI (Qwen2.5-Omni / MUSIC-AVQA reaches ~28 pp), and the
+    # legend sits below the axes so it cannot cover the near-zero point labels.
+    top = max(float(r["deliv_hi"]) for r in rows) + 2.5
+    ax.set_ylim(-7.0, max(27.0, top))
+    ax.legend(fontsize=6.5, frameon=False, loc="upper center", bbox_to_anchor=(0.5, -0.22),
+              ncol=2, columnspacing=1.0)
     ax.grid(axis="y", alpha=0.25, lw=0.5)
     fig.tight_layout(pad=0.4)
     fig.savefig(OUT_DIR / "figures" / "fig1_crossover.pdf", bbox_inches="tight")
@@ -192,45 +201,62 @@ def figure_crossover(rows: list[dict[str, object]]) -> None:
 
 
 def figure_fusion(rows: list[dict[str, object]]) -> None:
-    """Delivery gain against Delta_A(0); distance below the diagonal is fusion loss."""
-    fig, ax = plt.subplots(figsize=(3.4, 2.9))
+    """Delivery gain against Delta_A(0), with the marginal gap between them drawn as a contrast.
+
+    The vertical gap G_A - Delta_A(0) is a difference of two marginal accuracies. It is not
+    discarded information and not a fusion loss: it is labelled as the contrast it is, and the
+    diagonal is a reference line, not a ceiling. Delta_A(0) can exceed G_A where the two
+    channels are complementary.
+    """
+    fig, ax = plt.subplots(figsize=(3.4, 2.75))
     lim = (-8.0, 26.0)
     ax.plot(lim, lim, color="0.55", lw=0.9, ls="--", zorder=1)
-    ax.annotate("all delivered audio used", (13.0, 13.0), rotation=34, fontsize=6,
+    ax.annotate(r"$\Delta_A(0) = G_A$", (17.0, 17.0), rotation=34, fontsize=6,
                 color="0.4", ha="center", va="bottom")
     ax.axhline(0.0, color="0.8", lw=0.7, zorder=0)
     ax.axvline(0.0, color="0.8", lw=0.7, zorder=0)
 
+    # Labels name the domain only; the legend names the system. Offsets are per system and
+    # domain because the two Whisper-family systems sit on top of each other on AVUT.
+    offsets = {
+        ("video-SALMONN 2+", "AVUT"): (-8, 6, "right"),
+        ("Qwen2.5-Omni", "AVUT"): (8, 6, "left"),
+        ("VideoLLaMA2.1-AV", "MUSIC-AVQA"): (0, -14, "center"),
+        ("Qwen2.5-Omni", "MUSIC-AVQA"): (0, -14, "center"),
+        ("video-SALMONN 2+", "MUSIC-AVQA"): (0, 13, "center"),
+        ("VideoLLaMA2.1-AV", "AVUT"): (0, -15, "center"),
+    }
+    seen: set[str] = set()
     for row in rows:
-        colour, marker = style_for(str(row["model"]), str(row["frontend"]))
+        model, domain = str(row["model"]), str(row["domain"])
+        colour, marker = style_for(model, str(row["frontend"]))
         x, y = float(row["deliv"]), float(row["dA"])
-        if x - y > 5.0:  # audio arrived and was discarded: show the drop
+        if x - y > 5.0:
             ax.plot([x, x], [x, y], color=colour, lw=1.0, ls=":", zorder=2)
-            ax.annotate(f"fusion loss\n{x - y:.2f} pp", (x, (x + y) / 2), textcoords="offset points",
-                        xytext=(8, 0), ha="left", va="center", fontsize=6.5, color=colour)
+            # The two gaps are 4 pp apart, so the left one is labelled on its left.
+            left = x < max(float(r["deliv"]) for r in rows) - 1.0
+            # The left label sits low on its gap so it clears the AVUT points' error bars.
+            ax.annotate(f"$G_A-\\Delta_A(0)$\n{x - y:.2f} pp", (x, y + (0.3 if left else 0.5) * (x - y)),
+                        textcoords="offset points",
+                        xytext=(-4 if left else 4, 0), ha="right" if left else "left", va="center",
+                        fontsize=6, color=colour)
         ax.errorbar(x, y, xerr=[[x - float(row["deliv_lo"])], [float(row["deliv_hi"]) - x]],
                     yerr=[[y - float(row["dA_lo"])], [float(row["dA_hi"]) - y]],
-                    fmt=marker, color=colour, ms=6, capsize=2, elinewidth=0.8, zorder=3)
-        # The two non-delivering cells land on the same spot near the origin, so each
-        # label is placed by hand rather than by a shared offset.
-        # Whisper/MUSIC-AVQA and BEATs/AVUT are the two non-delivering cells and land on
-        # the same spot, so their labels go in opposite directions; the rest are placed
-        # directly under their own marker rather than offset sideways, which previously
-        # left a label sitting closer to a different point than to its own.
-        offsets = {
-            ("Whisper", "AVUT"): (10, -4, "left"),
-            ("BEATs", "MUSIC-AVQA"): (0, -15, "center"),
-            ("Whisper", "MUSIC-AVQA"): (0, 15, "center"),
-            ("BEATs", "AVUT"): (0, -17, "center"),
-        }
-        dx, dy, ha = offsets.get((str(row["frontend"]), str(row["domain"])), (7, -2, "left"))
-        ax.annotate(f"{row['frontend']} / {row['domain']}", (x, y), textcoords="offset points",
+                    fmt=marker, color=colour, ms=6, capsize=2, elinewidth=0.8, zorder=3,
+                    label=f"{model} ({row['frontend']})" if model not in seen else None)
+        seen.add(model)
+        if (model, domain) not in offsets:
+            raise ValueError(f"no label offset registered for {model} / {domain}")
+        dx, dy, ha = offsets[(model, domain)]
+        ax.annotate(domain, (x, y), textcoords="offset points",
                     xytext=(dx, dy), fontsize=6, color=colour, va="center", ha=ha)
+    ax.legend(fontsize=6, frameon=False, loc="upper center", bbox_to_anchor=(0.5, -0.30), ncol=2,
+              columnspacing=0.8, handletextpad=0.3)
 
     ax.set_xlim(-11.0, 30.0)
-    ax.set_ylim(-11.0, 21.0)
-    ax.set_xlabel("audio delivery gain (pp)\nwhat audio alone can contribute", fontsize=7.5)
-    ax.set_ylabel(r"$\Delta_A(0)$ (pp)" "\nwhat it adds on top of vision", fontsize=7.5)
+    ax.set_ylim(-11.0, max(21.0, max(float(r["deliv"]) for r in rows) + 1.5))  # show each gap's top
+    ax.set_xlabel("audio delivery gain $G_A$ (pp), blank video", fontsize=7.5)
+    ax.set_ylabel(r"$\Delta_A(0)$ (pp), clean video", fontsize=7.5)
     ax.tick_params(labelsize=7)
     ax.grid(alpha=0.2, lw=0.5)
     fig.tight_layout(pad=0.4)
@@ -269,10 +295,20 @@ def _interaction_macros() -> list[str]:
     original 8x2 s sampling gave the BEATs-fronted model roughly a quarter of the audio the
     Whisper-fronted one received, which is confounded with the effect being measured.
     """
+    # Within a domain the two systems answer the same items, so the per-item contrast
+    # (G_Whisper - G_BEATs) is formed first and its video clusters resampled once; drawing
+    # the two systems independently would treat paired outputs as independent. The two
+    # domains are independent samples and are resampled separately.
     rng = np.random.default_rng(SEED)
 
-    def draw(a: Path, b: Path) -> tuple[np.ndarray, float]:
-        diff, cid = _paired_vector(a, b)
+    def domain_contrast(domain: str) -> tuple[np.ndarray, float]:
+        w, cid = _paired_vector(EVAL_DIR / f"poscontrol_cmss_{domain}_vsalm2_real.json",
+                                EVAL_DIR / f"poscontrol_cmss_{domain}_vsalm2_silent.json")
+        bg, cid_b = _paired_vector(EVAL_DIR / f"full_poscontrol_cmss_{domain}_vl2_real.json",
+                                   EVAL_DIR / f"full_poscontrol_cmss_{domain}_vl2_silent.json")
+        if not np.array_equal(cid, cid_b):
+            raise ValueError(f"{domain}: the two systems' delivery cells are not item-aligned")
+        diff = w - bg
         n_clusters = int(cid.max()) + 1
         sums = np.zeros(n_clusters)
         counts = np.zeros(n_clusters)
@@ -281,16 +317,10 @@ def _interaction_macros() -> list[str]:
         pick = rng.integers(0, n_clusters, size=(N_BOOT, n_clusters))
         return sums[pick].sum(1) / counts[pick].sum(1), float(diff.mean())
 
-    wa, wa_m = draw(EVAL_DIR / "poscontrol_cmss_avut_vsalm2_real.json",
-                    EVAL_DIR / "poscontrol_cmss_avut_vsalm2_silent.json")
-    wm, wm_m = draw(EVAL_DIR / "poscontrol_cmss_music_vsalm2_real.json",
-                    EVAL_DIR / "poscontrol_cmss_music_vsalm2_silent.json")
-    ba, ba_m = draw(EVAL_DIR / "full_poscontrol_cmss_avut_vl2_real.json",
-                    EVAL_DIR / "full_poscontrol_cmss_avut_vl2_silent.json")
-    bm, bm_m = draw(EVAL_DIR / "full_poscontrol_cmss_music_vl2_real.json",
-                    EVAL_DIR / "full_poscontrol_cmss_music_vl2_silent.json")
-    draws = (wa - wm) - (ba - bm)
-    point = (wa_m - wm_m) - (ba_m - bm_m)
+    avut, avut_m = domain_contrast("avut")
+    music, music_m = domain_contrast("music")
+    draws = avut - music
+    point = avut_m - music_m
     lo, hi = np.percentile(draws, [2.5, 97.5])
     return [
         f"\\newcommand{{\\InteractionMatched}}{{{point:+.2f}}}",
@@ -323,7 +353,42 @@ def _probe_macros() -> list[str]:
         f"\\newcommand{{\\ProbeWhisperSd}}{{{whisper['std']:.1f}}}",
         f"\\newcommand{{\\ProbeWhisperRatio}}{{{whisper['mean'] / base:.1f}}}",
         f"\\newcommand{{\\ProbeGap}}{{{beats['mean'] - whisper['mean']:.1f}}}",
-    ] + _qwen_probe_macros(base)
+    ] + _qwen_probe_macros(base) + _matched_probe_macros(base)
+
+
+def _matched_probe_macros(base: float) -> list[str]:
+    """The probe with all three encoders on the same first 30 s (run_encoder_probe_matched.py).
+
+    The original probe gave BEATs the whole clip and Whisper/Qwen the first 30 s, so its numbers
+    are not an encoder comparison. This one is, with intervals over clips and paired contrasts.
+    """
+    path = EVAL_DIR / "encoder_probe_instrument_matched.json"
+    if not path.exists():
+        return []
+    probe = json.loads(path.read_text())
+    if abs(float(probe["majority_baseline"]) - base) > 1e-6:
+        raise ValueError("matched probe ran on a different clip set than the original probe")
+    names = {"BEATs": "BEATs", "Whisper-large-v3": "Whisper", "Qwen2.5-Omni audio tower": "Qwen"}
+    out: list[str] = []
+    for key, tag in names.items():
+        enc = probe["encoders"][key]
+        lo, hi = enc["ci"]
+        out += [f"\\newcommand{{\\ProbeM{tag}}}{{{enc['mean']:.1f}}}",
+                f"\\newcommand{{\\ProbeMCI{tag}}}{{[{lo:.1f}, {hi:.1f}]}}",
+                f"\\newcommand{{\\ProbeMRatio{tag}}}{{{enc['mean'] / base:.1f}}}"]
+        sub = probe["label_audit"]["audio_typed_subset"][key]
+        out.append(f"\\newcommand{{\\ProbeAud{tag}}}{{{sub['mean']:.1f}}}")
+    for key, tag in (("BEATs - Whisper-large-v3", "BEATsWhisper"),
+                     ("Qwen2.5-Omni audio tower - Whisper-large-v3", "QwenWhisper"),
+                     ("BEATs - Qwen2.5-Omni audio tower", "BEATsQwen")):
+        d = probe["paired_differences"][key]
+        out += [f"\\newcommand{{\\ProbeMDiff{tag}}}{{{d['mean']:+.1f}}}",
+                f"\\newcommand{{\\ProbeMDiffCI{tag}}}{{[{d['lo']:+.1f}, {d['hi']:+.1f}]}}"]
+    types = probe["label_audit"]["label_question_types"]
+    out += [f"\\newcommand{{\\ProbeAudItems}}{{{probe['label_audit']['audio_typed_subset']['items']}}}",
+            f"\\newcommand{{\\ProbeVisualLabels}}{{{sum(n for t, n in types.items() if 'Audio' not in t)}}}",
+            f"\\newcommand{{\\ProbeShortClips}}{{{probe['seconds_fed']['clips_shorter_than_window']}}}"]
+    return out
 
 
 def _qwen_probe_macros(base: float) -> list[str]:
@@ -459,6 +524,23 @@ def _census_macros() -> list[str]:
             f"\\newcommand{{\\RepGain}}{{{mean:+.2f}}}",
             f"\\newcommand{{\\RepCI}}{{[{lo:+.2f}, {hi:+.2f}]}}",
         ]
+    # Qwen2.5-Omni's registered entry gate (amendment of 2026-09-14): G_A significantly
+    # positive on the same 60 held-out MUSIC-AVQA items, run before its grid.
+    gate_a = EVAL_DIR / "pre_music_qwenomni_blank_real.json"
+    gate_b = EVAL_DIR / "pre_music_qwenomni_blank_silent.json"
+    if gate_a.exists() and gate_b.exists():
+        mean, lo, hi = paired_gain(gate_a, gate_b)
+        out += [
+            f"\\newcommand{{\\QwenGate}}{{{mean:+.2f}}}",
+            f"\\newcommand{{\\QwenGateCI}}{{[{lo:+.2f}, {hi:+.2f}]}}",
+        ]
+    # Visual delivery gain (clean silent - blank silent): M1's second eligibility condition.
+    for domain, model, tag in MODEL_CELLS:
+        vision = EVAL_DIR / f"avqa_cmss_{domain}_{model}_silent.json"
+        floor = EVAL_DIR / f"poscontrol_cmss_{domain}_{model}_silent.json"
+        if vision.exists() and floor.exists():
+            gain = json.loads(vision.read_text())["accuracy"] - json.loads(floor.read_text())["accuracy"]
+            out.append(f"\\newcommand{{\\VisDeliv{tag}}}{{{gain:+.2f}}}")
     return out
 
 
@@ -566,15 +648,15 @@ def _contrast_macros() -> list[str]:
 
 
 def _ceiling_macros() -> list[str]:
-    """The item-level ceiling on what audio can add, and how much of it is realised.
+    """Item-level selection headroom C, its blank-channel floor C0, and the net-gain split.
 
     ``G_A - Delta_A(0)`` is a difference of two *marginal* accuracies and is silent on
-    whether the items audio answers alone are the items vision already answers. Where they
-    coincide, a near-zero ``Delta_A(0)`` is benchmark redundancy, not discarded information.
-    The quantity that separates the two is the share of items audio alone gets right and
-    vision alone gets wrong: no fusion, however good, can add more than that. On the anchor
-    cell it is 6.00 pp against a marginal fusion loss of 18.33 pp, so the marginal figure
-    attributes to fusion roughly three times what fusion could ever have delivered.
+    whether the items audio answers alone are the items vision already answers. C is the
+    share audio alone gets right and vision alone gets wrong: what choosing the better
+    channel item by item could add. It bounds selection, not integration. In item counts
+    the net gain splits exactly as Delta_A(0) = H + S - L: H items of C recovered with both
+    channels, S synergy items neither channel answers alone, L items vision alone answered
+    that the joint input loses. Delta_A(0)/C mixes all three; H/C is the recovery rate.
     """
     out: list[str] = []
     for domain, model, tag in MODEL_CELLS:
@@ -600,22 +682,125 @@ def _ceiling_macros() -> list[str]:
         chance = (f == 1) & (v == 0)
         excess_m, excess_lo, excess_hi = cluster_bootstrap_mean(
             (unique.astype(float) - chance.astype(float)) * 100.0, cid, n_boot=N_BOOT, seed=SEED)
+        recovered = unique & (b == 1)
+        synergy = (b == 1) & (a == 0) & (v == 0)
+        harm = (v == 1) & (b == 0)
+        if int(recovered.sum() + synergy.sum() - harm.sum()) != int((b - v).sum()):
+            raise ValueError(f"{domain}/{model}: net gain does not decompose as H + S - L")
         out += [
+            f"\\newcommand{{\\Recovered{tag}}}{{{100.0 * recovered.sum() / max(int(unique.sum()), 1):.0f}}}",
+            f"\\newcommand{{\\RecoveredN{tag}}}{{{int(recovered.sum())}}}",
+            f"\\newcommand{{\\SynergyN{tag}}}{{{int(synergy.sum())}}}",
+            f"\\newcommand{{\\HarmN{tag}}}{{{int(harm.sum())}}}",
+            f"\\newcommand{{\\Harm{tag}}}{{{100.0 * harm.mean():.2f}}}",
+            f"\\newcommand{{\\NetN{tag}}}{{{int((b - v).sum()):+d}}}",
             f"\\newcommand{{\\Ceiling{tag}}}{{{ceiling:.2f}}}",
             f"\\newcommand{{\\CeilingCI{tag}}}{{[{lo:.2f}, {hi:.2f}]}}",
             f"\\newcommand{{\\CeilingN{tag}}}{{{int(unique.sum())}}}",
             f"\\newcommand{{\\CeilingChance{tag}}}{{{100.0 * chance.mean():.2f}}}",
+            f"\\newcommand{{\\CeilingChanceN{tag}}}{{{int(chance.sum())}}}",
             # Items neither channel answers alone but both together do: what lets Delta_A(0)
             # exceed C in principle, so C bounds per-item channel selection, not integration.
-            f"\\newcommand{{\\Synergy{tag}}}{{{100.0 * ((b == 1) & (a == 0) & (v == 0)).mean():.2f}}}",
+            f"\\newcommand{{\\Synergy{tag}}}{{{100.0 * synergy.mean():.2f}}}",
             f"\\newcommand{{\\CeilingExcess{tag}}}{{{excess_m:+.2f}}}",
             f"\\newcommand{{\\CeilingExcessCI{tag}}}{{[{excess_lo:+.2f}, {excess_hi:+.2f}]}}",
-            # A realisation ratio is reported only where the ceiling clears its chance analogue:
+            # A realisation ratio is reported only where the headroom clears its blank-channel floor:
             # below that the denominator is guessing and the ratio is noise over noise.
             f"\\newcommand{{\\Realised{tag}}}{{{100.0 * realised / ceiling:.0f}}}" if excess_lo > 0
             else f"\\newcommand{{\\Realised{tag}}}{{n/a}}",
         ]
     return out
+
+
+def _fulltrack_macros() -> list[str]:
+    """Qwen2.5-Omni re-run on the whole audio track (scripts/run_qwen_fulltrack.sh).
+
+    Every Qwen2.5-Omni cell in the grid fed the model the first 30 s of each track. The rerun
+    changes two things at once -- the audio is the whole track and the silence is as long as
+    that item's track -- so a difference from the as-run cells is attributed to the input
+    contract, not to "more audio" alone. Per domain: G_A, Delta_A(0), C - C0, and the
+    item-paired change in G_A against the 30 s cells.
+    """
+    out: list[str] = []
+    for domain, tag in (("music", "Music"), ("avut", "Avut")):
+        ft = {k: EVAL_DIR / f"{p}_cmss_{domain}_qwenomni_fulltrack_{m}.json"
+              for k, (p, m) in {"ar": ("poscontrol", "real"), "as": ("poscontrol", "silent"),
+                                "vr": ("avqa", "real"), "vs": ("avqa", "silent")}.items()}
+        if not all(f.exists() for f in ft.values()):
+            continue
+        g, cid = _paired_vector(ft["ar"], ft["as"])
+        d, cid_d = _paired_vector(ft["vr"], ft["vs"])
+        g30, cid_30 = _paired_vector(EVAL_DIR / f"poscontrol_cmss_{domain}_qwenomni_real.json",
+                                     EVAL_DIR / f"poscontrol_cmss_{domain}_qwenomni_silent.json")
+        if not (np.array_equal(cid, cid_d) and np.array_equal(cid, cid_30)):
+            raise ValueError(f"{domain}: full-track cells are not item-aligned with the grid")
+        a, _ = correctness(ft["ar"])
+        f, _ = correctness(ft["as"])
+        v, _ = correctness(ft["vs"])
+        excess = (((a == 1) & (v == 0)).astype(float) - ((f == 1) & (v == 0)).astype(float)) * 100.0
+        for name, values in (("Deliv", g), ("DeltaA", d), ("Excess", excess), ("DelivChange", g - g30)):
+            m, lo, hi = cluster_bootstrap_mean(values, cid, n_boot=N_BOOT, seed=SEED)
+            out += [f"\\newcommand{{\\FT{name}{tag}}}{{{m:+.2f}}}",
+                    f"\\newcommand{{\\FT{name}CI{tag}}}{{[{lo:+.2f}, {hi:+.2f}]}}"]
+        samples = np.array([int(p.get("audio_samples", 0)) for p in json.loads(ft["ar"].read_text())["predictions"]])
+        if samples.min() <= 0:
+            raise ValueError(f"{domain}: full-track cell does not record the audio it was fed")
+        coverage = np.minimum(samples, 30 * 16000) / samples  # share of the track the 30 s grid saw
+        out += [f"\\newcommand{{\\FTSeconds{tag}}}{{{float(np.median(samples)) / 16000:.0f}}}",
+                f"\\newcommand{{\\FTCoverageThirty{tag}}}{{{100.0 * float(np.median(coverage)):.0f}}}"]
+    return out
+
+
+def _envelope_macros() -> list[str]:
+    """How often Delta_A(v) exceeds G_A, cell by cell and condition by condition.
+
+    Delta_A(v) <= G_A is an empirical envelope on this grid, not a theorem: synergy can break
+    it. Every one of the 13 visual conditions x 6 cells is checked as an item-paired contrast
+    (Delta_A(v) - G_A per item, video-cluster bootstrap), and the macros count the point
+    inversions and how many of them exclude zero.
+    """
+    conditions = [""] + [f"_vis-{f}-s{sev}" for f in FAMILIES for sev in ("0.33", "0.66", "1")]
+    total = inverted = significant = 0
+    for _domain, _kind, _model, _frontend, tag in CELLS:
+        deliv, cid = _paired_vector(EVAL_DIR / f"poscontrol_{tag}_real.json",
+                                    EVAL_DIR / f"poscontrol_{tag}_silent.json")
+        for cond in conditions:
+            real = EVAL_DIR / f"avqa_{tag}_real{cond}.json"
+            silent = EVAL_DIR / f"avqa_{tag}_silent{cond}.json"
+            if not (real.exists() and silent.exists()):
+                raise ValueError(f"envelope check needs {real.name} and {silent.name}")
+            d, cid_v = _paired_vector(real, silent)
+            if not np.array_equal(cid, cid_v):
+                raise ValueError(f"{tag}{cond}: not item-aligned with its delivery cells")
+            mean, lo, _hi = cluster_bootstrap_mean(d - deliv, cid, n_boot=N_BOOT, seed=SEED)
+            total += 1
+            inverted += int(mean > 0)
+            significant += int(lo > 0)
+    # Qwen2.5-Omni minus VideoLLaMA2.1-AV delivery on the same music items: the two cells the
+    # registered 20 pp threshold splits.
+    q, cid_q = _paired_vector(EVAL_DIR / "poscontrol_cmss_music_qwenomni_real.json",
+                              EVAL_DIR / "poscontrol_cmss_music_qwenomni_silent.json")
+    v, cid_b = _paired_vector(EVAL_DIR / "poscontrol_cmss_music_vl2_real.json",
+                              EVAL_DIR / "poscontrol_cmss_music_vl2_silent.json")
+    if not np.array_equal(cid_q, cid_b):
+        raise ValueError("music delivery cells are not item-aligned across systems")
+    m, lo, hi = cluster_bootstrap_mean(q - v, cid_q, n_boot=N_BOOT, seed=SEED)
+    # Qwen2.5-Omni minus video-SALMONN 2+ delivery on the same music items: the headline
+    # contrast between the two Whisper-family systems, as one paired statistic.
+    w, cid_w = _paired_vector(EVAL_DIR / "poscontrol_cmss_music_vsalm2_real.json",
+                              EVAL_DIR / "poscontrol_cmss_music_vsalm2_silent.json")
+    if not np.array_equal(cid_q, cid_w):
+        raise ValueError("music delivery cells are not item-aligned across Whisper-family systems")
+    fm, flo, fhi = cluster_bootstrap_mean(q - w, cid_q, n_boot=N_BOOT, seed=SEED)
+    return [
+        f"\\newcommand{{\\FamilyDiff}}{{{fm:+.2f}}}",
+        f"\\newcommand{{\\FamilyDiffCI}}{{[{flo:+.2f}, {fhi:+.2f}]}}",
+        f"\\newcommand{{\\EnvelopeChecks}}{{{total}}}",
+        f"\\newcommand{{\\EnvelopeInversions}}{{{inverted}}}",
+        f"\\newcommand{{\\EnvelopeInversionsSig}}{{{significant}}}",
+        f"\\newcommand{{\\GateSplitDiff}}{{{m:+.2f}}}",
+        f"\\newcommand{{\\GateSplitDiffCI}}{{[{lo:+.2f}, {hi:+.2f}]}}",
+    ]
 
 
 def delta_curve(tag: str) -> list[tuple[float, float, float]]:
@@ -637,7 +822,7 @@ def delta_curve(tag: str) -> list[tuple[float, float, float]]:
 
 
 def figure_surfaces(rows: list[dict[str, object]]) -> None:
-    """Delta_A(v) per cell, with the delivery gain drawn as the ceiling it imposes.
+    """Delta_A(v) per cell, with the delivery gain drawn as a reference line (an envelope here, not a bound).
 
     Visual degradation cannot reveal more audio reliance than audio alone supplies, so the
     delivery gain is a horizontal bound on each curve. Drawing it turns the panels into a
@@ -661,7 +846,7 @@ def figure_surfaces(rows: list[dict[str, object]]) -> None:
         gain = float(row["deliv"])
         ax.axhline(0.0, color="0.6", lw=0.8, ls="--", zorder=1)
         ax.axhline(gain, color="0.25", lw=1.0, ls="-.", zorder=2)
-        ax.text(0.02, gain + 0.8, f"delivery ceiling {gain:+.2f}", fontsize=5.8, color="0.25")
+        ax.text(0.02, gain + 0.8, f"$G_A$ = {gain:+.2f} (reference)", fontsize=5.8, color="0.25")
         ax.fill_between(x, lo, hi, color=colour, alpha=0.15, lw=0, zorder=2)
         ax.plot(x, mean, color=colour, marker=marker, ms=4, lw=1.7, zorder=3)
         ax.set_title(f"{model} / {domain}   SG = {mean[-1] - mean[0]:+.2f} pp", fontsize=7.5)
@@ -742,6 +927,8 @@ def main() -> None:
     macros += _access_macros()
     macros += _ceiling_macros()
     macros += _contrast_macros()
+    macros += _envelope_macros()
+    macros += _fulltrack_macros()
 
     (OUT_DIR / "numbers_crossover.tex").write_text("\n".join(sorted(macros)) + "\n")
     figure_crossover(rows)

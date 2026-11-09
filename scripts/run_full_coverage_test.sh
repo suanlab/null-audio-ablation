@@ -30,7 +30,7 @@ cell() {  # cell <domain> <eval_data> <video_dir> <audio_mode> <out>
         --audio_mode "$4" --visual_mode clean --visual_severity 1.0 \
         --audio_access full --answer_format "$6" \
         --output "$out" >>"$LOG" 2>&1
-    echo "[$(date +%T)] DONE exit=$? -> $(basename "$out")" | tee -a "$LOG"
+    rc=$?; echo "[$(date +%T)] DONE exit=$rc -> $(basename "$out")" | tee -a "$LOG"
 }
 
 R="$ROOT/eval_results"

@@ -11,7 +11,7 @@
 set -uo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 DEST="$ROOT/data/raw/music_avqa"
-PY=python
+PY=$VENV/bin/python
 LOG=/tmp/fetch_music_avqa.log
 REAL_ID=1Ovj5Ay8rDXaPy57CNCHes0A99S43lPBy
 MIN_FREE_GB=90   # 37 GB zip + ~37 GB extracted + headroom
@@ -29,7 +29,7 @@ import gdown
 gdown.download(id='${REAL_ID}', output='MUSIC-AVQA-videos-Real.zip', quiet=False, resume=True)
 " >>"$LOG" 2>&1
 fi
-echo "[$(date +%T)] download exit=$? size=$(du -h MUSIC-AVQA-videos-Real.zip 2>/dev/null | cut -f1)" | tee -a "$LOG"
+rc=$?; echo "[$(date +%T)] download exit=$rc size=$(du -h MUSIC-AVQA-videos-Real.zip 2>/dev/null | cut -f1)" | tee -a "$LOG"
 
 if [ -s MUSIC-AVQA-videos-Real.zip ]; then
     if unzip -tq MUSIC-AVQA-videos-Real.zip >>"$LOG" 2>&1; then

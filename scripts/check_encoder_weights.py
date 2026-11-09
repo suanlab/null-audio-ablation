@@ -27,8 +27,15 @@ OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 
 
 HUB = os.path.expanduser("~/.cache/huggingface/hub")
 WHISPER = glob.glob(f"{HUB}/models--openai--whisper-large-v3/snapshots/*/model.safetensors")[0]
-VSALM = "$MODELS_DIR/video-SALMONN2_plus_7B_full"
 QWEN = os.path.dirname(glob.glob(f"{HUB}/models--Qwen--Qwen2.5-Omni-7B/snapshots/*/model.safetensors.index.json")[0])
+
+
+def _env(name: str, default: str | None = None) -> str:
+    """A path variable from PATHS.md; fail naming the variable rather than with a bad path."""
+    value = os.environ.get(name) or default
+    if not value:
+        raise SystemExit(f"set ${name} first -- see PATHS.md")
+    return value
 
 
 def load_prefix(root: str, prefix: str) -> dict[str, torch.Tensor]:
@@ -49,7 +56,8 @@ def main() -> None:
     with safe_open(WHISPER, "pt") as h:
         whisper = {k[len("model.encoder."):]: h.get_tensor(k) for k in h.keys() if k.startswith("model.encoder.")}  # noqa: SIM118
     report: dict[str, dict[str, float]] = {}
-    for name, enc in (("video-SALMONN 2+", load_prefix(VSALM, "audio.")),
+    vsalm = os.path.join(_env("MODELS_DIR"), "video-SALMONN2_plus_7B_full")
+    for name, enc in (("video-SALMONN 2+", load_prefix(vsalm, "audio.")),
                       ("Qwen2.5-Omni", load_prefix(QWEN, "thinker.audio_tower."))):
         shared = [k for k in whisper if k in enc and enc[k].shape == whisper[k].shape]
         identical = sum(torch.equal(whisper[k].to(torch.bfloat16), enc[k].to(torch.bfloat16)) for k in shared)

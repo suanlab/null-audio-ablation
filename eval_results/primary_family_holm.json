@@ -1,0 +1,125 @@
+{
+  "alpha": 0.05,
+  "n_boot": 10000,
+  "seed": 2027,
+  "registered": {
+    "family_size": 4,
+    "rejections": 2,
+    "tests": [
+      {
+        "system": "VideoLLaMA2.1-AV",
+        "domain": "music",
+        "test": "delivery control",
+        "estimate_pp": 18.0,
+        "raw_p": 9.999000099990002e-05,
+        "holm_threshold": 0.0125,
+        "holm_reject": true
+      },
+      {
+        "system": "VideoLLaMA2.1-AV",
+        "domain": "music",
+        "test": "SG > 0",
+        "estimate_pp": 13.333333333333334,
+        "raw_p": 9.999000099990002e-05,
+        "holm_threshold": 0.016666666666666666,
+        "holm_reject": true
+      },
+      {
+        "system": "video-SALMONN 2+",
+        "domain": "music",
+        "test": "delivery control",
+        "estimate_pp": -0.3333333333333333,
+        "raw_p": 0.6060393960603939,
+        "holm_threshold": 0.025,
+        "holm_reject": false
+      },
+      {
+        "system": "video-SALMONN 2+",
+        "domain": "music",
+        "test": "SG > 0",
+        "estimate_pp": -0.6666666666666666,
+        "raw_p": 0.6931306869313069,
+        "holm_threshold": 0.05,
+        "holm_reject": false
+      }
+    ]
+  },
+  "sensitivity_with_avut": {
+    "family_size": 8,
+    "rejections": 3,
+    "tests": [
+      {
+        "system": "VideoLLaMA2.1-AV",
+        "domain": "music",
+        "test": "delivery control",
+        "estimate_pp": 18.0,
+        "raw_p": 9.999000099990002e-05,
+        "holm_threshold": 0.00625,
+        "holm_reject": true
+      },
+      {
+        "system": "VideoLLaMA2.1-AV",
+        "domain": "music",
+        "test": "SG > 0",
+        "estimate_pp": 13.333333333333334,
+        "raw_p": 9.999000099990002e-05,
+        "holm_threshold": 0.0071428571428571435,
+        "holm_reject": true
+      },
+      {
+        "system": "video-SALMONN 2+",
+        "domain": "music",
+        "test": "delivery control",
+        "estimate_pp": -0.3333333333333333,
+        "raw_p": 0.6060393960603939,
+        "holm_threshold": 0.016666666666666666,
+        "holm_reject": false
+      },
+      {
+        "system": "video-SALMONN 2+",
+        "domain": "music",
+        "test": "SG > 0",
+        "estimate_pp": -0.6666666666666666,
+        "raw_p": 0.6931306869313069,
+        "holm_threshold": 0.025,
+        "holm_reject": false
+      },
+      {
+        "system": "VideoLLaMA2.1-AV",
+        "domain": "avut",
+        "test": "delivery control",
+        "estimate_pp": 0.3333333333333333,
+        "raw_p": 0.46935306469353066,
+        "holm_threshold": 0.0125,
+        "holm_reject": false
+      },
+      {
+        "system": "VideoLLaMA2.1-AV",
+        "domain": "avut",
+        "test": "SG > 0",
+        "estimate_pp": 1.25,
+        "raw_p": 0.20757924207579243,
+        "holm_threshold": 0.01,
+        "holm_reject": false
+      },
+      {
+        "system": "video-SALMONN 2+",
+        "domain": "avut",
+        "test": "delivery control",
+        "estimate_pp": 14.0,
+        "raw_p": 9.999000099990002e-05,
+        "holm_threshold": 0.008333333333333333,
+        "holm_reject": true
+      },
+      {
+        "system": "video-SALMONN 2+",
+        "domain": "avut",
+        "test": "SG > 0",
+        "estimate_pp": -2.3333333333333335,
+        "raw_p": 0.9204079592040796,
+        "holm_threshold": 0.05,
+        "holm_reject": false
+      }
+    ]
+  }
+}

@@ -115,7 +115,7 @@ run_cell() {
         --visual_mode "$visual_mode" \
         --visual_severity "$severity" \
         --output "$out" >>"$LOG" 2>&1
-    echo "[$(date +%T)] DONE exit=$? -> $(basename "${out}")" | tee -a "$LOG"
+    rc=$?; echo "[$(date +%T)] DONE exit=$rc -> $(basename "${out}")" | tee -a "$LOG"
 }
 
 echo "--- clean (visual severity 0) ---" | tee -a "$LOG"

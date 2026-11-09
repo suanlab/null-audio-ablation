@@ -22,7 +22,7 @@ vl2() {  # vl2 <domain-tag> <eval_data> <video_dir> <answer_format> <gpu>
         --model_path DAMO-NLP-SG/VideoLLaMA2.1-7B-AV --eval_data "$2" --video_dir "$3" \
         --audio_mode shuffled --visual_mode clean --visual_severity 1.0 \
         --answer_format "$4" --output "$out" >>"$LOG" 2>&1 )
-    echo "[$(date +%T)] DONE exit=$? -> $(basename $out)" | tee -a "$LOG"
+    rc=$?; echo "[$(date +%T)] DONE exit=$rc -> $(basename $out)" | tee -a "$LOG"
 }
 vsalm() {
     local out="$R/shuf_poscontrol_cmss_$1_vsalm2.json"
@@ -36,7 +36,7 @@ vsalm() {
         --eval_data "$2" --video_dir "$3" --audio_mode shuffled \
         --visual_mode clean --visual_severity 1.0 --answer_format "$4" \
         --output "$out" >>"$LOG" 2>&1
-    echo "[$(date +%T)] DONE exit=$? -> $(basename $out)" | tee -a "$LOG"
+    rc=$?; echo "[$(date +%T)] DONE exit=$rc -> $(basename $out)" | tee -a "$LOG"
 }
 qwen() {  # added 2026-11-08: the headline Qwen2.5-Omni cells lacked the shuffled null
     local out="$R/shuf_poscontrol_cmss_$1_qwenomni.json"
@@ -48,7 +48,7 @@ qwen() {  # added 2026-11-08: the headline Qwen2.5-Omni cells lacked the shuffle
         --eval_data "$2" --video_dir "$3" --audio_mode shuffled \
         --visual_mode clean --visual_severity 1.0 --answer_format "$4" \
         --output "$out" >>"$LOG" 2>&1
-    echo "[$(date +%T)] DONE exit=$? -> $(basename $out)" | tee -a "$LOG"
+    rc=$?; echo "[$(date +%T)] DONE exit=$rc -> $(basename $out)" | tee -a "$LOG"
 }
 MUSIC_D="$ROOT/data/instruct/music_avqa_pilot_300.jsonl"
 MUSIC_V="$ROOT/data/raw/music_avqa/videos/MUSIC-AVQA-videos-Real"

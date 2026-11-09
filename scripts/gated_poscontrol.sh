@@ -9,7 +9,7 @@ while true; do
   if [ -n "${G:-}" ]; then
      echo "[$(date +%T)] GPU $G has >=20GB free; launching poscontrol" | tee -a "$LOG"
      GPU="$G" bash scripts/run_poscontrol.sh >>"$LOG" 2>&1
-     echo "[$(date +%T)] poscontrol exit=$?" | tee -a "$LOG"
+     rc=$?; echo "[$(date +%T)] poscontrol exit=$rc" | tee -a "$LOG"
      break
   fi
   sleep 180

@@ -116,7 +116,7 @@ run_cell() {
         --visual_mode "$visual_mode" \
         --visual_severity "$severity" \
         --output "$out" >>"$LOG" 2>&1
-    echo "[$(date +%T)] DONE exit=$? -> ${out}" | tee -a "$LOG"
+    rc=$?; echo "[$(date +%T)] DONE exit=$rc -> ${out}" | tee -a "$LOG"
 }
 
 # --- 1. clean baseline --------------------------------------------------------

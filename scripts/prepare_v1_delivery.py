@@ -19,6 +19,7 @@ Usage::
 from __future__ import annotations
 
 import json
+import os
 import subprocess
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
@@ -26,14 +27,26 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 PILOT = REPO_ROOT / "data" / "instruct" / "music_avqa_pilot_300.jsonl"
 VIDEOS = REPO_ROOT / "data" / "raw" / "music_avqa" / "videos" / "MUSIC-AVQA-videos-Real"
-OUT = Path("$VIDEOSALMONN_V1_DIR/delivery_data")
 SR = 16000
 DURATION = 60  # every MUSIC-AVQA clip is 60 s
 
 
+def _env(name: str, default: str | None = None) -> str:
+    """A path variable from PATHS.md; fail naming the variable rather than with a bad path."""
+    value = os.environ.get(name) or default
+    if not value:
+        raise SystemExit(f"set ${name} first -- see PATHS.md")
+    return value
+
+
+def out_dir() -> Path:
+    """Where the v1 delivery inputs are written: inside the video-SALMONN v1 checkout."""
+    return Path(_env("VIDEOSALMONN_V1_DIR")) / "delivery_data"
+
+
 def extract_wav(video: str) -> str | None:
     """Decode one clip's audio to a 16 kHz mono wav; return the path, or None on failure."""
-    out = OUT / "wav" / f"{Path(video).stem}.wav"
+    out = out_dir() / "wav" / f"{Path(video).stem}.wav"
     if out.exists():
         return str(out)
     cmd = ["ffmpeg", "-nostdin", "-y", "-i", str(VIDEOS / video),
@@ -45,16 +58,16 @@ def extract_wav(video: str) -> str | None:
 def main() -> None:
     """Write the black video, the silent waveform, per-clip audio, and both manifests."""
     for sub in ("wav",):
-        (OUT / sub).mkdir(parents=True, exist_ok=True)
+        (out_dir() / sub).mkdir(parents=True, exist_ok=True)
 
-    black = OUT / "black.mp4"
+    black = out_dir() / "black.mp4"
     if not black.exists():
         subprocess.run(
             ["ffmpeg", "-nostdin", "-y", "-f", "lavfi", "-i",
              f"color=c=black:s=224x224:d={DURATION}:r=25", "-pix_fmt", "yuv420p", str(black)],
             capture_output=True, check=True, timeout=300,
         )
-    silent = OUT / "silent.wav"
+    silent = out_dir() / "silent.wav"
     if not silent.exists():
         subprocess.run(
             ["ffmpeg", "-nostdin", "-y", "-f", "lavfi", "-i",
@@ -83,7 +96,7 @@ def main() -> None:
                 "gt": str(row["conversations"][1]["value"]),
                 "video": str(row["video"]),
             })
-        path = OUT / f"delivery_{condition}.json"
+        path = out_dir() / f"delivery_{condition}.json"
         path.write_text(json.dumps(items, indent=1))
         print(f"wrote {path} ({len(items)} items)")
 

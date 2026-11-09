@@ -22,6 +22,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -30,14 +31,18 @@ import torch
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
-BEATS_REPO = Path("$VIDEOLLAMA2_DIR")
-BEATS_CKPT = Path(
-    "$VIDEOSALMONN_V1_DIR/ckpt/pretrained_ckpt/"
-    "BEATs_iter3_plus_AS2M_finetuned_on_AS2M_cpt2.pt"
-)
+BEATS_CKPT_NAME = "ckpt/pretrained_ckpt/BEATs_iter3_plus_AS2M_finetuned_on_AS2M_cpt2.pt"
 WHISPER_ID = "openai/whisper-large-v3"
 SR = 16000
 SEED = 2027
+
+
+def _env(name: str, default: str | None = None) -> str:
+    """A path variable from PATHS.md; fail naming the variable rather than with a bad path."""
+    value = os.environ.get(name) or default
+    if not value:
+        raise SystemExit(f"set ${name} first -- see PATHS.md")
+    return value
 
 
 def parse_args() -> argparse.Namespace:
@@ -83,11 +88,13 @@ def beats_features(paths: list[str], device: str) -> np.ndarray:
     # Import BEATs as a standalone package: videollama2/__init__ pulls in a projector that
     # imports TRANSFORMERS_CACHE, removed in transformers 5.x, and the encoder needs none
     # of that chain.
-    sys.path.insert(0, str(BEATS_REPO / "videollama2" / "model"))
+    beats_repo = Path(_env("VIDEOLLAMA2_DIR"))
+    beats_ckpt = Path(_env("VIDEOSALMONN_V1_DIR")) / BEATS_CKPT_NAME
+    sys.path.insert(0, str(beats_repo / "videollama2" / "model"))
     import torchaudio.compliance.kaldi as ta_kaldi
     from beats.BEATs import BEATs, BEATsConfig
 
-    ckpt = torch.load(BEATS_CKPT, map_location="cpu")
+    ckpt = torch.load(beats_ckpt, map_location="cpu")
     model = BEATs(BEATsConfig(ckpt["cfg"]))
     model.load_state_dict(ckpt["model"])
     model = model.to(device).eval()
