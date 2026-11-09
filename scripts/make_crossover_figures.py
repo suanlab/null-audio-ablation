@@ -323,6 +323,29 @@ def _probe_macros() -> list[str]:
         f"\\newcommand{{\\ProbeWhisperSd}}{{{whisper['std']:.1f}}}",
         f"\\newcommand{{\\ProbeWhisperRatio}}{{{whisper['mean'] / base:.1f}}}",
         f"\\newcommand{{\\ProbeGap}}{{{beats['mean'] - whisper['mean']:.1f}}}",
+    ] + _qwen_probe_macros(base)
+
+
+def _qwen_probe_macros(base: float) -> list[str]:
+    """Probe on Qwen2.5-Omni's own audio tower (scripts/run_encoder_probe_qwen.py).
+
+    video-SALMONN 2+'s encoder is Whisper-large-v3 bit for bit, so the Whisper probe speaks for
+    it; Qwen's tower was trained on from that initialisation, so it needs its own probe before
+    the manuscript can say where the two systems' delivery gap lies.
+    """
+    path = EVAL_DIR / "encoder_probe_instrument_qwen.json"
+    if not path.exists():
+        return []
+    probe = json.loads(path.read_text())
+    if abs(float(probe["majority_baseline"]) - base) > 1e-6:
+        raise ValueError("Qwen probe ran on a different clip set than the Whisper/BEATs probe")
+    qwen = probe["encoders"]["Qwen2.5-Omni audio tower"]
+    weights = EVAL_DIR / "encoder_weight_check.json"
+    diff = json.loads(weights.read_text())["Qwen2.5-Omni"]["relative_difference"] if weights.exists() else None
+    return ([f"\\newcommand{{\\EncoderDiffQwen}}{{{diff:.2f}}}"] if diff is not None else []) + [
+        f"\\newcommand{{\\ProbeQwen}}{{{qwen['mean']:.1f}}}",
+        f"\\newcommand{{\\ProbeQwenSd}}{{{qwen['std']:.1f}}}",
+        f"\\newcommand{{\\ProbeQwenRatio}}{{{qwen['mean'] / base:.1f}}}",
     ]
 
 
@@ -569,11 +592,27 @@ def _ceiling_macros() -> list[str]:
         index = {x: i for i, x in enumerate(sorted(set(videos)))}
         cid = np.array([index[x] for x in videos])
         _m, lo, hi = cluster_bootstrap_mean(unique * 100.0, cid, n_boot=N_BOOT, seed=SEED)
+        # C counts items audio-only gets right by guessing too. The same count with no
+        # information at all -- blank video and silence -- is its chance analogue, C0;
+        # C - C0 is the audio-unique signal beyond guessing, bootstrapped item-paired.
+        floor_path = EVAL_DIR / f"poscontrol_cmss_{domain}_{model}_silent.json"
+        f, _ = correctness(floor_path)
+        chance = (f == 1) & (v == 0)
+        excess_m, excess_lo, excess_hi = cluster_bootstrap_mean(
+            (unique.astype(float) - chance.astype(float)) * 100.0, cid, n_boot=N_BOOT, seed=SEED)
         out += [
             f"\\newcommand{{\\Ceiling{tag}}}{{{ceiling:.2f}}}",
             f"\\newcommand{{\\CeilingCI{tag}}}{{[{lo:.2f}, {hi:.2f}]}}",
             f"\\newcommand{{\\CeilingN{tag}}}{{{int(unique.sum())}}}",
-            f"\\newcommand{{\\Realised{tag}}}{{{100.0 * realised / ceiling:.0f}}}" if ceiling > 0.5
+            f"\\newcommand{{\\CeilingChance{tag}}}{{{100.0 * chance.mean():.2f}}}",
+            # Items neither channel answers alone but both together do: what lets Delta_A(0)
+            # exceed C in principle, so C bounds per-item channel selection, not integration.
+            f"\\newcommand{{\\Synergy{tag}}}{{{100.0 * ((b == 1) & (a == 0) & (v == 0)).mean():.2f}}}",
+            f"\\newcommand{{\\CeilingExcess{tag}}}{{{excess_m:+.2f}}}",
+            f"\\newcommand{{\\CeilingExcessCI{tag}}}{{[{excess_lo:+.2f}, {excess_hi:+.2f}]}}",
+            # A realisation ratio is reported only where the ceiling clears its chance analogue:
+            # below that the denominator is guessing and the ratio is noise over noise.
+            f"\\newcommand{{\\Realised{tag}}}{{{100.0 * realised / ceiling:.0f}}}" if excess_lo > 0
             else f"\\newcommand{{\\Realised{tag}}}{{n/a}}",
         ]
     return out

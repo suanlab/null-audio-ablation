@@ -38,12 +38,26 @@ vsalm() {
         --output "$out" >>"$LOG" 2>&1
     echo "[$(date +%T)] DONE exit=$? -> $(basename $out)" | tee -a "$LOG"
 }
+qwen() {  # added 2026-11-08: the headline Qwen2.5-Omni cells lacked the shuffled null
+    local out="$R/shuf_poscontrol_cmss_$1_qwenomni.json"
+    [ -s "$out" ] && { echo "[skip] $(basename $out)" | tee -a "$LOG"; return 0; }
+    echo "[$(date +%T)] [run ] Qwen2.5-Omni $1 shuffled" | tee -a "$LOG"
+    POS_BLANK=1 CUDA_VISIBLE_DEVICES="$5" \
+    PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True \
+    $VENV/bin/python "$ROOT/scripts/eval_avqa_qwenomni.py" \
+        --eval_data "$2" --video_dir "$3" --audio_mode shuffled \
+        --visual_mode clean --visual_severity 1.0 --answer_format "$4" \
+        --output "$out" >>"$LOG" 2>&1
+    echo "[$(date +%T)] DONE exit=$? -> $(basename $out)" | tee -a "$LOG"
+}
 MUSIC_D="$ROOT/data/instruct/music_avqa_pilot_300.jsonl"
 MUSIC_V="$ROOT/data/raw/music_avqa/videos/MUSIC-AVQA-videos-Real"
 AVUT_D="$ROOT/data/instruct/avut_pilot_300.jsonl"
 AVUT_V="$ROOT/data/avut/videos"
 
-case "${ARM:?set ARM=beats|whisper}" in
+case "${ARM:?set ARM=beats|whisper|qwen_music|qwen_avut}" in
+  qwen_music) qwen music "$MUSIC_D" "$MUSIC_V" vocab  "${GPU:-1}" ;;
+  qwen_avut)  qwen avut  "$AVUT_D"  "$AVUT_V"  letter "${GPU:-3}" ;;
   beats)   vl2   music "$MUSIC_D" "$MUSIC_V" vocab  "${GPU:-2}"
            vl2   avut  "$AVUT_D"  "$AVUT_V"  letter "${GPU:-2}" ;;
   whisper) vsalm music "$MUSIC_D" "$MUSIC_V" vocab  "${GPU:-3}"

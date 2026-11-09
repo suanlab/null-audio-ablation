@@ -24,9 +24,10 @@ the same encoder family as one of the other two and behaves differently: the two
 fall on opposite sides of the delivery gate on music audio while being indistinguishable on
 speech at every one of thirteen visual conditions. So naming the audio front end does not
 tell you whether audio reached the model --- the delivery control has to be run per system.
-The same model delivers the most music audio of anything tested here and realises none of
-the resulting ceiling with vision intact, which is what makes delivery and fusion separable
-rather than two names for one thing.
+Delivery is a property of the system, not of its encoder family. Heavy delivery does not
+make an ablation informative either: the same model delivers the most music audio of
+anything tested here, yet on music shows no audio-unique signal beyond chance, while on
+speech it realises 71 % of its ceiling.
 
 ## What is here
 
@@ -56,6 +57,24 @@ rather than digits typed by hand. A handful of in-text quantities (answer-divers
 percentages, audio-coverage fractions) are computed outside that script and are not
 covered by it. The numbers were produced under `requirements-frozen.txt`; the looser bounds
 in `pyproject.toml` are for installation, not reproduction.
+
+Four checks were added before submission, all exploratory:
+
+- **Shuffled audio for the third system** (`eval_results/shuf_poscontrol_cmss_*_qwenomni.json`,
+  `scripts/run_shuffled_delivery.sh`, `ARM=qwen_music|qwen_avut`). These cells split its music
+  delivery gain into de-degeneration (+2.00 pp) and audio content (+20.33 pp), so the gain is
+  content. On speech, shuffled audio is an active distractor (−5.33 pp).
+- **Encoder weights against Whisper-large-v3** (`scripts/check_encoder_weights.py` →
+  `eval_results/encoder_weight_check.json`). video-SALMONN 2+'s encoder is bit-identical to
+  Whisper-large-v3 after bf16 rounding. Qwen2.5-Omni's tower was trained from that
+  initialisation (global relative difference 0.65).
+- **Instrument probe on Qwen2.5-Omni's own tower** (`scripts/run_encoder_probe_qwen.py` →
+  `eval_results/encoder_probe_instrument_qwen.json`). It scores 49.4 %, against 35.7 % for
+  Whisper-large-v3 and 54.8 % for BEATs on the same clips.
+- **The item-wise ceiling against its chance analogue**, computed in
+  `make_crossover_figures.py`. C₀ is the same count with blank video and silence. On music,
+  C − C₀ includes zero for every system, so those cells read as redundancy with vision, not as
+  failed fusion.
 
 The manuscript itself is not included here while it is under review.
 

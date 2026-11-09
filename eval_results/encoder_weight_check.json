@@ -1,0 +1,14 @@
+{
+  "video-SALMONN 2+": {
+    "shared": 487,
+    "whisper_tensors": 487,
+    "bf16_identical": 487,
+    "relative_difference": 0.0014017417098620836
+  },
+  "Qwen2.5-Omni": {
+    "shared": 484,
+    "whisper_tensors": 487,
+    "bf16_identical": 0,
+    "relative_difference": 0.6530548647655581
+  }
+}

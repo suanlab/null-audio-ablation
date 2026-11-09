@@ -1,0 +1,13 @@
+{
+  "items": 1319,
+  "classes": 20,
+  "majority_baseline": 13.267626990144048,
+  "task": "instrument identity (20-way)",
+  "encoders": {
+    "Qwen2.5-Omni audio tower": {
+      "mean": 49.353036064062685,
+      "std": 1.9936188429262907,
+      "dim": 1280
+    }
+  }
+}
